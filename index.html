@@ -3,442 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PowerAI-Energy: asesoría, inspección termográfica y mantenimiento basado en condición para sistemas eléctricos de potencia, centros de media y alta tensión y activos industriales.">
+<meta name="description" content="PowerAI-Energy | Asesoría en sistemas eléctricos de potencia, inspección termográfica y mantenimiento basado en condición.">
 <meta name="theme-color" content="#0b2235">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>PowerAI-Energy | Power System Services & Condition-Based Maintenance</title>
+<title>PowerAI-Energy | Sistemas de Potencia & Condition-Based Maintenance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="single-screen">
 
 <header class="site-header">
   <div class="topbar">
     <div class="container topbar-inner">
       <span>POWER SYSTEMS • FIELD SERVICES • CONDITION ASSESSMENT</span>
-      <span>Colombia • Atención técnica por programación</span>
+      <span>Ingeniería eléctrica especializada</span>
     </div>
   </div>
   <nav class="nav container" aria-label="Navegación principal">
-    <a class="brand" href="#inicio">
-      <span class="brand-mark">P</span>
-      <span>PowerAI<span class="brand-dash">-</span>Energy</span>
-    </a>
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
-      <span></span><span></span><span></span>
-    </button>
+    <a class="brand" href="#inicio"><span class="brand-mark">P</span><span>PowerAI<span class="brand-dash">-</span>Energy</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     <div class="nav-links" id="nav-links">
+      <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
-      <a href="#capacidades">Capacidades</a>
-      <a href="#condicion">Mantenimiento por condición</a>
-      <a href="#normativa">Normativa</a>
-      <a href="#contacto" class="nav-cta">Solicitar evaluación</a>
+      <a href="#condicion">Condición</a>
+      <a href="#normativa">NFPA 70B</a>
+      <a class="nav-cta" href="contacto.html" target="_blank" rel="noopener">Solicitar servicio ↗</a>
     </div>
   </nav>
 </header>
 
 <main id="inicio">
+  <section class="hero-screen">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> POWER SYSTEM SERVICES</div>
+        <h1>Confiabilidad para <em>activos eléctricos críticos.</em></h1>
+        <p class="hero-text">
+          Asesoría en sistemas eléctricos de potencia, inspección termográfica y mantenimiento basado en condición para centros de media y alta tensión e instalaciones industriales.
+        </p>
 
-<section class="hero">
-  <div class="hero-grid container">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="eyebrow-rule"></span> Field Services • Power Systems</p>
-      <h1>Ingeniería para <span>activos eléctricos críticos</span>.</h1>
-      <p class="hero-lead">
-        Asesoría técnica, inspección termográfica y mantenimiento basado en condición
-        para sistemas eléctricos de potencia, centros de media y alta tensión e infraestructura industrial.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contacto">Solicitar evaluación <span>→</span></a>
-        <a class="btn btn-outline" href="#servicios">Ver servicios</a>
-      </div>
-      <div class="hero-metrics" aria-label="Ámbitos de servicio">
-        <div><strong>MT</strong><span>Media tensión</span></div>
-        <div><strong>AT</strong><span>Alta tensión</span></div>
-        <div><strong>CBM</strong><span>Condition-Based Maintenance</span></div>
-        <div><strong>IR</strong><span>Termografía infrarroja</span></div>
-      </div>
-    </div>
-
-    <div class="field-panel">
-      <div class="panel-head">
-        <div>
-          <small>FIELD SERVICE</small>
-          <strong>Condition assessment</strong>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contacto.html" target="_blank" rel="noopener">Solicitar evaluación <b>→</b></a>
+          <a class="btn btn-light" href="#servicios">Ver alcance</a>
         </div>
-        <span class="panel-status"><i></i> READY</span>
+
+        <div class="service-strip">
+          <div><strong>MT / AT</strong><span>Centros y subestaciones</span></div>
+          <div><strong>IR</strong><span>Termografía infrarroja</span></div>
+          <div><strong>CBM</strong><span>Condición + criticidad</span></div>
+        </div>
+
+        <div class="standard-callout">
+          <div class="standard-mark">70B</div>
+          <div>
+            <span>REFERENCIA DE MANTENIMIENTO</span>
+            <strong>NFPA 70B · Standard for Electrical Equipment Maintenance</strong>
+            <p>Programa documentado de mantenimiento, inspección, pruebas, servicio y registros, según el alcance aplicable.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="panel-schematic">
-        <svg viewBox="0 0 620 360" role="img" aria-label="Esquema de centro de media y alta tensión con puntos de diagnóstico">
-          <defs>
-            <linearGradient id="lineA" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#53a5cf"/>
-              <stop offset="0.55" stop-color="#8bd0e8"/>
-              <stop offset="1" stop-color="#e7b24d"/>
-            </linearGradient>
-            <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".12"/></filter>
-          </defs>
+      <div class="visual-stage" aria-label="Infraestructura eléctrica de referencia">
+        <div class="visual-main">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Transformer_at_substation.jpg" alt="Transformador en una subestación eléctrica">
+          <div class="image-overlay">
+            <span>POWER TRANSFORMER</span>
+            <b>Condition assessment</b>
+          </div>
+        </div>
+        <div class="visual-small">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/High_voltage_switchgear.jpg" alt="Switchgear de alta tensión en subestación">
+          <div class="image-overlay"><span>HIGH VOLTAGE</span><b>Switchyard</b></div>
+        </div>
+        <div class="visual-small">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Distribution_substation_switchgear.jpg" alt="Switchgear y componentes de subestación de distribución">
+          <div class="image-overlay"><span>SWITCHGEAR</span><b>Inspection / maintenance</b></div>
+        </div>
 
-          <rect x="22" y="22" width="576" height="316" rx="18" fill="#0e2a40" stroke="#284a60"/>
-          <g opacity=".24" stroke="#84a8b9" stroke-width="1">
-            <path d="M45 70H575M45 120H575M45 170H575M45 220H575M45 270H575"/>
-            <path d="M95 45V315M150 45V315M205 45V315M260 45V315M315 45V315M370 45V315M425 45V315M480 45V315M535 45V315"/>
-          </g>
-
-          <g filter="url(#shadow)">
-            <rect x="55" y="127" width="112" height="78" rx="12" fill="#143b54" stroke="#4b7891"/>
-            <rect x="203" y="98" width="116" height="136" rx="14" fill="#f7fbfd" stroke="#c7dde8"/>
-            <rect x="363" y="127" width="104" height="78" rx="12" fill="#143b54" stroke="#4b7891"/>
-            <rect x="510" y="130" width="55" height="72" rx="12" fill="#143b54" stroke="#4b7891"/>
-          </g>
-
-          <path d="M167 166H203M319 166H363M467 166H510" stroke="url(#lineA)" stroke-width="6" stroke-linecap="round"/>
-          <path d="M101 166V92M420 166V92M537 166V92" stroke="#73b6d4" stroke-width="3"/>
-          <path d="M101 92H140M420 92H480M537 92H565" stroke="#73b6d4" stroke-width="3"/>
-
-          <g font-family="Barlow, sans-serif">
-            <text x="72" y="152" fill="#a9cfdf" font-size="10" font-weight="700">INCOMING</text>
-            <text x="79" y="178" fill="#fff" font-size="14" font-weight="700">MT / AT</text>
-            <text x="79" y="194" fill="#8ea8b6" font-size="9">celdas • barras</text>
-
-            <text x="261" y="143" text-anchor="middle" fill="#547187" font-size="10" font-weight="700">TRANSFORMER</text>
-            <circle cx="261" cy="174" r="29" fill="#eaf4f8" stroke="#2f8ab5" stroke-width="3"/>
-            <path d="M246 165c7-8 18-8 30 0M246 183c7 8 18 8 30 0" fill="none" stroke="#2f8ab5" stroke-width="3"/>
-            <text x="261" y="217" text-anchor="middle" fill="#6a8291" font-size="9">condición dieléctrica</text>
-
-            <text x="415" y="152" fill="#a9cfdf" font-size="10" font-weight="700">SWITCHGEAR</text>
-            <text x="390" y="178" fill="#fff" font-size="14" font-weight="700">PROTECCIÓN</text>
-            <text x="391" y="194" fill="#8ea8b6" font-size="9">interruptores • relés</text>
-
-            <text x="538" y="151" text-anchor="middle" fill="#a9cfdf" font-size="9" font-weight="700">LOAD</text>
-            <text x="538" y="176" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">BUS</text>
-            <text x="538" y="193" text-anchor="middle" fill="#8ea8b6" font-size="8">salidas</text>
-          </g>
-
-          <g>
-            <circle cx="101" cy="92" r="8" fill="#e7b24d"/>
-            <circle cx="420" cy="92" r="8" fill="#5bc28f"/>
-            <circle cx="537" cy="92" r="8" fill="#5aa5d0"/>
-            <g font-family="Barlow, sans-serif" font-size="9" font-weight="700">
-              <text x="82" y="74" fill="#d9eaf2">THERMAL</text>
-              <text x="399" y="74" fill="#d9eaf2">PROTECTION</text>
-              <text x="518" y="74" fill="#d9eaf2">LOAD</text>
-            </g>
-          </g>
-
-          <g font-family="Barlow, sans-serif" font-size="9" fill="#7fa2b4">
-            <text x="55" y="300">INSPECT</text>
-            <text x="201" y="300">ASSESS</text>
-            <text x="360" y="300">PRIORITIZE</text>
-            <text x="505" y="300">ACT</text>
-          </g>
-        </svg>
-      </div>
-
-      <div class="panel-foot">
-        <span>Visual + thermal evidence</span>
-        <strong>CONDITION → RISK → ACTION</strong>
+        <div class="visual-note">
+          <span>REFERENCE IMAGERY</span>
+          <p>Fotografías CC0 de Wikimedia Commons. No representan trabajos ejecutados por PowerAI-Energy.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="service-bar">
-  <div class="container service-bar-grid">
-    <div><span>POWERAI-ENERGY</span><strong>Servicios de campo y asesoría en sistemas eléctricos de potencia.</strong></div>
-    <a href="#contacto">Agendar valoración técnica →</a>
-  </div>
-</section>
+  <section class="compact-panel" id="servicios">
+    <div class="container panel-grid">
+      <div class="panel-heading">
+        <span>FIELD SERVICES</span>
+        <h2>Evaluar el activo. Documentar la condición. Definir la acción.</h2>
+      </div>
+      <div class="service-cards">
+        <article><b>01</b><h3>Asesoría SEP</h3><p>Arquitectura, operación, mantenimiento, criticidad y confiabilidad.</p></article>
+        <article><b>02</b><h3>Termografía IR</h3><p>Inspección de centros MT/AT y activos accesibles bajo procedimiento de seguridad.</p></article>
+        <article><b>03</b><h3>CBM</h3><p>Condición + histórico + tendencia + criticidad para priorizar intervenciones.</p></article>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="servicios">
-  <div class="container">
-    <div class="section-heading split-heading">
+  <section class="compact-panel light" id="condicion">
+    <div class="container condition-row">
       <div>
-        <p class="section-kicker">Field Services</p>
-        <h2>Servicios para mantenimiento, diagnóstico y confiabilidad.</h2>
+        <span class="panel-label">CONDITION-BASED MAINTENANCE</span>
+        <h2>La termografía es evidencia; la decisión nace del contexto.</h2>
+        <p>Los hallazgos se interpretan con carga, condiciones ambientales, estado del equipo, antecedentes, criticidad y evidencia complementaria disponible.</p>
       </div>
-      <p>Un enfoque técnico inspirado en la lógica de los servicios especializados de campo: evaluar el activo, obtener evidencia, documentar hallazgos y convertirlos en acciones de mantenimiento.</p>
-    </div>
-
-    <div class="service-grid">
-      <article class="service-card">
-        <span class="service-number">01</span>
-        <h3>Asesoría en sistemas eléctricos de potencia</h3>
-        <p>Revisión técnica de arquitectura, operación, mantenimiento, criticidad y estrategias de confiabilidad para instalaciones industriales.</p>
-        <div class="tags"><span>SEP</span><span>Subestaciones</span><span>Confiabilidad</span></div>
-      </article>
-
-      <article class="service-card service-featured">
-        <span class="service-number">02</span>
-        <h3>Inspección termográfica infrarroja</h3>
-        <p>Campañas de termografía en centros de MT/AT y equipos accesibles, orientadas a localizar patrones térmicos anómalos y establecer prioridades.</p>
-        <div class="tags"><span>IR</span><span>Hot spots</span><span>Tendencias</span></div>
-      </article>
-
-      <article class="service-card">
-        <span class="service-number">03</span>
-        <h3>Mantenimiento basado en condición</h3>
-        <p>Integración de inspección, condición, criticidad, histórico y tendencia para definir la intervención con base en evidencia técnica.</p>
-        <div class="tags"><span>CBM</span><span>Riesgo</span><span>Prioridad</span></div>
-      </article>
-
-      <article class="service-card">
-        <span class="service-number">04</span>
-        <h3>Diagnóstico de activos críticos</h3>
-        <p>Transformadores, switchgear, tableros, barras, conexiones, motores y equipos asociados al sistema de potencia.</p>
-        <div class="tags"><span>Transformadores</span><span>Switchgear</span><span>Motores</span></div>
-      </article>
-
-      <article class="service-card">
-        <span class="service-number">05</span>
-        <h3>Planes de mantenimiento y criticidad</h3>
-        <p>Estructuración de rutinas, frecuencias, criterios de aceptación, registros, indicadores y trazabilidad de la condición del activo.</p>
-        <div class="tags"><span>PM</span><span>CBM</span><span>KPIs</span></div>
-      </article>
-
-      <article class="service-card">
-        <span class="service-number">06</span>
-        <h3>Acompañamiento técnico e interventoría</h3>
-        <p>Apoyo documental y técnico en inspecciones, mantenimiento, diagnóstico y seguimiento de acciones correctivas.</p>
-        <div class="tags"><span>QA/QC</span><span>Documentación</span><span>Seguimiento</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section dark-section" id="capacidades">
-  <div class="container">
-    <div class="section-heading">
-      <p class="section-kicker light">Capacidades técnicas</p>
-      <h2 class="light-title">Del centro de transformación al sistema completo.</h2>
-      <p class="dark-lead">El alcance se define de acuerdo con tensión, criticidad, tipo de activo, condiciones de operación, documentación disponible y objetivos del cliente.</p>
-    </div>
-
-    <div class="capability-layout">
-      <div class="capability-list">
-        <div class="capability-item">
-          <span>01</span>
-          <div><strong>Centros de media tensión</strong><p>Celdas, barras, conexiones, transformadores, alimentadores y equipos de maniobra.</p></div>
-        </div>
-        <div class="capability-item">
-          <span>02</span>
-          <div><strong>Instalaciones de alta tensión</strong><p>Evaluación visual y termográfica de equipos accesibles, según condiciones y procedimientos de seguridad del sitio.</p></div>
-        </div>
-        <div class="capability-item">
-          <span>03</span>
-          <div><strong>Transformadores de potencia</strong><p>Inspección de condición, puntos calientes, conexiones, enfriamiento y evidencia complementaria disponible.</p></div>
-        </div>
-        <div class="capability-item">
-          <span>04</span>
-          <div><strong>Protección y control</strong><p>Revisión documental y técnica de criterios de mantenimiento de interruptores, relés, CT/PT y sistemas auxiliares.</p></div>
-        </div>
-      </div>
-
-      <div class="capability-card">
-        <div class="capability-card-top">
-          <span>DIAGNOSTIC STACK</span>
-          <strong>Evidence first</strong>
-        </div>
-        <div class="diagnostic-row"><b>01</b><span>Inspección visual</span><em>Estado físico</em></div>
-        <div class="diagnostic-row"><b>02</b><span>Termografía IR</span><em>Comportamiento térmico</em></div>
-        <div class="diagnostic-row"><b>03</b><span>Histórico / tendencia</span><em>Degradación</em></div>
-        <div class="diagnostic-row"><b>04</b><span>Criticidad / riesgo</span><em>Prioridad</em></div>
-        <div class="diagnostic-row"><b>05</b><span>Plan de acción</span><em>Intervención</em></div>
+      <div class="condition-badges">
+        <span>INSPECCIONAR</span><i>→</i><span>MEDIR</span><i>→</i><span>INTERPRETAR</span><i>→</i><span>PRIORIZAR</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section condition-section" id="condicion">
-  <div class="container">
-    <div class="section-heading">
-      <p class="section-kicker">Condition-Based Maintenance</p>
-      <h2>Mantenimiento basado en condición, no sólo por calendario.</h2>
-      <p>La termografía es una fuente de evidencia dentro de un programa de mantenimiento. Su valor aumenta cuando los hallazgos se comparan con carga, condiciones ambientales, antecedentes, criticidad y otras pruebas disponibles.</p>
-    </div>
-
-    <div class="condition-grid">
-      <div class="condition-visual">
-        <div class="thermal-window">
-          <div class="thermal-toolbar"><span>IR FIELD REPORT</span><strong>LIVE ASSESSMENT</strong></div>
-          <div class="thermal-image">
-            <div class="thermal-grid"></div>
-            <div class="thermal-spot"></div>
-            <div class="thermal-label label-a">T1 · 52.4 °C</div>
-            <div class="thermal-label label-b">T2 · 37.8 °C</div>
-            <div class="thermal-scale"><span>LOW</span><i></i><span>HIGH</span></div>
-          </div>
-          <div class="thermal-footer">
-            <span>Thermal pattern</span>
-            <b>Compare • document • trend</b>
-          </div>
-        </div>
-      </div>
-
-      <div class="condition-steps">
-        <div class="step"><span>01</span><div><h3>Preparar</h3><p>Identificar activos, antecedentes, condiciones de carga, accesos y restricciones de seguridad.</p></div></div>
-        <div class="step"><span>02</span><div><h3>Medir</h3><p>Realizar inspección termográfica y otras verificaciones que formen parte del alcance aprobado.</p></div></div>
-        <div class="step"><span>03</span><div><h3>Interpretar</h3><p>Correlacionar diferencias térmicas con conexiones, carga, ventilación, estado del componente y contexto operativo.</p></div></div>
-        <div class="step"><span>04</span><div><h3>Decidir</h3><p>Clasificar hallazgos y proponer acciones según condición, criticidad, riesgo y evidencia disponible.</p></div></div>
-      </div>
-    </div>
-
-    <div class="note-box">
-      <strong>Importante:</strong> una imagen térmica por sí sola no determina la causa raíz. Las conclusiones técnicas deben considerar el contexto del activo, método de inspección, emisividad, condiciones ambientales, carga y evidencia complementaria.
-    </div>
-  </div>
-</section>
-
-<section class="section standards-section" id="normativa">
-  <div class="container">
-    <div class="section-heading split-heading">
+  <section class="compact-panel standards" id="normativa">
+    <div class="container standards-row">
       <div>
-        <p class="section-kicker">Marco técnico y de seguridad</p>
-        <h2>Referencias para estructurar el servicio.</h2>
+        <span class="panel-label">MARCO DE REFERENCIA</span>
+        <h2>NFPA 70B · RETIE · Resolución 5018 de 2019</h2>
+        <p>El servicio se estructura con las referencias técnicas y reglamentarias que correspondan a la instalación, actividad, cliente y edición vigente.</p>
       </div>
-      <p>La prestación se plantea tomando como referencias técnicas las normas y reglamentos aplicables al tipo de instalación y actividad. La edición vigente debe verificarse al momento de ejecutar el trabajo.</p>
-    </div>
-
-    <div class="standards-grid">
-      <a class="standard-card" href="https://link.nfpa.org/all-publications/70B/2026" target="_blank" rel="noopener">
-        <span class="standard-code">NFPA 70B</span>
-        <h3>Electrical Equipment Maintenance</h3>
-        <p>Programa documentado de mantenimiento, inspección, pruebas, servicio, condición y registros.</p>
-        <small>Edición 2026 · NFPA LiNK ↗</small>
-      </a>
-
-      <a class="standard-card" href="https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-instalaciones-el%C3%A9ctricas-retie/" target="_blank" rel="noopener">
-        <span class="standard-code">RETIE</span>
-        <h3>Reglamento Técnico de Instalaciones Eléctricas</h3>
-        <p>Referencia reglamentaria colombiana para instalaciones y requisitos de seguridad y conformidad aplicables.</p>
-        <small>Versión vigente indicada por MinEnergía: Resolución 40284 de 2026 ↗</small>
-      </a>
-
-      <a class="standard-card" href="https://normograma.superservicios.gov.co/normograma/compilacion/docs/resolucion_mtra_5018_2019.htm" target="_blank" rel="noopener">
-        <span class="standard-code">RES. 5018</span>
-        <h3>Seguridad y salud en el trabajo</h3>
-        <p>Lineamientos de SST para procesos de generación, transmisión, distribución y comercialización de energía eléctrica.</p>
-        <small>Resolución 5018 de 2019 · Ministerio del Trabajo ↗</small>
-      </a>
-    </div>
-
-    <div class="standards-note">
-      <span>FRAMEWORK</span>
-      <p>El alcance contractual, los procedimientos de seguridad, las exigencias del cliente, los fabricantes y demás normas aplicables prevalecen sobre cualquier resumen incluido en esta página.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section gallery-section">
-  <div class="container">
-    <div class="section-heading">
-      <p class="section-kicker">Referencia visual</p>
-      <h2>Infraestructura de sistemas de potencia.</h2>
-      <p>Imágenes de referencia con enlaces a sus archivos de Wikimedia Commons. No representan trabajos ejecutados por PowerAI-Energy.</p>
-    </div>
-
-    <div class="photo-grid">
-      <figure class="photo-card photo-large">
-        <a href="https://commons.wikimedia.org/wiki/File:Transformer_at_substation.jpg" target="_blank" rel="noopener">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Transformer_at_substation.jpg" alt="Transformadores en una subestación eléctrica">
-        </a>
-        <figcaption><strong>Transformación de potencia</strong><span>Activo crítico para evaluación de condición y confiabilidad.</span><small>Wikideas1 · CC0 1.0 · Wikimedia Commons</small></figcaption>
-      </figure>
-
-      <figure class="photo-card">
-        <a href="https://commons.wikimedia.org/wiki/File:Distribution_substation_switchgear.jpg" target="_blank" rel="noopener">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Distribution_substation_switchgear.jpg" alt="Switchgear de una subestación de distribución">
-        </a>
-        <figcaption><strong>Switchgear</strong><span>Maniobra, protección y distribución.</span><small>Rsparks3 · CC0 1.0 · Wikimedia Commons</small></figcaption>
-      </figure>
-
-      <figure class="photo-card">
-        <a href="https://commons.wikimedia.org/wiki/File:Power_transmission_tower.jpg" target="_blank" rel="noopener">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Power_transmission_tower.jpg" alt="Torre de transmisión de energía eléctrica">
-        </a>
-        <figcaption><strong>Transmisión eléctrica</strong><span>Infraestructura de transporte de energía.</span><small>Nirbhaynt · CC BY-SA 4.0 · Wikimedia Commons</small></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="container cta-grid">
-    <div>
-      <span>POWERAI-ENERGY</span>
-      <h2>Convierta la condición del activo en una decisión de mantenimiento.</h2>
-      <p>Comparta tipo de instalación, nivel de tensión, activos críticos y necesidad principal para preparar un alcance técnico.</p>
-    </div>
-    <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico →</a>
-  </div>
-</section>
-
-<section class="section contact-section" id="contacto">
-  <div class="container contact-card">
-    <div class="contact-copy">
-      <p class="section-kicker">Contacto</p>
-      <h2>Asesoría técnica para sus activos eléctricos.</h2>
-      <p>Atención para levantamiento de requerimientos, programación de inspecciones y estructuración de servicios de mantenimiento basado en condición.</p>
-
-      <div class="contact-direct">
-        <span class="status-dot"></span>
-        <div>
-          <strong>Contacto directo</strong>
-          <div class="contact-items">
-            <a class="contact-item" href="https://wa.me/573150300034" target="_blank" rel="noopener">
-              <span class="contact-icon whatsapp-icon" aria-hidden="true">WA</span>
-              <span><small>WhatsApp</small><b>@PowerAI_Energy</b></span>
-            </a>
-            <a class="contact-item" href="tel:+573150300034">
-              <span class="contact-icon" aria-hidden="true">TEL</span>
-              <span><small>Teléfono</small><b>+57 315 030 0034</b></span>
-            </a>
-            <a class="contact-item" href="https://github.com/PowerAI-Energy" target="_blank" rel="noopener">
-              <span class="contact-icon" aria-hidden="true">GH</span>
-              <span><small>GitHub</small><b>PowerAI-Energy</b></span>
-            </a>
-            <a class="contact-item" href="mailto:PowerAI.Energy@gmail.com">
-              <span class="contact-icon mail-icon" aria-hidden="true">MAIL</span>
-              <span><small>Correo</small><b>PowerAI.Energy@gmail.com</b></span>
-            </a>
-            <a class="contact-item" href="mailto:engineer@outlook.co.il">
-              <span class="contact-icon mail-icon" aria-hidden="true">MAIL</span>
-              <span><small>Correo</small><b>engineer@outlook.co.il</b></span>
-            </a>
-            <a class="contact-item" href="https://powerai-energy.github.io/" target="_blank" rel="noopener">
-              <span class="contact-icon" aria-hidden="true">WEB</span>
-              <span><small>Sitio web</small><b>powerai-energy.github.io</b></span>
-            </a>
-          </div>
-        </div>
+      <div class="standards-links">
+        <a href="https://link.nfpa.org/all-publications/1451/2007" target="_blank" rel="noopener"><strong>NFPA 70B</strong><span>Edición 2026 publicada por NFPA LiNK ↗</span></a>
+        <a href="https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-instalaciones-el%C3%A9ctricas-retie/" target="_blank" rel="noopener"><strong>RETIE</strong><span>Información oficial del Ministerio ↗</span></a>
+        <a href="https://normograma.superservicios.gov.co/normograma/compilacion/docs/resolucion_mtra_5018_2019.htm" target="_blank" rel="noopener"><strong>RES. 5018</strong><span>Consulta del texto normativo ↗</span></a>
       </div>
     </div>
+  </section>
 
-    <form class="contact-form" id="contact-form">
-      <div class="form-title"><span>REQUEST</span><strong>Solicitar evaluación técnica</strong></div>
-      <label>Nombre<input type="text" name="nombre" placeholder="Su nombre" required></label>
-      <label>Empresa<input type="text" name="empresa" placeholder="Empresa / organización"></label>
-      <div class="form-two">
-        <label>Correo<input type="email" name="email" placeholder="correo@empresa.com" required></label>
-        <label>Nivel de tensión<input type="text" name="tension" placeholder="Ej.: 13.2 kV / 34.5 kV / AT"></label>
-      </div>
-      <label>Activo o instalación<textarea name="mensaje" rows="5" placeholder="Ej.: centro de MT, transformador de potencia, switchgear, inspección termográfica..." required></textarea></label>
-      <button class="btn btn-primary" type="submit">Preparar solicitud por WhatsApp <span>→</span></button>
-      <small>El formulario prepara el mensaje para WhatsApp y no almacena datos en esta página.</small>
-    </form>
-  </div>
-</section>
-
+  <section class="contact-teaser">
+    <div class="container contact-teaser-inner">
+      <div><span>POWERAI-ENERGY</span><h2>Solicite un alcance técnico para su instalación.</h2></div>
+      <a class="btn btn-primary" href="contacto.html" target="_blank" rel="noopener">Abrir contacto ↗</a>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
-  <div class="container footer-row">
-    <div class="brand footer-brand"><span class="brand-mark">P</span><span>PowerAI-Energy</span></div>
-    <p>Ingeniería • Sistemas eléctricos de potencia • Mantenimiento basado en condición</p>
+  <div class="container footer-inner">
     <span>© <span id="year"></span> PowerAI-Energy</span>
+    <span>Ingeniería • Sistemas eléctricos de potencia • Mantenimiento basado en condición</span>
+    <span>Imágenes: Wikimedia Commons · CC0</span>
   </div>
 </footer>
 
