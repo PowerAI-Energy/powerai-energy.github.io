@@ -1,1 +1,19 @@
-const menuToggle=document.querySelector('.menu-toggle'),navLinks=document.querySelector('#nav-links');menuToggle?.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open))});document.querySelectorAll('#nav-links a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle?.setAttribute('aria-expanded','false')}));document.querySelector('#year').textContent=new Date().getFullYear();const CONTACT_PHONE='573150300034',form=document.querySelector('#contact-form');form?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form),text=['Solicitud de servicios — PowerAI-Energy',`Nombre: ${d.get('nombre')}`,d.get('empresa')?`Empresa: ${d.get('empresa')}`:'',`Correo: ${d.get('email')}`,`Necesidad: ${d.get('mensaje')}`].filter(Boolean).join('\n');window.open(`https://wa.me/${CONTACT_PHONE}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer')});
+const menuToggle=document.querySelector('.menu-toggle'),navLinks=document.querySelector('#nav-links');
+menuToggle?.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open))});
+document.querySelectorAll('#nav-links a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle?.setAttribute('aria-expanded','false')}));
+const year=document.querySelector('#year'); if(year) year.textContent=new Date().getFullYear();
+const CONTACT_PHONE='573150300034';
+const form=document.querySelector('#contact-form');
+form?.addEventListener('submit',e=>{
+  e.preventDefault();
+  const d=new FormData(form);
+  const text=[
+    'Solicitud de servicios — PowerAI-Energy',
+    `Nombre: ${d.get('nombre')}`,
+    d.get('empresa')?`Empresa: ${d.get('empresa')}`:'',
+    `Correo: ${d.get('email')}`,
+    d.get('tension')?`Nivel de tensión: ${d.get('tension')}`:'',
+    `Activo / instalación: ${d.get('mensaje')}`
+  ].filter(Boolean).join('\n');
+  window.open(`https://wa.me/${CONTACT_PHONE}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');
+});
