@@ -184,3 +184,65 @@ img{display:block;max-width:100%}
 .contact-form-panel form{display:grid;gap:12px}.contact-form-panel label{display:grid;gap:5px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#62798a;font-size:.63rem;font-weight:800}.contact-form-panel input,.contact-form-panel textarea{width:100%;padding:11px 12px;border:1px solid #cbd9e1;border-radius:6px;background:#fcfeff;color:var(--text);outline:none;font-family:'Barlow',sans-serif;font-size:.82rem;letter-spacing:0;text-transform:none;font-weight:400}.contact-form-panel input:focus,.contact-form-panel textarea:focus{border-color:#82b8d0;box-shadow:0 0 0 3px rgba(44,134,180,.10)}.contact-form-panel textarea{resize:vertical;min-height:120px}.contact-form-panel .btn{width:100%;border:0;margin-top:2px}.contact-form-panel form>small{color:#8395a0;font-size:.57rem}.form-footer{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:17px;padding-top:12px;border-top:1px solid var(--line);color:#81939e;font-size:.58rem}.form-footer a{color:var(--blue);font-weight:800}
 @media(max-width:920px){.contact-main{padding-top:118px;align-items:flex-start}.contact-shell{grid-template-columns:1fr}.contact-info h1{max-width:700px}.direct-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:720px){.contact-main{padding:104px 0 24px}.contact-info,.contact-form-panel{padding:24px}.direct-grid{grid-template-columns:1fr}.contact-info h1{font-size:3rem}.contact-reference,.form-footer{flex-direction:column;align-items:flex-start}.contact-reference strong{text-align:left}.topbar-inner span:last-child{display:none}}
+
+/* Power systems service portfolio */
+.power-services{background:#fff}
+.power-services-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:18px}
+.power-services-head h2{max-width:760px}
+.service-more{font-family:'Barlow Condensed',sans-serif;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:800;border-bottom:1px solid #bfd4df;padding-bottom:4px;white-space:nowrap}
+.power-service-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.power-service-card{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:17px 15px;min-height:110px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.power-service-card:nth-child(4n){border-right:0}
+.power-service-card:nth-last-child(-n+4){border-bottom:0}
+.ps-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:5px;background:var(--navy);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:800}
+.power-service-card h3{font-family:'Barlow Condensed',sans-serif;color:var(--navy);font-size:1rem;line-height:1.05;margin:1px 0 4px}
+.power-service-card p{font-size:.61rem;color:var(--muted);line-height:1.35;margin:0}
+.services-page{background:#f4f7f9}
+.services-main{padding:126px 0 45px}
+.services-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center;padding-bottom:30px}
+.services-hero h1{font-family:'Barlow Condensed',sans-serif;color:var(--navy);font-size:clamp(3rem,5.5vw,5rem);line-height:.9;letter-spacing:-.04em;margin:10px 0 15px}
+.services-hero h1 em{font-style:normal;color:var(--blue)}
+.services-hero p{color:var(--muted);max-width:720px;font-size:.88rem;margin:0}
+.services-hero-card{background:var(--navy);border:1px solid #294b61;border-radius:8px;padding:24px;color:#fff}
+.services-hero-card span{font-family:'Barlow Condensed',sans-serif;font-size:.61rem;letter-spacing:.14em;color:#9ec1d2}
+.services-hero-card h2{font-family:'Barlow Condensed',sans-serif;font-size:2rem;line-height:1;color:#fff;margin:8px 0}
+.services-hero-card p{font-size:.7rem;color:#9db4c2}
+.portfolio-group{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.portfolio-group-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;align-items:center}
+.portfolio-group-head h2{font-family:'Barlow Condensed',sans-serif;color:var(--navy);font-size:1.65rem;margin:0}
+.portfolio-group-head span{font-family:'Barlow Condensed',sans-serif;color:#8597a2;font-size:.58rem;letter-spacing:.1em}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.portfolio-card{padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:185px}
+.portfolio-card:nth-child(3n){border-right:0}
+.portfolio-card:nth-last-child(-n+3){border-bottom:0}
+.portfolio-card .pc-icon{width:36px;height:36px;display:grid;place-items:center;background:var(--blue-soft);border:1px solid #c9dfe8;color:var(--blue);border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:.63rem;font-weight:800}
+.portfolio-card h3{font-family:'Barlow Condensed',sans-serif;color:var(--navy);font-size:1.25rem;line-height:1.05;margin:13px 0 7px}
+.portfolio-card p{margin:0;color:var(--muted);font-size:.68rem;line-height:1.45}
+.portfolio-card small{display:block;margin-top:12px;color:#8798a3;font-size:.56rem}
+.services-disclaimer{margin-top:18px;padding:13px 15px;border-left:3px solid var(--gold);background:#fff;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:#788b97;font-size:.65rem}
+.services-disclaimer strong{color:var(--navy)}
+@media(max-width:980px){
+  .power-services-head{align-items:start}
+  .power-service-grid{grid-template-columns:repeat(2,1fr)}
+  .power-service-card:nth-child(4n){border-right:1px solid var(--line)}
+  .power-service-card:nth-child(2n){border-right:0}
+  .power-service-card:nth-last-child(-n+4){border-bottom:1px solid var(--line)}
+  .power-service-card:nth-last-child(-n+2){border-bottom:0}
+  .services-hero{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-card:nth-child(3n){border-right:1px solid var(--line)}
+  .portfolio-card:nth-child(2n){border-right:0}
+  .portfolio-card:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+  .portfolio-card:nth-last-child(-n+2){border-bottom:0}
+}
+@media(max-width:720px){
+  .power-services-head{display:block}
+  .service-more{display:inline-block;margin-top:11px}
+  .power-service-grid{grid-template-columns:1fr}
+  .power-service-card,.power-service-card:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}
+  .power-service-card:last-child{border-bottom:0}
+  .services-main{padding-top:101px}
+  .portfolio-grid{grid-template-columns:1fr}
+  .portfolio-card,.portfolio-card:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}
+  .portfolio-card:last-child{border-bottom:0}
+}
