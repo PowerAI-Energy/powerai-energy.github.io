@@ -34,6 +34,38 @@
   </nav>
 </header>
 
+<div class="live-data-ticker" aria-label="Indicadores económicos y clima local">
+  <div class="ticker-viewport">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-item ticker-label">POWERAI LIVE DATA</span>
+      <span class="ticker-item">USD/COP <b id="fx-usd">—</b></span>
+      <span class="ticker-item">EUR/COP <b id="fx-eur">—</b></span>
+      <span class="ticker-item">GBP/COP <b id="fx-gbp">—</b></span>
+      <span class="ticker-item weather-item">CLIMA <b id="weather-summary">Solicitar ubicación</b></span>
+      <span class="ticker-item">TEMP. <b id="weather-temp">—</b></span>
+      <span class="ticker-item">HUMEDAD <b id="weather-humidity">—</b></span>
+      <span class="ticker-item">VIENTO <b id="weather-wind">—</b></span>
+      <span class="ticker-item">ALTITUD <b id="weather-altitude">—</b></span>
+      <button class="ticker-location" id="location-button" type="button">⌖ Mostrar clima de mi ubicación</button>
+    </div>
+  </div>
+</div>
+
+<div class="location-modal" id="location-modal" aria-hidden="true">
+  <div class="location-dialog" role="dialog" aria-modal="true" aria-labelledby="location-title">
+    <button class="location-close" id="location-close" type="button" aria-label="Cerrar">×</button>
+    <div class="location-icon">⌖</div>
+    <span class="panel-label">CLIMA LOCAL</span>
+    <h2 id="location-title">¿Desea mostrar el clima de su ubicación?</h2>
+    <p>PowerAI-Energy usará la ubicación del dispositivo únicamente para consultar el estado meteorológico local y mostrar ciudad, altitud, temperatura, humedad, viento y otras variables en esta sesión.</p>
+    <div class="location-actions">
+      <button class="btn btn-primary" id="location-allow" type="button">Permitir ubicación</button>
+      <button class="btn btn-light" id="location-deny" type="button">Ahora no</button>
+    </div>
+    <small>La ubicación no se guarda en GitHub ni se publica en la página.</small>
+  </div>
+</div>
+
 <main id="inicio">
   <section class="hero-screen">
     <div class="container hero-layout">
@@ -164,6 +196,8 @@
     </div>
   </section>
 </main>
+
+<div class="data-attribution"><div class="container"><span>Fuentes: tipos de cambio Frankfurter / fuentes oficiales agregadas • meteorología MET Norway • geolocalización de ciudad BigDataCloud.</span><span><a href="https://frankfurter.dev/" target="_blank" rel="noopener">Frankfurter ↗</a> · <a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway ↗</a> · <a href="https://www.bigdatacloud.com/geocoding-apis/free-reverse-geocode-to-city-api" target="_blank" rel="noopener">BigDataCloud ↗</a></span></div></div>
 
 <footer class="footer">
   <div class="container footer-inner">
