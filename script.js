@@ -100,6 +100,12 @@ try{
 }catch(e){}
 
 // Save only non-identifying coordinates for this browser session/storage when permission was granted.
+setTimeout(()=>{
+  try{
+    if(!localStorage.getItem('powerai_weather_consent')) openLocationModal();
+  }catch(e){openLocationModal()}
+},2200);
+
 const originalUpdate=updateLocalWeather;
 updateLocalWeather=async function(lat,lon){
   try{localStorage.setItem('powerai_weather_coords',JSON.stringify({lat:Number(lat).toFixed(4),lon:Number(lon).toFixed(4)}));}catch(e){}
