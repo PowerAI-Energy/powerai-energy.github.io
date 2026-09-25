@@ -21,7 +21,6 @@
 
 <main class="contact-main">
   <div class="container contact-shell">
-
     <section class="contact-info">
       <div class="contact-kicker"><span></span> CONTACTO TÉCNICO</div>
       <h1>Conectemos la ingeniería con la condición real del activo.</h1>
@@ -57,8 +56,12 @@
     </section>
 
     <section class="contact-form-panel">
-      <div class="form-title"><span>REQUEST / FIELD SERVICE</span><strong>Prepare su solicitud técnica.</strong><p>Cuéntenos qué necesita para estructurar un primer alcance.</p></div>
-      <form id="contact-form">
+      <div class="form-title"><span>REQUEST / FIELD SERVICE</span><strong>Prepare su solicitud técnica.</strong><p>La información se enviará al correo configurado.</p></div>
+      <form id="contact-form" action="https://formsubmit.co/PowerAI.Energy@gmail.com" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Nueva solicitud técnica — PowerAI-Energy">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://powerai-energy.github.io/gracias.html">
+        <input type="hidden" name="_honey" value="">
         <div class="form-grid-two">
           <label>Nombre<input name="nombre" required placeholder="Su nombre"></label>
           <label>Empresa<input name="empresa" placeholder="Empresa / organización"></label>
@@ -77,9 +80,14 @@
           <option>Transformador / subestación</option><option>Otro requerimiento técnico</option>
         </select></label>
         <label>Descripción del requerimiento<textarea name="mensaje" rows="5" required placeholder="Describa brevemente la instalación, activo, problema o servicio requerido."></textarea></label>
-        <button class="btn btn-primary" type="submit"><span>Enviar solicitud por WhatsApp</span><b>→</b></button>
-        <small class="privacy-note">Se abrirá WhatsApp con la información diligenciada. Esta página no almacena sus datos.</small>
+        <button class="btn btn-primary" type="submit"><span>Enviar solicitud</span><b>→</b></button>
+        <small class="privacy-note">El envío utiliza FormSubmit para entregar la solicitud por correo. En el primer envío puede solicitar una confirmación de la dirección receptora.</small>
       </form>
+      <div class="whatsapp-direct">
+        <span class="small-round-icon whatsapp-mini"><svg viewBox="0 0 24 24"><path d="M12 3.15a8.76 8.76 0 0 0-7.58 13.14L3.12 21l4.88-1.27A8.76 8.76 0 1 0 12 3.15Z"/></svg></span>
+        <div><strong>¿Prefiere contacto inmediato?</strong><small>Escriba directamente por WhatsApp: +57 315 030 0034</small></div>
+        <a href="https://wa.me/573150300034" target="_blank" rel="noopener">Abrir WhatsApp ↗</a>
+      </div>
       <div class="form-footer"><span>PowerAI-Energy · Ingeniería en sistemas eléctricos de potencia</span><a href="servicios.html">Ver portafolio técnico →</a></div>
     </section>
   </div>
