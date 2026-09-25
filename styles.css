@@ -155,3 +155,32 @@ img{display:block;max-width:100%}
   .contact-teaser .btn{width:100%}
   .footer-inner{padding:13px 0;display:grid;justify-content:center;text-align:center}
 }
+
+/* Contact page — dedicated technical contact experience */
+.contact-page{background:linear-gradient(120deg,#f1f5f7 0%,#ffffff 60%,#edf3f6 100%);min-height:100vh}
+.contact-main{min-height:calc(100vh - 98px);padding:125px 0 38px;display:flex;align-items:center}
+.contact-shell{display:grid;grid-template-columns:.95fr 1.05fr;gap:24px;align-items:stretch}
+.contact-info,.contact-form-panel{border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.96);box-shadow:var(--shadow)}
+.contact-info{padding:34px}
+.contact-info h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,4.5vw,4.6rem);line-height:.92;letter-spacing:-.04em;color:var(--navy);margin:10px 0 14px;max-width:560px}
+.contact-intro{color:var(--muted);font-size:.82rem;max-width:550px;margin:0}
+.contact-status{display:flex;align-items:center;gap:10px;margin:21px 0 18px;padding:11px 13px;border:1px solid #d4e3e9;background:#f7fbfc;border-radius:7px}
+.contact-status .status-dot{width:8px;height:8px;flex:0 0 auto;margin:0;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(82,189,135,.10)}
+.contact-status strong{display:block;font-family:'Barlow Condensed',sans-serif;color:var(--navy);font-size:.9rem}
+.contact-status small{display:block;color:#81939e;font-size:.58rem}
+.direct-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.direct-card{display:grid;grid-template-columns:40px 1fr;gap:10px;align-items:center;padding:11px;border:1px solid var(--line);border-radius:7px;background:#fbfdfe;transition:.18s transform,.18s border-color,.18s background,.18s box-shadow}
+.direct-card:hover{transform:translateY(-2px);border-color:#b8d3de;background:#fff;box-shadow:0 8px 18px rgba(11,34,53,.06)}
+.direct-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:7px;background:#eaf4f8;color:var(--blue)}
+.direct-icon svg{width:20px;height:20px;fill:currentColor}
+.direct-card.whatsapp .direct-icon{background:#e8f7ef;color:#279b6d}.direct-card.phone .direct-icon{background:#eef4fa;color:#3f7295}.direct-card.email .direct-icon{background:#f0f5f8;color:#2c7299}.direct-card.github .direct-icon{background:#eef2f5;color:#20394a}.direct-card.web .direct-icon{background:#edf6fa;color:#17678f}
+.direct-card small{display:block;font-family:'Barlow Condensed',sans-serif;letter-spacing:.09em;font-size:.55rem;color:#80939f;font-weight:800}
+.direct-card b{display:block;color:var(--navy);font-size:.7rem;font-weight:800;overflow-wrap:anywhere;line-height:1.22;margin-top:2px}
+.direct-card em{display:block;color:var(--blue);font-style:normal;font-size:.56rem;margin-top:3px}
+.contact-reference{margin-top:17px;padding:12px 13px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px}
+.contact-reference span{font-family:'Barlow Condensed',sans-serif;color:#7f929e;font-size:.56rem;letter-spacing:.12em;font-weight:800}.contact-reference strong{color:var(--navy);font-size:.66rem;text-align:right}
+.contact-form-panel{padding:34px;display:flex;flex-direction:column;justify-content:center}
+.form-title{margin-bottom:18px}.form-title>span{display:block;font-family:'Barlow Condensed',sans-serif;color:var(--blue-2);letter-spacing:.14em;font-size:.6rem;font-weight:800}.form-title>strong{display:block;font-family:'Barlow Condensed',sans-serif;color:var(--navy);font-size:1.75rem;line-height:1.02;margin-top:5px}.form-title>p{color:var(--muted);font-size:.68rem;margin:6px 0 0;max-width:500px}
+.contact-form-panel form{display:grid;gap:12px}.contact-form-panel label{display:grid;gap:5px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#62798a;font-size:.63rem;font-weight:800}.contact-form-panel input,.contact-form-panel textarea{width:100%;padding:11px 12px;border:1px solid #cbd9e1;border-radius:6px;background:#fcfeff;color:var(--text);outline:none;font-family:'Barlow',sans-serif;font-size:.82rem;letter-spacing:0;text-transform:none;font-weight:400}.contact-form-panel input:focus,.contact-form-panel textarea:focus{border-color:#82b8d0;box-shadow:0 0 0 3px rgba(44,134,180,.10)}.contact-form-panel textarea{resize:vertical;min-height:120px}.contact-form-panel .btn{width:100%;border:0;margin-top:2px}.contact-form-panel form>small{color:#8395a0;font-size:.57rem}.form-footer{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:17px;padding-top:12px;border-top:1px solid var(--line);color:#81939e;font-size:.58rem}.form-footer a{color:var(--blue);font-weight:800}
+@media(max-width:920px){.contact-main{padding-top:118px;align-items:flex-start}.contact-shell{grid-template-columns:1fr}.contact-info h1{max-width:700px}.direct-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.contact-main{padding:104px 0 24px}.contact-info,.contact-form-panel{padding:24px}.direct-grid{grid-template-columns:1fr}.contact-info h1{font-size:3rem}.contact-reference,.form-footer{flex-direction:column;align-items:flex-start}.contact-reference strong{text-align:left}.topbar-inner span:last-child{display:none}}
