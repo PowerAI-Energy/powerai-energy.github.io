@@ -427,3 +427,5 @@ body.modal-open{overflow:hidden}
 .thermal-real-card img{width:100%;height:auto!important;max-height:520px;object-fit:contain!important;display:block;background:#0b2639}
 .thermal-real-card figcaption{width:100%}
 @media(max-width:720px){.thermal-real-card img{width:100%;height:auto!important;max-height:none}}
+
+.image-license-details{margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:11px 14px;color:#7f919b;font-size:.58rem}.image-license-details summary{cursor:pointer;color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.04em}.image-license-details p{margin:8px 0 6px;line-height:1.45}.image-license-details ul{margin:0;padding-left:17px;line-height:1.45}.image-license-details li{margin:2px 0}
