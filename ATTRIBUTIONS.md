@@ -1,6 +1,6 @@
 # Atribuciones de imágenes — PowerAI-Energy
 
-Las fotografías de terceros utilizadas en el sitio son referencias visuales de entornos industriales y no representan trabajos ejecutados por PowerAI-Energy ni implican endorsement de las instalaciones o marcas mostradas.
+Las fotografías de terceros utilizadas en el sitio son referencias visuales de entornos industriales y no representan trabajos ejecutados por PowerAI-Energy ni implican respaldo, patrocinio o relación comercial con las instalaciones o marcas mostradas.
 
 ## Fotografías
 
