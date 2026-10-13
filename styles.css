@@ -626,3 +626,22 @@ main p{font-size:1rem;line-height:1.65}
 .image-rights-details ul{padding-left:20px;margin:10px 0}
 .image-rights-details li{margin:8px 0;overflow-wrap:anywhere}
 .image-rights-details a{text-decoration:underline;text-underline-offset:3px;color:var(--blue)}
+
+/* Contextual imagery supports service scope and professional assurance. */
+.home-hero-photo{justify-self:center;max-width:540px;box-shadow:var(--shadow)}
+.home-hero-photo img{height:310px}
+.operational-assurance{background:var(--surface);padding:48px 0}
+.assurance-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:28px}
+.assurance-story h3{color:var(--navy);font-size:1.4rem;margin:0 0 12px}
+.assurance-story p{color:var(--muted);max-width:560px;margin:0 0 18px}
+.assurance-story .industrial-photo{max-width:500px;justify-self:center}
+.assurance-story-reverse .industrial-photo{grid-column:2;grid-row:1}
+.assurance-story-reverse>div{grid-column:1;grid-row:1}
+.industrial-photo-story .industrial-photo{max-width:480px;justify-self:center}
+.industrial-photo-story img{height:300px;object-fit:contain;background:var(--blue-soft)}
+.nfpa-real-visual{display:block;max-width:520px;width:100%;justify-self:center}
+.nfpa-real-visual .real-photo img{height:290px}
+.asset-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.asset-photo-card img{height:260px;object-fit:contain;background:#0b2235}
+@media(max-width:980px){.home-hero-photo{margin-top:24px}.single-screen .hero-copy{display:block}}
+@media(max-width:720px){.assurance-story{grid-template-columns:1fr;gap:20px}.assurance-story-reverse .industrial-photo,.assurance-story-reverse>div{grid-column:auto;grid-row:auto}.home-hero-photo img{height:230px}.operational-assurance{padding:32px 0}.asset-photo-grid{grid-template-columns:1fr}.nfpa-real-visual .real-photo img{height:230px}}
