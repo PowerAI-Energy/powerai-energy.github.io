@@ -1,16 +1,930 @@
 {
-  "generatedAt": "2026-10-13T18:02:11.772977+00:00",
+  "generatedAt": "2026-10-13T18:10:21.216905+00:00",
   "xm": {
-    "available": false,
-    "status": "unavailable",
-    "lastAttemptAt": "2026-10-13T18:02:11.772977+00:00",
-    "indicators": [],
-    "catalog": []
+    "available": true,
+    "indicators": [
+      {
+        "id": "DemaReal",
+        "name": "Demanda Real por Sistema",
+        "unit": "kWh",
+        "value": 2151192.83,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaCome",
+        "name": "Demanda Comercial por Sistema",
+        "unit": "kWh",
+        "value": 2151192.83,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "Gene",
+        "name": "Generación por Sistema",
+        "unit": "kWh",
+        "value": 9593767.43,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "GeneIdea",
+        "name": "Generación Ideal por Sistema",
+        "unit": "kWh",
+        "value": 9593767.43,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "factorEmisionCO2e",
+        "name": "Emisiones de CO2 Eq/kWh por Sistema",
+        "unit": "gCO2e/kWh",
+        "value": 221.25588,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "ImpoEner",
+        "name": "Importaciones Energía por Sistema",
+        "unit": "kWh",
+        "value": 456.65,
+        "date": "2026-10-10",
+        "period": "17:00–18:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "PerdidasEner",
+        "name": "Perdidas de Energía por Sistema",
+        "unit": "kWh",
+        "value": 165284.55,
+        "date": "2026-10-08",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "ExpoEner",
+        "name": "Exportaciones Energía por Sistema",
+        "unit": "kWh",
+        "value": 573.25,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaComeReg",
+        "name": "Demanda Comercial Mercado Regulado por Sistema",
+        "unit": "kWh",
+        "value": 2008543.74,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaComeNoReg",
+        "name": "Demanda Comercial Mercado No Regulado por Sistema",
+        "unit": "kWh",
+        "value": 71003.17,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaRealReg",
+        "name": "Demanda Real Regulada Sistema",
+        "unit": "kWh",
+        "value": 2008543.74,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaRealNoReg",
+        "name": "Demanda Real No Regulada Sistema",
+        "unit": "kWh",
+        "value": 71003.17,
+        "date": "2026-10-10",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "PerdidasEnerReg",
+        "name": "Perdidas de Energía Regulada Sistema",
+        "unit": "kWh",
+        "value": 112475.85,
+        "date": "2026-10-08",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "PerdidasEnerNoReg",
+        "name": "Perdidas de Energía No Regulada Sistema",
+        "unit": "kWh",
+        "value": 52784.1,
+        "date": "2026-10-08",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      }
+    ],
+    "catalog": [
+      {
+        "MetricId": "DemaReal",
+        "MetricName": "Demanda Real por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado Público)"
+      },
+      {
+        "MetricId": "DemaReal",
+        "MetricName": "Demanda Real por Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado Público)"
+      },
+      {
+        "MetricId": "DemaCome",
+        "MetricName": "Demanda Comercial por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "Gene",
+        "MetricName": "Generación por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Generacion neta de cada una de las plantas Nacionales en sus puntos de frontera."
+      },
+      {
+        "MetricId": "GeneIdea",
+        "MetricName": "Generación Ideal por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Despacho de generacion que resulta de considerar una red de transporte inexistente"
+      },
+      {
+        "MetricId": "ConsCombustibleMBTU",
+        "MetricName": "Consumo Combustible MBTU por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "MBTU",
+        "MetricDescription": "Los generadores térmicos deben reportar diariamente según resolución CREG 084 de 2005 el consumo de combustible en MBTU"
+      },
+      {
+        "MetricId": "ConsCombustibleMBTU",
+        "MetricName": "Consumo Combustible MBTU",
+        "Entity": "Combustible",
+        "Type": "HourlyEntities",
+        "MetricUnits": "MBTU",
+        "MetricDescription": "Los generadores térmicos deben reportar diariamente según resolución CREG 084 de 2005 el consumo de combustible en MBTU"
+      },
+      {
+        "MetricId": "Gene",
+        "MetricName": "Generación por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Generacion neta de cada una de las plantas Nacionales en sus puntos de frontera."
+      },
+      {
+        "MetricId": "IndRecMargina",
+        "MetricName": "Indicador Recurso Margina por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "#",
+        "MetricDescription": "Si Precio de Oferta Declarado = Máximo Precio de Oferta Nacional (para el recurso que esto se cumpla, es el recurso que margina)"
+      },
+      {
+        "MetricId": "DemaCome",
+        "MetricName": "Demanda Comercial por Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "GeneIdea",
+        "MetricName": "Generación Ideal por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Despacho de generacion que resulta de considerar una red de transporte inexistente"
+      },
+      {
+        "MetricId": "ConsCombAprox",
+        "MetricName": "Consumo Combustible Aproximado para el Factor de Emisión por RecursoComb",
+        "Entity": "RecursoComb",
+        "Type": "HourlyEntities",
+        "MetricUnits": "MBTU",
+        "MetricDescription": "Consumo aproximado de combustible de los generadores térmicos que no reportan diariamente consumo en MBTU, utilizado como insumo para el cálculo  de emisión de CO2 de los recursos."
+      },
+      {
+        "MetricId": "EmisionesCO2",
+        "MetricName": "Emisiones de CO2 por RecursoComb",
+        "Entity": "RecursoComb",
+        "Type": "HourlyEntities",
+        "MetricUnits": "TonCO2",
+        "MetricDescription": "Emisiones totales de dióxido de carbono (CO2) de las plantas de generación registradas ante el Centro Nacional de Despacho. Incluye tanto las obtenidas con base en el reporte de consumo de combustible"
+      },
+      {
+        "MetricId": "EmisionesCH4",
+        "MetricName": "Emisiones de CH4 por RecursoComb",
+        "Entity": "RecursoComb",
+        "Type": "HourlyEntities",
+        "MetricUnits": "TonCH4",
+        "MetricDescription": "Emisiones totales de Dióxido de Carbono (CH4)  de las plantas de generación registradas ante el Centro Nacional de Despacho, incluyendo las calculadas con base en información reportada y las estimadas"
+      },
+      {
+        "MetricId": "EmisionesN2O",
+        "MetricName": "Emisiones de N2O por RecursoComb",
+        "Entity": "RecursoComb",
+        "Type": "HourlyEntities",
+        "MetricUnits": "TonN2O",
+        "MetricDescription": "Emisiones totales de Dióxido de Carbono – N2O de las plantas de generación registradas ante el CND, incluye tanto las obtenidas con base en el reporte de consumo de combustible como las aproximadas po"
+      },
+      {
+        "MetricId": "EmisionesCO2Eq",
+        "MetricName": "Emisiones de CO2 Eq por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "gCO2e/kWh",
+        "MetricDescription": "Emisiones de dióxido de carbono equivalente expresadas como los gramos de dióxido de carbono equivalente emitidos a la atmósfera por cada kilovatio-hora (kWh) de electricidad generada por las plantas "
+      },
+      {
+        "MetricId": "factorEmisionCO2e",
+        "MetricName": "Emisiones de CO2 Eq/kWh por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "gCO2e/kWh",
+        "MetricDescription": "Factor de emisión de dióxido de carbono equivalente del sistema, correspondiente al Margen de Operación Simple (OM), expresado como los gramos de dióxido de carbono equivalente emitidos por cada kilov"
+      },
+      {
+        "MetricId": "ImpoEner",
+        "MetricName": "Importaciones Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Transferencias de Energia desde otros paises para abastecer la demanda nacional"
+      },
+      {
+        "MetricId": "ImpoEner",
+        "MetricName": "Importaciones Energía",
+        "Entity": "Enlace",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Transferencias de Energia desde otros paises para abastecer la demanda nacional"
+      },
+      {
+        "MetricId": "ExpoEner",
+        "MetricName": "Exportaciones Energía",
+        "Entity": "Enlace",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Transferencias de Energia desde Colombia hacia otros paises"
+      },
+      {
+        "MetricId": "DemaOR",
+        "MetricName": "Demanda por OR por Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda real del OR sin referir al STN, excluyendo la demanda de los usuarios conectados directamente al STN. Es decir que no se consideran las perdidas existentes en el STN."
+      },
+      {
+        "MetricId": "PerdidasEner",
+        "MetricName": "Perdidas de Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Cantidad de las inyecciones de energia al Sistema de Transmision Nacional (Generación), menos la cantidad de los flujos que salieron del Sistema (Demanda de energia reportada a traves de lectura de co"
+      },
+      {
+        "MetricId": "GeneSeguridad",
+        "MetricName": "Generación de Seguridad por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Generación que se requiere para garantizar condiciones de seguridad y confiabilidad, en la operación del Sistema Interconectado Nacional (SIN). Esta generación es programada por el CND en el Despacho "
+      },
+      {
+        "MetricId": "GeneFueraMerito",
+        "MetricName": "Generación Fuera de Mérito por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Cantidad de energía generada por recursos de generación que operan fuera de mérito para atender restricciones del Sistema Interconectado Nacional (SIN), aun cuando su precio de oferta sea superior al "
+      },
+      {
+        "MetricId": "ExpoEner",
+        "MetricName": "Exportaciones Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Transferencias de Energia desde Colombia hacia otros paises"
+      },
+      {
+        "MetricId": "GeneProgDesp",
+        "MetricName": "Generación Programada por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Despacho de generacion esperado de las centrales, que resulta de considerar la red de transporte real"
+      },
+      {
+        "MetricId": "GeneProgRedesp",
+        "MetricName": "Generación Programada Redespacho por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Generación programada del redespacho"
+      },
+      {
+        "MetricId": "DispoReal",
+        "MetricName": "Disponibilidad Real por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kW",
+        "MetricDescription": "Disponibilidad promedio calculada a partir de la fecha de los eventos que modifican la disponibilidad de las unidades de generacion de los generadores, asi como de la disponibilidad reportada al Centr"
+      },
+      {
+        "MetricId": "DispoCome",
+        "MetricName": "Disponibilidad Comercial por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kW",
+        "MetricDescription": "Considera la declaración de disponibilidad de los generadores, modificada cuando se presentan cambios en las unidades de generación en operación real del Sistema"
+      },
+      {
+        "MetricId": "DispoDeclarada",
+        "MetricName": "Disponibilidad Declarada por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Máxima cantidad de potencia neta que un generador puede suministrar al sistema durante el intervalo de tiempo determinado para el despacho económico o el redespacho, reportada diariamente en la oferta"
+      },
+      {
+        "MetricId": "RecoPosEner",
+        "MetricName": "Reconciliación Positiva Energía por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Es el valor de la compensacion positiva que se debe aplicar a los generadores para cada uno de sus recursos ofertados debido a las diferencias entre el despacho ideal y la generacion real. Este concep"
+      },
+      {
+        "MetricId": "RecoNegEner",
+        "MetricName": "Reconciliación Negativa Energía por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Costos asociados con generaciones desplazadas en el despacho real por Generaciones de Seguridad Fuera de Merito o por Redespachos (diferencia entre el despacho ideal y el real).Este concepto aplica de"
+      },
+      {
+        "MetricId": "DesvEner",
+        "MetricName": "Desviaciones Energía por Recurso",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Es la cantidad de energía que se desvía una Central cuando incumple el programa de generación"
+      },
+      {
+        "MetricId": "DemaComeReg",
+        "MetricName": "Demanda Comercial Mercado Regulado por Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "DemaComeNoReg",
+        "MetricName": "Demanda Comercial Mercado No Regulado por Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "DemaComeReg",
+        "MetricName": "Demanda Comercial Mercado Regulado por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "DemaComeNoReg",
+        "MetricName": "Demanda Comercial Mercado No Regulado por Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "DemaComeNoReg",
+        "MetricName": "Demanda Comercial por CIIU",
+        "Entity": "CIIU",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "DemaCome",
+        "MetricName": "Demanda Comercial por MercadoComercializacion",
+        "Entity": "MercadoComercializacion",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+      },
+      {
+        "MetricId": "DemaRealReg",
+        "MetricName": "Demanda Real Regulada Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado Público)"
+      },
+      {
+        "MetricId": "DemaRealReg",
+        "MetricName": "Demanda Real Regulada Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado Público)"
+      },
+      {
+        "MetricId": "DemaRealNoReg",
+        "MetricName": "Demanda Real No Regulada Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado Público)"
+      },
+      {
+        "MetricId": "DemaRealNoReg",
+        "MetricName": "Demanda Real No Regulada Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado Público)"
+      },
+      {
+        "MetricId": "PerdidasEnerReg",
+        "MetricName": "Perdidas de Energía Regulada Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Cantidad de las inyecciones de energia al Sistema de Transmision Nacional (Generación), menos la cantidad de los flujos que salieron del Sistema (Demanda de energia reportada a traves de lectura de co"
+      },
+      {
+        "MetricId": "PerdidasEnerReg",
+        "MetricName": "Perdidas de Energía Regulada Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Cantidad de las inyecciones de energia al Sistema de Transmision Nacional (Generación), menos la cantidad de los flujos que salieron del Sistema (Demanda de energia reportada a traves de lectura de co"
+      },
+      {
+        "MetricId": "PerdidasEnerNoReg",
+        "MetricName": "Perdidas de Energía No Regulada Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Cantidad de las inyecciones de energia al Sistema de Transmision Nacional (Generación), menos la cantidad de los flujos que salieron del Sistema (Demanda de energia reportada a traves de lectura de co"
+      },
+      {
+        "MetricId": "PerdidasEnerNoReg",
+        "MetricName": "Perdidas de Energía No Regulada Sistema",
+        "Entity": "Sistema",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Cantidad de las inyecciones de energia al Sistema de Transmision Nacional (Generación), menos la cantidad de los flujos que salieron del Sistema (Demanda de energia reportada a traves de lectura de co"
+      },
+      {
+        "MetricId": "PerdidasEner",
+        "MetricName": "Perdidas de Energía Agente",
+        "Entity": "Agente",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Cantidad de las inyecciones de energia al Sistema de Transmision Nacional (Generación), menos la cantidad de los flujos que salieron del Sistema (Demanda de energia reportada a traves de lectura de co"
+      },
+      {
+        "MetricId": "DesvGenVariableDesp",
+        "MetricName": "Desviación generación variable despacho",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Desviación de los recursos de generación variable de acuerdo con lo establecido en la Resolución CREG 060 de 2019, el valor es obtenido como la diferencia entre la generación real con respecto a la ge"
+      },
+      {
+        "MetricId": "DesvGenVariableRedesp",
+        "MetricName": "Desviación generación variable redespacho",
+        "Entity": "Recurso",
+        "Type": "HourlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Desviación de los recursos de generación variable de acuerdo con lo establecido en la Resolución CREG 060 de 2019, el valor es obtenido como la diferencia entre la generación real con respecto a la ge"
+      },
+      {
+        "MetricId": "AporEner",
+        "MetricName": "Aportes  Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Caudales en energia de los rios que aportan agua a algun embalse del SIN"
+      },
+      {
+        "MetricId": "VoluUtilDiarEner",
+        "MetricName": "Volumen Útil diario Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Volumen almacenado por encima del Nivel Minimo Tecnico, reportado diariamente por los agentes. En % corresponde a la relacion entre el Volumen Util Diario y la Capacidad Util del Embalse"
+      },
+      {
+        "MetricId": "CapEfecNeta",
+        "MetricName": "Capacidad Efectiva Neta por Recurso",
+        "Entity": "Recurso",
+        "Type": "DailyEntities",
+        "MetricUnits": "kW",
+        "MetricDescription": "Máxima cantidad de potencia neta que puede suministrar una unidad de generación en condiciones normales de operación. Incluye las menores y cogeneradores"
+      },
+      {
+        "MetricId": "DemaSIN",
+        "MetricName": "Demanda Energia SIN por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Demanda del SIN, la cual se calcula con base en la generacion neta de las plantas e incluye: hidraulicas, termicas, plantas menores, cogeneradores , solares, eolicas, demanda no atendida, limitacion d"
+      },
+      {
+        "MetricId": "AporEnerMediHist",
+        "MetricName": "Aportes Media Histórica Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Caudal medio mensual histórico en energia para los rios del SIN, obtenido como el promedio de los valores de cada mes para todos años con información disponibles "
+      },
+      {
+        "MetricId": "CapaUtilDiarEner",
+        "MetricName": "Capacidad Útil Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Corresponde al Volumen Útil del Embalse, que se define como el volumen almacenado entre el nivel Mínimo Técnico y el Nivel Máximo Físico"
+      },
+      {
+        "MetricId": "ObligEnerFirme",
+        "MetricName": "Obligación de Energía en Firme - OEF por Recurso",
+        "Entity": "Recurso",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "La OEF es un producto diseñado para garantizar la confiabilidad en el suministro de energía en el largo plazo a precios eficientes. Prorrata de la Energía Firme declarada para cada una de las Plantas "
+      },
+      {
+        "MetricId": "DemaNoAtenProg",
+        "MetricName": "Demanda No Atendida Programada por Area",
+        "Entity": "Area",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Es la demanda no atendida de energía del SIN por desconexiones forzadas o programadas"
+      },
+      {
+        "MetricId": "DemaNoAtenNoProg",
+        "MetricName": "Demanda No Atendida No Programada por Area",
+        "Entity": "Area",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Es la demanda no atendida de energía del SIN por desconexiones forzadas o programadas"
+      },
+      {
+        "MetricId": "DemaNoAtenProg",
+        "MetricName": "Demanda No Atendida Programada por Subarea",
+        "Entity": "Subarea",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Es la demanda no atendida de energía del SIN por desconexiones forzadas o programadas"
+      },
+      {
+        "MetricId": "DemaNoAtenNoProg",
+        "MetricName": "Demanda No Atendida No Programada por Subarea",
+        "Entity": "Subarea",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Es la demanda no atendida de energía del SIN por desconexiones forzadas o programadas"
+      },
+      {
+        "MetricId": "VoluUtilDiarEner",
+        "MetricName": "Volumen Útil diario Energía por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Volumen almacenado por encima del Nivel Minimo Tecnico, reportado diariamente por los agentes. En % corresponde a la relacion entre el Volumen Util Diario y la Capacidad Util del Embalse"
+      },
+      {
+        "MetricId": "CapaUtilDiarEner",
+        "MetricName": "Capacidad Útil Energía por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Corresponde al Volumen Útil del Embalse, que se define como el volumen almacenado entre el nivel Mínimo Técnico y el Nivel Máximo Físico"
+      },
+      {
+        "MetricId": "AporEner",
+        "MetricName": "Aportes  Energía por Rio",
+        "Entity": "Rio",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Caudales en energia de los rios que aportan agua a algun embalse del SIN"
+      },
+      {
+        "MetricId": "AporEnerMediHist",
+        "MetricName": "Aportes Media Histórica Energía por Rio",
+        "Entity": "Rio",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Caudal medio mensual histórico en energia para los rios del SIN, obtenido como el promedio de los valores de cada mes para todos años con información disponibles "
+      },
+      {
+        "MetricId": "DDVContratada",
+        "MetricName": "DDV Contratada por Recurso",
+        "Entity": "Recurso",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Valor total diario contratado por cada recurso de generación bajo el esquema de Demanda Desconectable Voluntaria."
+      },
+      {
+        "MetricId": "DemaMaxPot",
+        "MetricName": "Demanda Máxima de Potencia por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "kW",
+        "MetricDescription": "Es la máxima demanda de potencia, expresada en MW, requerida por el SIN en un instante de tiempo. Conocida también como demanda pico."
+      },
+      {
+        "MetricId": "VoluUtilDiarMasa",
+        "MetricName": "Volumen Útil diario por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3",
+        "MetricDescription": "Definida como el volumen almacenado en el embalse por encima del Nivel Mínimo Técnico, inició su declaración diaria por parte de los agentes hidráulicos del mercado desde julio 11 de 2004 (Acuerdo 294"
+      },
+      {
+        "MetricId": "VertMasa",
+        "MetricName": "Vertimientos Volumen por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3",
+        "MetricDescription": "Los vertimientos estan relacionados con la cantidad de agua que debe ser evacuada en los embalses cuando la reserva sobrepasa la capacidad maxima de almacenamiento."
+      },
+      {
+        "MetricId": "AporCaudal",
+        "MetricName": "Aportes Caudal por Rio",
+        "Entity": "Rio",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3/s",
+        "MetricDescription": "Valores de la hidrologia de los caudales de los rios del SIN, en metros cubicos por segundo"
+      },
+      {
+        "MetricId": "AporCaudalMediHist",
+        "MetricName": "Aportes Media Histórica Caudal por Rio",
+        "Entity": "Rio",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3/s",
+        "MetricDescription": "Caudal medio mensual histórico para los rios del SIN, obtenido como el promedio de los valores de cada mes para todos años con información disponibles"
+      },
+      {
+        "MetricId": "DescMasa",
+        "MetricName": "Descargas por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3",
+        "MetricDescription": "Agua descargada del embalse por compuertas de fondo o cualquier otro sistema, expresado en m3."
+      },
+      {
+        "MetricId": "VertEner",
+        "MetricName": "Vertimientos Energía por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Los vertimientos estan relacionados con la cantidad de agua que debe ser evacuada en los embalses cuando la reserva sobrepasa la capacidad maxima de almacenamiento."
+      },
+      {
+        "MetricId": "VertEner",
+        "MetricName": "Vertimientos Energía por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "Los vertimientos estan relacionados con la cantidad de agua que debe ser evacuada en los embalses cuando la reserva sobrepasa la capacidad maxima de almacenamiento."
+      },
+      {
+        "MetricId": "CapaUtilDiarMasa",
+        "MetricName": "Capacidad Útil Volumen por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3",
+        "MetricDescription": "Corresponde al Volumen Útil del Embalse, que se define como el volumen almacenado entre el nivel Mínimo Técnico y el Nivel Máximo Físico"
+      },
+      {
+        "MetricId": "CapaUtilDiarMasa",
+        "MetricName": "Capacidad Útil Volumen por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3",
+        "MetricDescription": "Corresponde al Volumen Útil del Embalse, que se define como el volumen almacenado entre el nivel Mínimo Técnico y el Nivel Máximo Físico"
+      },
+      {
+        "MetricId": "VolTurbMasa",
+        "MetricName": "Volumen Turbinado por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3",
+        "MetricDescription": "Agua turbinada por la planta expresada en m3, incluye caudal ambiental y caudal de acueducto"
+      },
+      {
+        "MetricId": "VolTurbMasa",
+        "MetricName": "Volumen Turbinado por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "m3",
+        "MetricDescription": "Agua turbinada por la planta expresada en m3, incluye caudal ambiental y caudal de acueducto"
+      },
+      {
+        "MetricId": "PorcVoluUtilDiar",
+        "MetricName": "Volumen Útil  diario % por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "%",
+        "MetricDescription": "Porcentaje de llenado del area util de un embalse (Volumen almacenado por encima del Nivel Mínimo Técnico)"
+      },
+      {
+        "MetricId": "PorcVoluUtilDiar",
+        "MetricName": "Volumen Útil  diario % por Embalse",
+        "Entity": "Embalse",
+        "Type": "DailyEntities",
+        "MetricUnits": "%",
+        "MetricDescription": "Porcentaje de llenado del area util de un embalse (Volumen almacenado por encima del Nivel Mínimo Técnico)"
+      },
+      {
+        "MetricId": "PorcApor",
+        "MetricName": "Aportes % por Sistema",
+        "Entity": "Sistema",
+        "Type": "DailyEntities",
+        "MetricUnits": "%",
+        "MetricDescription": "Aportes naturales de los ríos que aportan agua a algún embalse del SIN, dividido por su media histórica calculado en porcentaje "
+      },
+      {
+        "MetricId": "PorcApor",
+        "MetricName": "Aportes % por Rio",
+        "Entity": "Rio",
+        "Type": "DailyEntities",
+        "MetricUnits": "%",
+        "MetricDescription": "Aportes naturales de los ríos que aportan agua a algún embalse del SIN, dividido por su media histórica calculado en porcentaje "
+      },
+      {
+        "MetricId": "IrrPanel",
+        "MetricName": "Irradiación Panel por Recurso",
+        "Entity": "Recurso",
+        "Type": "DailyEntities",
+        "MetricUnits": "W/m2",
+        "MetricDescription": "Irradiación solar en la superficie de los paneles representativa de  la planta solar fotovoltaica."
+      },
+      {
+        "MetricId": "IrrGlobal",
+        "MetricName": "Irradiación Global por Recurso",
+        "Entity": "Recurso",
+        "Type": "DailyEntities",
+        "MetricUnits": "W/m2",
+        "MetricDescription": "Irradiación solar en superficie horizontal representativa de la planta solar fotovoltaica."
+      },
+      {
+        "MetricId": "TempAmbSolar",
+        "MetricName": "Temperatura Ambiente Solar por Recurso",
+        "Entity": "Recurso",
+        "Type": "DailyEntities",
+        "MetricUnits": "°C",
+        "MetricDescription": "Temperatura del aire representativa de la planta solar fotovoltaica."
+      },
+      {
+        "MetricId": "EscDemUPMEAlto",
+        "MetricName": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
+        "Entity": "Sistema",
+        "Type": "MonthlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "proyecciones de demanda de energía realizada por la UPME "
+      },
+      {
+        "MetricId": "EscDemUPMEMedio",
+        "MetricName": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema",
+        "Entity": "Sistema",
+        "Type": "MonthlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "proyecciones de demanda de energía realizada por la UPME"
+      },
+      {
+        "MetricId": "EscDemUPMEBajo",
+        "MetricName": "Demanda de Energia Proyectada UPME Escenario Bajo por Sistema",
+        "Entity": "Sistema",
+        "Type": "MonthlyEntities",
+        "MetricUnits": "kWh",
+        "MetricDescription": "proyecciones de demanda de energía realizada por la UPME "
+      },
+      {
+        "MetricId": "ListadoAGPE",
+        "MetricName": "Listado Autogeneradores a Pequeña Escala por Agente",
+        "Entity": "Agente",
+        "Type": "ListsEntities",
+        "MetricUnits": "kW",
+        "MetricDescription": "Listado de Autogeneradores a Pequeña Escala AGPE con reporte y sin reporte al ASIC."
+      }
+    ],
+    "unavailable": [
+      {
+        "id": "AporEner",
+        "name": "Aportes  Energía por Sistema"
+      },
+      {
+        "id": "VoluUtilDiarEner",
+        "name": "Volumen Útil diario Energía por Sistema"
+      },
+      {
+        "id": "DemaSIN",
+        "name": "Demanda Energia SIN por Sistema"
+      },
+      {
+        "id": "AporEnerMediHist",
+        "name": "Aportes Media Histórica Energía por Sistema"
+      },
+      {
+        "id": "CapaUtilDiarEner",
+        "name": "Capacidad Útil Energía por Sistema"
+      },
+      {
+        "id": "DemaMaxPot",
+        "name": "Demanda Máxima de Potencia por Sistema"
+      },
+      {
+        "id": "VertEner",
+        "name": "Vertimientos Energía por Sistema"
+      },
+      {
+        "id": "CapaUtilDiarMasa",
+        "name": "Capacidad Útil Volumen por Sistema"
+      },
+      {
+        "id": "VolTurbMasa",
+        "name": "Volumen Turbinado por Sistema"
+      },
+      {
+        "id": "PorcVoluUtilDiar",
+        "name": "Volumen Útil  diario % por Sistema"
+      },
+      {
+        "id": "PorcApor",
+        "name": "Aportes % por Sistema"
+      },
+      {
+        "id": "EscDemUPMEAlto",
+        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema"
+      },
+      {
+        "id": "EscDemUPMEMedio",
+        "name": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema"
+      },
+      {
+        "id": "EscDemUPMEBajo",
+        "name": "Demanda de Energia Proyectada UPME Escenario Bajo por Sistema"
+      }
+    ],
+    "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
+    "source": "https://sinergox.xm.com.co/",
+    "lastSuccessAt": "2026-10-13T18:10:21.216905+00:00",
+    "status": "ok"
   },
   "oil": {
     "available": false,
     "status": "unavailable",
-    "lastAttemptAt": "2026-10-13T18:02:11.772977+00:00",
+    "lastAttemptAt": "2026-10-13T18:10:21.216905+00:00",
     "indicators": [],
     "catalog": []
   }
