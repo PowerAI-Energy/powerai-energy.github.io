@@ -588,3 +588,30 @@ main p{font-size:1rem;line-height:1.65}
 .home-field-summary{border-radius:8px;gap:8px;min-width:0}
 .home-field-summary .btn{align-self:flex-start;margin-top:16px}
 @media(max-width:980px){.field-team-story{grid-template-columns:1fr}.field-team-photo{width:90%;margin:auto}.home-field-summary{margin-top:24px}}
+
+/* Industrial images and adjacent rights across the site. */
+.industrial-photo{margin:0;width:100%;max-width:580px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;min-width:0}
+.industrial-photo img{display:block;width:100%;height:230px;object-fit:cover}
+.industrial-photo figcaption{display:grid;gap:8px;padding:14px;color:var(--navy);line-height:1.4}
+.image-rights{display:block;font-size:.75rem;line-height:1.5;color:var(--muted);padding:8px 12px;background:#fff}
+.image-rights a{text-decoration:underline;text-underline-offset:3px;color:var(--blue)}
+.home-industrial-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;min-width:0}
+.home-industrial-gallery .industrial-photo:first-child{grid-column:1/-1;max-width:none}
+.home-industrial-gallery .industrial-photo img{height:150px}
+.home-industrial-gallery .industrial-photo:first-child img{height:220px}
+.industrial-photo-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center;margin:0 0 28px}
+.industrial-photo-story h2{color:var(--navy)}
+.contact-industrial-photo{margin:22px 0;max-width:500px}
+.contact-industrial-photo img{height:180px}
+.thank-industrial-photo{margin:24px auto 0;max-width:480px;text-align:left}
+.thank-industrial-photo img{height:180px}
+@media(max-width:720px){.industrial-photo-story{grid-template-columns:1fr}.home-industrial-gallery{margin-top:24px}.home-industrial-gallery .industrial-photo{grid-column:1/-1}.industrial-photo{max-width:100%}}
+/* Keep credit links visible, outside image overlays. */
+.nfpa-real-visual{height:auto;grid-template-rows:auto auto}
+.real-photo{display:flex;flex-direction:column;background:#fff}
+.real-photo img{height:180px;flex:none}
+.real-photo-main img{height:380px}
+.real-photo:after{display:none}
+.real-photo figcaption{position:static;padding:12px;color:var(--navy)}
+.real-photo figcaption span,.real-photo figcaption small{color:var(--muted)}
+@media(max-width:720px){.nfpa-real-visual{grid-template-columns:1fr;grid-template-rows:auto}.real-photo-main{grid-row:auto}.real-photo img,.real-photo-main img{height:220px}}
