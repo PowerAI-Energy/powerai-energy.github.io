@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261013-continuous-ticker">
+<link rel="stylesheet" href="styles.css?v=20261013-editorial-audit">
 </head>
 <body class="supervision-page">
 
@@ -33,7 +33,7 @@
     <div class="ticker-track" id="ticker-track">
       <span class="ticker-item ticker-label">INGENIERÍA · XM</span>
       <span id="xm-items" class="ticker-group"><span class="ticker-item">XM <b>Consultando datos publicados…</b></span></span>
-      <span id="oil-items" class="ticker-group"><span class="ticker-item">PETRÓLEO <b>Consultando referencia COP/barril…</b></span></span>
+      <span id="oil-items" class="ticker-group"><span class="ticker-item">PETRÓLEO <b>Consultando precios de referencia en COP/barril…</b></span></span>
       <span class="ticker-item weather-item">LUGAR <b id="weather-summary">Autorizar ubicación</b></span>
       <span class="ticker-item">TEMPERATURA <b id="weather-temp">—</b></span>
       <span class="ticker-item">HUMEDAD RELATIVA <b id="weather-humidity">—</b></span>
@@ -57,7 +57,7 @@
   <div class="location-dialog" role="dialog" aria-modal="true" aria-labelledby="location-title">
     <button class="location-close" id="location-close" type="button" aria-label="Cerrar">×</button>
     <span class="panel-label">CONDICIONES LOCALES</span>
-    <h2 id="location-title">¿Desea compartir su ubicación para consultar el clima?</h2>
+    <h2 id="location-title">¿Desea compartir su ubicación para consultar las condiciones meteorológicas?</h2>
     <p>Con su autorización, el navegador solicitará su ubicación. Se enviarán coordenadas aproximadas a MET Norway y BigDataCloud para mostrar lugar, altitud del terreno, temperatura, humedad, viento y otras condiciones del pronóstico.</p>
     <div class="location-actions">
       <button class="btn btn-primary" id="location-allow" type="button">Permitir ubicación</button>
@@ -72,10 +72,10 @@
     <span class="panel-label">FUENTES PÚBLICAS · DATOS PUBLICADOS</span>
     <h2 id="engineering-title">Indicadores técnicos del sistema eléctrico</h2>
     <p id="engineering-status">Consultando el último conjunto de datos publicado.</p>
-    <p>Se consultan los indicadores técnicos agregados del Sistema disponibles en la API pública de XM. No equivale a todo el histórico ni a todas las desagregaciones. Los datos conservan sus unidades y período de publicación.</p>
+    <p>Se consultan los indicadores técnicos agregados del sistema disponibles en la API pública de XM. La consulta no abarca todas las series históricas ni todas las desagregaciones. Cada dato conserva su unidad y su período de publicación.</p>
     <div class="engineering-table-wrap"><table class="engineering-table"><thead><tr><th scope="col">Indicador</th><th scope="col">Valor</th><th scope="col">Fecha / período</th></tr></thead><tbody id="engineering-rows"></tbody></table></div>
-    <details><summary>Catálogo técnico publicado por XM</summary><p>Variables y desagregaciones del catálogo público. La tira muestra los agregados del Sistema que hayan respondido a la consulta. La participación por fuente se calcula sobre la generación de recursos reportada para una misma hora; es el último período publicado, no una medición instantánea.</p><ul id="engineering-catalog"></ul></details>
-    <p>Brent y WTI: referencias spot de EIA convertidas a COP por barril con TRM oficial. Las fechas pueden diferir; no son precios de venta local ni cotizaciones en tiempo real.</p>
+    <details><summary>Catálogo técnico publicado por XM</summary><p>Variables y desagregaciones del catálogo público. La tira muestra los agregados del Sistema que hayan respondido a la consulta. La participación por fuente se calcula sobre la generación reportada por los recursos para una misma hora; es el último período publicado, no una medición instantánea.</p><ul id="engineering-catalog"></ul></details>
+    <p>Brent y WTI: precios de referencia de la EIA, convertidos a pesos colombianos por barril con la TRM oficial. Las fechas pueden diferir; no son precios de venta local ni cotizaciones en tiempo real.</p>
     <p><a href="https://sinergox.xm.com.co/" target="_blank" rel="noopener">XM / Sinergox ↗</a> · <a href="https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm" target="_blank" rel="noopener">EIA petróleo ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">Brent EIA/FRED ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILWTICO" target="_blank" rel="noopener">WTI EIA/FRED ↗</a> · <a href="https://www.datos.gov.co/Econom-a-y-Finanzas/TRM/32sa-8pi3" target="_blank" rel="noopener">TRM oficial ↗</a></p>
   </div>
 </div>
@@ -118,7 +118,7 @@
   </figure>
 </section>
 <section class="portfolio-group" id="liderazgo-campo">
-<div class="portfolio-group-head"><h2>El valor de PowerAI Energy: liderazgo técnico en campo</h2><span>SUPERVISIÓN • PERSONAL • EJECUCIÓN</span></div>
+<div class="portfolio-group-head"><h2>El valor de PowerAI-Energy: liderazgo técnico en campo</h2><span>SUPERVISIÓN • PERSONAL • EJECUCIÓN</span></div>
 <div class="portfolio-grid">
 <article class="portfolio-card"><div class="pc-icon">LID</div><h3>Dirección y coordinación de personal técnico</h3><p>Organizamos cuadrillas, especialistas y contratistas según competencias, experiencia, responsabilidades y complejidad del trabajo. Coordinamos frentes, relevos, recursos y comunicación con operación.</p><small>Asignación de responsabilidades y seguimiento presencial del trabajo.</small></article>
 <article class="portfolio-card"><div class="pc-icon">SUP</div><h3>Supervisión especializada de la ejecución</h3><p>Dirigimos el desarrollo del mantenimiento eléctrico industrial en BT, MT y AT: revisión del método de trabajo, instrucciones a la cuadrilla, puntos de control, calidad técnica y verificación de resultados.</p><small>Gerencia de mantenimiento conectada con la realidad del frente de trabajo.</small></article>
@@ -187,7 +187,7 @@
         <div>
           <span class="panel-label">ALCANCE DE MANTENIMIENTO INDUSTRIAL</span>
           <h2>Control técnico de activos, personas y <em>frentes de trabajo.</em></h2>
-          <p>El alcance puede estructurarse para mantenimiento industrial, paradas programadas, adecuaciones, obras nuevas, pruebas, comisionamiento y recuperación de activos.</p>
+          <p>El alcance puede estructurarse para mantenimiento industrial, paradas programadas, adecuaciones, obras nuevas, pruebas, puesta en servicio y recuperación de activos.</p>
         </div>
         <div class="scope-list">
           <div><b>ACTIVOS</b><span>Subestaciones · Transformadores · Celdas MT · Tableros BT · CCM · Motores · Protecciones · Alimentadores</span></div>
@@ -204,7 +204,7 @@
       </div>
       <div class="supervision-responsibility-grid">
         <article><div class="sr-code">S01</div><h3>Seguridad eléctrica</h3><p>Verificación de condiciones de trabajo, controles de riesgo, consignación/LOTO cuando aplique, límites de trabajo y cumplimiento de procedimientos.</p></article>
-        <article><div class="sr-code">S02</div><h3>Calidad de instalación</h3><p>Control de montaje, torque, conexionado, identificación, soportación, canalizaciones, terminaciones y criterios de aceptación.</p></article>
+        <article><div class="sr-code">S02</div><h3>Calidad de instalación</h3><p>Control de montaje, par de apriete, conexionado, identificación, soportes, canalizaciones, terminaciones y criterios de aceptación.</p></article>
         <article><div class="sr-code">S03</div><h3>Continuidad operacional</h3><p>Coordinación de intervenciones con operación y mantenimiento para minimizar impactos y controlar la restitución del servicio.</p></article>
         <article><div class="sr-code">S04</div><h3>Pruebas y puesta en servicio</h3><p>Seguimiento de protocolos, resultados, anomalías, correcciones y liberación técnica antes de entregar el equipo o sistema.</p></article>
         <article><div class="sr-code">S05</div><h3>Gestión de contratistas</h3><p>Seguimiento de productividad, calidad, recursos, frentes abiertos, cumplimiento del alcance y documentación requerida.</p></article>
@@ -212,17 +212,17 @@
       </div>
     </section>
 
-<section class="portfolio-group" id="metodologias"><div class="portfolio-group-head"><h2>Aplicación de metodologías de mantenimiento y dominio de SAP PM</h2><span>RCM • RCA • IMC • SAP PM</span></div><div class="portfolio-grid"><article class="portfolio-card"><div class="pc-icon">RCM</div><h3>Mantenimiento centrado en confiabilidad — RCM</h3><p>Ejecutamos análisis de funciones, fallas funcionales, modos y efectos de falla, consecuencias y selección de tareas técnicamente viables. Priorización por seguridad, ambiente, producción y costo.</p><small>Entregables: análisis de activos críticos, estrategia y plan de tareas.</small></article><article class="portfolio-card"><div class="pc-icon">RCA</div><h3>Análisis de causa raíz — RCA</h3><p>Realizamos investigación de fallas repetitivas o de alto impacto mediante evidencia, cronología, análisis causal y validación de hipótesis. Definición de acciones y verificación de su eficacia.</p><small>Entregables: informe causal, responsables, plazos y seguimiento.</small></article><article class="portfolio-card"><div class="pc-icon">FMEA</div><h3>Modos de falla y criticidad — FMEA / FMECA</h3><p>Desarrollamos evaluación de modos, efectos y criticidad de falla para priorizar intervenciones, controles y repuestos de equipos eléctricos.</p><small>Integración con RCM y evaluación de riesgo.</small></article><article class="portfolio-card"><div class="pc-icon">CBM</div><h3>Mantenimiento basado en condición y predictivo</h3><p>Termografía, tendencias de pruebas eléctricas y análisis de condición disponibles; definición de criterios de alarma e intervención según el activo, fabricante y contexto operativo.</p><small>Diagnóstico, tendencias y recomendaciones documentadas.</small></article><article class="portfolio-card"><div class="pc-icon">PM</div><h3>Preventivo, correctivo y mejora continua</h3><p>Rutinas por tiempo o uso, corrección planificada de defectos, control de backlog y revisión de frecuencias. Integración de mantenimiento productivo total — TPM — con participación de operación.</p><small>Seguimiento de disponibilidad, MTBF, MTTR y cumplimiento del plan.</small></article><article class="portfolio-card"><div class="pc-icon">IMC</div><h3>IMC: confiabilidad integrada con SAP PM</h3><p>Aplicamos el enfoque IMC de confiabilidad conforme al modelo y los procedimientos de la organización: evaluación de activos, priorización de intervenciones, estructuración del plan de mantenimiento y seguimiento de resultados en SAP PM.</p><small>Implementación alineada con la definición corporativa del cliente, sus datos maestros y su flujo de trabajo.</small></article><article class="portfolio-card"><div class="pc-icon">SAP</div><h3>Gestión del ciclo de mantenimiento en SAP PM</h3><p>Gestionamos ubicaciones técnicas y equipos, avisos, órdenes, hojas de ruta y planes. Programación de operaciones y recursos, notificación de ejecución y cierre técnico.</p><small>Trazabilidad de fallas, historial, repuestos y costos; integración con MM/CO según el sistema del cliente.</small></article></div></section><section class="portfolio-group" id="supervision-industrial"><div class="portfolio-group-head"><h2>Supervisión y coordinación de mantenimiento industrial</h2><span>CAMPO • PARADAS • CONTROL TÉCNICO</span></div><div class="portfolio-grid"><article class="portfolio-card"><div class="pc-icon">SUP</div><h3>Supervisión técnica de alta exigencia</h3><p>Control de ejecución en subestaciones, transformadores, celdas, tableros y sistemas de protección. Verificación de procedimientos, calidad de montaje, protocolos de prueba y criterios de aceptación.</p><small>Inspecciones, puntos de control, evidencias y cierre de pendientes.</small></article><article class="portfolio-card"><div class="pc-icon">COOR</div><h3>Coordinación de intervenciones y paradas</h3><p>Integración de operación, mantenimiento y contratistas: alcance, secuencia, cronograma, cuadrillas, repuestos, contingencias y ventanas de indisponibilidad.</p><small>Coordinación de consignaciones y permisos según responsabilidades y procedimientos del sitio.</small></article><article class="portfolio-card"><div class="pc-icon">HSEQ</div><h3>Seguridad, calidad y restitución del servicio</h3><p>Seguimiento de controles de riesgo eléctrico, aislamiento de energías y LOTO, permisos de trabajo y liberación técnica. Coordinación de pruebas y entrega a operación.</p><small>Protocolos, actas de entrega e indicadores de seguridad y calidad.</small></article></div></section>
+<section class="portfolio-group" id="metodologias"><div class="portfolio-group-head"><h2>Aplicación de metodologías de mantenimiento y dominio de SAP PM</h2><span>RCM • RCA • IMC • SAP PM</span></div><div class="portfolio-grid"><article class="portfolio-card"><div class="pc-icon">RCM</div><h3>Mantenimiento centrado en confiabilidad — RCM</h3><p>Analizamos funciones, fallas funcionales, modos y efectos de falla y sus consecuencias para seleccionar tareas técnicamente viables. Priorizamos la seguridad, el ambiente, la producción y los costos.</p><small>Entregables: análisis de activos críticos, estrategia y plan de tareas.</small></article><article class="portfolio-card"><div class="pc-icon">RCA</div><h3>Análisis de causa raíz — RCA</h3><p>Investigamos fallas repetitivas o de alto impacto mediante evidencias, cronología, análisis causal y validación de hipótesis. Definimos acciones y verificamos su eficacia.</p><small>Entregables: informe causal, responsables, plazos y seguimiento.</small></article><article class="portfolio-card"><div class="pc-icon">FMEA</div><h3>Modos de falla y criticidad — FMEA / FMECA</h3><p>Evaluamos los modos, efectos y criticidad de las fallas para priorizar intervenciones, controles y repuestos de equipos eléctricos.</p><small>Integración con RCM y evaluación de riesgo.</small></article><article class="portfolio-card"><div class="pc-icon">CBM</div><h3>Mantenimiento basado en condición y predictivo</h3><p>Termografía, tendencias de pruebas eléctricas y análisis de condición disponibles; definición de criterios de alarma e intervención según el activo, fabricante y contexto operativo.</p><small>Diagnóstico, tendencias y recomendaciones documentadas.</small></article><article class="portfolio-card"><div class="pc-icon">PM</div><h3>Preventivo, correctivo y mejora continua</h3><p>Rutinas por tiempo o uso, corrección planificada de defectos, control de trabajos pendientes y revisión de frecuencias. Integración de mantenimiento productivo total — TPM — con participación de operación.</p><small>Seguimiento de disponibilidad, MTBF, MTTR y cumplimiento del plan.</small></article><article class="portfolio-card"><div class="pc-icon">IMC</div><h3>IMC: confiabilidad integrada con SAP PM</h3><p>Aplicamos el enfoque IMC de confiabilidad conforme al modelo y los procedimientos de la organización: evaluación de activos, priorización de intervenciones, estructuración del plan de mantenimiento y seguimiento de resultados en SAP PM.</p><small>Implementación alineada con la definición corporativa del cliente, sus datos maestros y su flujo de trabajo.</small></article><article class="portfolio-card"><div class="pc-icon">SAP</div><h3>Gestión del ciclo de mantenimiento en SAP PM</h3><p>Gestionamos ubicaciones técnicas, equipos, avisos, órdenes, hojas de ruta y planes. Programamos operaciones y recursos, notificamos la ejecución y verificamos el cierre técnico.</p><small>Trazabilidad de fallas, historial, repuestos y costos; integración con MM/CO según el sistema del cliente.</small></article></div></section><section class="portfolio-group" id="supervision-industrial"><div class="portfolio-group-head"><h2>Supervisión y coordinación de mantenimiento industrial</h2><span>CAMPO • PARADAS • CONTROL TÉCNICO</span></div><div class="portfolio-grid"><article class="portfolio-card"><div class="pc-icon">SUP</div><h3>Supervisión técnica de alta exigencia</h3><p>Control de ejecución en subestaciones, transformadores, celdas, tableros y sistemas de protección. Verificación de procedimientos, calidad de montaje, protocolos de prueba y criterios de aceptación.</p><small>Inspecciones, puntos de control, evidencias y cierre de pendientes.</small></article><article class="portfolio-card"><div class="pc-icon">COOR</div><h3>Coordinación de intervenciones y paradas</h3><p>Integración de operación, mantenimiento y contratistas: alcance, secuencia, cronograma, cuadrillas, repuestos, contingencias y ventanas de indisponibilidad.</p><small>Coordinación de consignaciones y permisos según responsabilidades y procedimientos del sitio.</small></article><article class="portfolio-card"><div class="pc-icon">HSEQ</div><h3>Seguridad, calidad y restitución del servicio</h3><p>Seguimiento de controles de riesgo eléctrico, aislamiento de energías y LOTO, permisos de trabajo y liberación técnica. Coordinación de pruebas y entrega a operación.</p><small>Protocolos, actas de entrega e indicadores de seguridad y calidad.</small></article></div></section>
     <section class="supervision-section supervision-control">
       <div>
         <span class="panel-label">TABLERO DE CONTROL</span>
         <h2>Indicadores para decidir y <em>mejorar el mantenimiento.</em></h2>
       </div>
       <div class="control-grid">
-        <div><b>AVANCE</b><span>% actividades ejecutadas vs. programadas</span></div>
-        <div><b>CALIDAD</b><span>Hallazgos, retrabajos, punch list y cierre técnico</span></div>
+        <div><b>AVANCE</b><span>% actividades ejecutadas frente a las programadas</span></div>
+        <div><b>CALIDAD</b><span>Hallazgos, retrabajos, lista de pendientes y cierre técnico</span></div>
         <div><b>SEGURIDAD</b><span>Controles críticos, permisos y desviaciones observadas</span></div>
-        <div><b>CONFIABILIDAD</b><span>Backlog, criticidad, condición y reincidencia de fallas</span></div>
+        <div><b>CONFIABILIDAD</b><span>Trabajos pendientes, criticidad, condición y reincidencia de fallas</span></div>
         <div><b>RECURSOS</b><span>Productividad de cuadrillas y utilización del personal</span></div>
         <div><b>TIEMPO</b><span>Cumplimiento de hitos, ventanas operativas y entregables</span></div>
       </div>
@@ -276,10 +276,10 @@
   <details class="image-rights-details">
     <summary>Créditos y derechos de imágenes</summary>
     <p>Las fotografías externas se utilizan como referencias de entornos eléctricos industriales. Sus fuentes y condiciones de uso se relacionan a continuación.</p>
-    <ul><li><strong>Supervisión y coordinación de personal técnico:</strong> imagen propia de PowerAI Energy, editada de forma ilustrativa con autorización de su propietario. Derechos reservados.</li><li><strong>Inspección termográfica con cámara infrarroja:</strong> material proporcionado por PowerAI-Energy para ilustrar el servicio.</li></ul>
+    <ul><li><strong>Supervisión y coordinación de personal técnico:</strong> imagen propia de PowerAI-Energy, editada de forma ilustrativa con autorización de su propietario. Derechos reservados.</li><li><strong>Inspección termográfica con cámara infrarroja:</strong> material proporcionado por PowerAI-Energy para ilustrar el servicio.</li></ul>
   </details>
 </div>
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> PowerAI-Energy</span><span>Supervisión y coordinación de personal • BT / MT / AT</span><a href="contacto.html">Contacto técnico</a></div></footer>
-<script src="script.js?v=20261013-continuous-ticker"></script>
+<script src="script.js?v=20261013-editorial-audit"></script>
 </body>
 </html>

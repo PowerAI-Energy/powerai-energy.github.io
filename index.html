@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261013-continuous-ticker">
+<link rel="stylesheet" href="styles.css?v=20261013-editorial-audit">
 </head>
 <body class="single-screen">
 
@@ -34,7 +34,7 @@
     <div class="ticker-track" id="ticker-track">
       <span class="ticker-item ticker-label">INGENIERÍA · XM</span>
       <span id="xm-items" class="ticker-group"><span class="ticker-item">XM <b>Consultando datos publicados…</b></span></span>
-      <span id="oil-items" class="ticker-group"><span class="ticker-item">PETRÓLEO <b>Consultando referencia COP/barril…</b></span></span>
+      <span id="oil-items" class="ticker-group"><span class="ticker-item">PETRÓLEO <b>Consultando precios de referencia en COP/barril…</b></span></span>
       <span class="ticker-item weather-item">LUGAR <b id="weather-summary">Autorizar ubicación</b></span>
       <span class="ticker-item">TEMPERATURA <b id="weather-temp">—</b></span>
       <span class="ticker-item">HUMEDAD RELATIVA <b id="weather-humidity">—</b></span>
@@ -58,7 +58,7 @@
   <div class="location-dialog" role="dialog" aria-modal="true" aria-labelledby="location-title">
     <button class="location-close" id="location-close" type="button" aria-label="Cerrar">×</button>
     <span class="panel-label">CONDICIONES LOCALES</span>
-    <h2 id="location-title">¿Desea compartir su ubicación para consultar el clima?</h2>
+    <h2 id="location-title">¿Desea compartir su ubicación para consultar las condiciones meteorológicas?</h2>
     <p>Con su autorización, el navegador solicitará su ubicación. Se enviarán coordenadas aproximadas a MET Norway y BigDataCloud para mostrar lugar, altitud del terreno, temperatura, humedad, viento y otras condiciones del pronóstico.</p>
     <div class="location-actions">
       <button class="btn btn-primary" id="location-allow" type="button">Permitir ubicación</button>
@@ -73,10 +73,10 @@
     <span class="panel-label">FUENTES PÚBLICAS · DATOS PUBLICADOS</span>
     <h2 id="engineering-title">Indicadores técnicos del sistema eléctrico</h2>
     <p id="engineering-status">Consultando el último conjunto de datos publicado.</p>
-    <p>Se consultan los indicadores técnicos agregados del Sistema disponibles en la API pública de XM. No equivale a todo el histórico ni a todas las desagregaciones. Los datos conservan sus unidades y período de publicación.</p>
+    <p>Se consultan los indicadores técnicos agregados del sistema disponibles en la API pública de XM. La consulta no abarca todas las series históricas ni todas las desagregaciones. Cada dato conserva su unidad y su período de publicación.</p>
     <div class="engineering-table-wrap"><table class="engineering-table"><thead><tr><th scope="col">Indicador</th><th scope="col">Valor</th><th scope="col">Fecha / período</th></tr></thead><tbody id="engineering-rows"></tbody></table></div>
-    <details><summary>Catálogo técnico publicado por XM</summary><p>Variables y desagregaciones del catálogo público. La tira muestra los agregados del Sistema que hayan respondido a la consulta. La participación por fuente se calcula sobre la generación de recursos reportada para una misma hora; es el último período publicado, no una medición instantánea.</p><ul id="engineering-catalog"></ul></details>
-    <p>Brent y WTI: referencias spot de EIA convertidas a COP por barril con TRM oficial. Las fechas pueden diferir; no son precios de venta local ni cotizaciones en tiempo real.</p>
+    <details><summary>Catálogo técnico publicado por XM</summary><p>Variables y desagregaciones del catálogo público. La tira muestra los agregados del Sistema que hayan respondido a la consulta. La participación por fuente se calcula sobre la generación reportada por los recursos para una misma hora; es el último período publicado, no una medición instantánea.</p><ul id="engineering-catalog"></ul></details>
+    <p>Brent y WTI: precios de referencia de la EIA, convertidos a pesos colombianos por barril con la TRM oficial. Las fechas pueden diferir; no son precios de venta local ni cotizaciones en tiempo real.</p>
     <p><a href="https://sinergox.xm.com.co/" target="_blank" rel="noopener">XM / Sinergox ↗</a> · <a href="https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm" target="_blank" rel="noopener">EIA petróleo ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">Brent EIA/FRED ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILWTICO" target="_blank" rel="noopener">WTI EIA/FRED ↗</a> · <a href="https://www.datos.gov.co/Econom-a-y-Finanzas/TRM/32sa-8pi3" target="_blank" rel="noopener">TRM oficial ↗</a></p>
   </div>
 </div>
@@ -137,7 +137,7 @@
           <span class="ps-icon">03</span><div><h3>Coordinación de protecciones</h3><p>Selectividad, tiempos de despeje y criterios de protección.</p></div>
         </article>
         <article class="power-service-card">
-          <span class="ps-icon">04</span><div><h3>Arc Flash</h3><p>Análisis de energía incidente y criterios de seguridad aplicables.</p></div>
+          <span class="ps-icon">04</span><div><h3>Arco eléctrico (arc flash)</h3><p>Análisis de energía incidente y criterios de seguridad aplicables.</p></div>
         </article>
         <article class="power-service-card">
           <span class="ps-icon">05</span><div><h3>Puesta a tierra</h3><p>Evaluación de redes, equipotencialidad y desempeño del sistema.</p></div>
@@ -169,7 +169,7 @@
   <section class="compact-panel light" id="condicion">
     <div class="container condition-row">
       <div>
-        <span class="panel-label">CONDITION-BASED MAINTENANCE</span>
+        <span class="panel-label">MANTENIMIENTO BASADO EN CONDICIÓN</span>
         <h2>La termografía es evidencia; la decisión nace del contexto.</h2>
         <p>Los hallazgos se interpretan con carga, condiciones ambientales, estado del equipo, antecedentes, criticidad y evidencia complementaria disponible.</p>
       </div>
@@ -179,7 +179,7 @@
     </div>
   </section>
 
-  <section class="compact-panel light"><div class="container condition-row"><div><span class="panel-label">MANTENIMIENTO INDUSTRIAL DE ALTA EXIGENCIA</span><h2>Estrategia, supervisión y coordinación con trazabilidad.</h2><p>Aplicamos RCM, RCA, IMC, FMEA y mantenimiento preventivo y predictivo. Gestionamos el ciclo de mantenimiento en SAP PM y coordinamos paradas con control de alcance, recursos, calidad y resultados. Apoyo técnico a trámites ante el operador de red y el CND según el alcance regulatorio de cada activo.</p></div><div class="hero-actions"><a class="btn btn-primary" href="servicios.html#metodologias">Metodologías y SAP PM →</a><a class="btn btn-light" href="servicios.html#creg">CREG y trámites →</a></div></div></section>
+  <section class="compact-panel light"><div class="container condition-row"><div><span class="panel-label">MANTENIMIENTO INDUSTRIAL DE ALTA EXIGENCIA</span><h2>Estrategia, supervisión y coordinación con trazabilidad.</h2><p>Aplicamos RCM, RCA, IMC, FMEA y mantenimiento preventivo y predictivo. Gestionamos el ciclo de mantenimiento en SAP PM y coordinamos paradas con control de alcance, recursos, calidad y resultados. Brindamos apoyo técnico en los trámites ante el operador de red y el CND, según el alcance regulatorio de cada activo.</p></div><div class="hero-actions"><a class="btn btn-primary" href="servicios.html#metodologias">Metodologías y SAP PM →</a><a class="btn btn-light" href="servicios.html#creg">CREG y trámites →</a></div></div></section>
   <section class="compact-panel standards" id="normativa">
     <div class="container standards-row">
       <div>
@@ -188,7 +188,7 @@
         <p>El servicio se estructura con las referencias técnicas y reglamentarias que correspondan a la instalación, actividad, cliente y edición vigente.</p>
       </div>
       <div class="standards-links">
-        <a href="https://link.nfpa.org/all-publications/1451/2007" target="_blank" rel="noopener"><strong>NFPA 70B</strong><span>Edición 2026 publicada por NFPA LiNK ↗</span></a>
+        <a href="https://link.nfpa.org/all-publications/1451/2007" target="_blank" rel="noopener"><strong>NFPA 70B</strong><span>Consultar la norma en NFPA LiNK ↗</span></a>
         <a href="https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-instalaciones-el%C3%A9ctricas-retie/" target="_blank" rel="noopener"><strong>RETIE</strong><span>Información oficial del Ministerio ↗</span></a>
         <a href="https://normograma.superservicios.gov.co/normograma/compilacion/docs/resolucion_mtra_5018_2019.htm" target="_blank" rel="noopener"><strong>RES. 5018</strong><span>Consulta del texto normativo ↗</span></a>
       </div>
@@ -215,6 +215,6 @@
   </details>
 </div>
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> PowerAI-Energy</span><span>Supervisión y coordinación de personal • BT / MT / AT</span><a href="contacto.html">Contacto técnico</a></div></footer>
-<script src="script.js?v=20261013-continuous-ticker"></script>
+<script src="script.js?v=20261013-editorial-audit"></script>
 </body>
 </html>
