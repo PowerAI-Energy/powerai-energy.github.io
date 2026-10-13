@@ -19,7 +19,7 @@ PERIODS = {'HourlyEntities': 'hourly', 'DailyEntities': 'daily', 'MonthlyEntitie
 
 
 def request(url, body=None, as_json=True, binary=False):
-    headers = {'User-Agent': USER_AGENT, 'Accept': 'application/json' if as_json else 'text/csv'}
+    headers = {'User-Agent': USER_AGENT, 'Accept': '*/*' if binary else ('application/json' if as_json else 'text/csv')}
     if body is not None:
         headers['Content-Type'] = 'application/json'
     for attempt in range(2):
@@ -105,6 +105,10 @@ def collect_xm(today):
         try:
             payload = request(SOURCE + PERIODS[metric['Type']], body)
             rows = latest_values(payload, metric)
+            if not rows and metric['Type'] != 'MonthlyEntities':
+                max_days = min(30, int(metric.get('MaxDays', 31)))
+                body['StartDate'] = (end - timedelta(days=max_days)).isoformat()
+                rows = latest_values(request(SOURCE + PERIODS[metric['Type']], body), metric)
             return rows, None if rows else {'id': metric['MetricId'], 'name': metric['MetricName']}
         except Exception as error:
             return [], {'id': metric['MetricId'], 'name': metric['MetricName'], 'errorType': type(error).__name__, 'httpStatus': getattr(error, 'code', None)}
