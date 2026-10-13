@@ -18,8 +18,9 @@ que incluye otras desagregaciones; no se descarga todo el histórico de XM.
 `scripts/update_engineering_data.py` consulta el catálogo, las series técnicas y
 los precios spot Brent/WTI de EIA publicados en FRED. Convierte estos últimos a
 COP/barril usando la TRM de datos.gov.co y conserva ambas fechas. No son precios
-de venta colombianos ni cotizaciones en tiempo real. El colector no necesita claves
-ni paquetes Python externos.
+de venta colombianos ni cotizaciones en tiempo real. El colector no necesita claves. Si FRED no responde, consulta los archivos Excel
+públicos de la EIA con `xlrd`, fijado y verificado en `requirements-feeds.txt`.
+Instalación: `python3 -m pip install --require-hashes -r requirements-feeds.txt`.
 
 El workflow `engineering-data.yml` se ejecuta al modificar el colector, manualmente
 y cada hora. Guarda `data/engineering-data.json` y solicita la reconstrucción de

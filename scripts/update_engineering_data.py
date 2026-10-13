@@ -18,7 +18,7 @@ USER_AGENT = 'PowerAI-Energy/1.0 (https://powerai-energy.github.io/contacto.html
 PERIODS = {'HourlyEntities': 'hourly', 'DailyEntities': 'daily', 'MonthlyEntities': 'monthly'}
 
 
-def request(url, body=None, as_json=True):
+def request(url, body=None, as_json=True, binary=False):
     headers = {'User-Agent': USER_AGENT, 'Accept': 'application/json' if as_json else 'text/csv'}
     if body is not None:
         headers['Content-Type'] = 'application/json'
@@ -26,7 +26,10 @@ def request(url, body=None, as_json=True):
         try:
             req = Request(url, data=json.dumps(body).encode() if body is not None else None, headers=headers)
             with urlopen(req, timeout=25) as response:
-                text = response.read().decode('utf-8-sig')
+                raw = response.read()
+            if binary:
+                return raw
+            text = raw.decode('utf-8-sig')
             return json.loads(text) if as_json else text
         except Exception:
             if attempt:
@@ -132,6 +135,24 @@ def oil_rows(text):
     return list(result.values())
 
 
+def oil_xls(data, label):
+    import xlrd
+    book = xlrd.open_workbook(file_contents=data)
+    sheet = book.sheet_by_name('Data 1')
+    result = []
+    for row in range(sheet.nrows):
+        if sheet.cell_type(row, 0) != xlrd.XL_CELL_DATE:
+            continue
+        value = number(sheet.cell_value(row, 1))
+        if value is None or value <= 0:
+            continue
+        date = xlrd.xldate_as_datetime(sheet.cell_value(row, 0), book.datemode).date().isoformat()
+        result.append({'name': label, 'usd': value, 'date': date, 'source': 'EIA'})
+    if not result:
+        raise ValueError('No EIA daily observations')
+    return max(result, key=lambda row: row['date'])
+
+
 def convert_oil(rows, trm):
     rate = number(trm.get('valor'))
     if rate is None or rate <= 0:
@@ -146,18 +167,25 @@ def collect_oil(today):
         trm = request('https://www.datos.gov.co/resource/32sa-8pi3.json?' + params)
     except Exception as error:
         raise ValueError('TRM source failed: ' + type(error).__name__ + ' ' + str(getattr(error, 'code', ''))) from error
-    rows = []
-    for series in ['DCOILBRENTEU', 'DCOILWTICO']:
+    rows, unavailable = [], []
+    for series, label, file in [('DCOILBRENTEU', 'Brent', 'RBRTEd.xls'), ('DCOILWTICO', 'WTI', 'RWTCd.xls')]:
         try:
             text = request('https://fred.stlouisfed.org/graph.csv?' + urlencode({'id': series}), as_json=False)
-            rows.extend(oil_rows(text))
-        except Exception as error:
-            raise ValueError('FRED ' + series + ' failed: ' + type(error).__name__ + ' ' + str(getattr(error, 'code', ''))) from error
+            observations = oil_rows(text)
+            if not observations:
+                raise ValueError('No FRED observations')
+            rows.extend({**row, 'source': 'EIA/FRED'} for row in observations)
+        except Exception:
+            try:
+                data = request('https://www.eia.gov/dnav/pet/hist_xls/' + file, as_json=False, binary=True)
+                rows.append(oil_xls(data, label))
+            except Exception as error:
+                unavailable.append({'name': label, 'errorType': type(error).__name__, 'httpStatus': getattr(error, 'code', None)})
     if not rows or not trm:
-        raise ValueError('No published oil/TRM observations')
-    return {'available': True, 'indicators': convert_oil(rows, trm[0]),
-            'source': 'https://fred.stlouisfed.org/series/DCOILBRENTEU', 'trmSource': 'https://www.datos.gov.co/resource/32sa-8pi3.json',
-            'note': 'Precios spot de referencia EIA publicados en FRED, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.'}
+        raise ValueError('No published oil/TRM observations: ' + json.dumps(unavailable))
+    return {'available': True, 'indicators': convert_oil(rows, trm[0]), 'unavailable': unavailable,
+            'source': 'https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm', 'trmSource': 'https://www.datos.gov.co/resource/32sa-8pi3.json',
+            'note': 'Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.'}
 
 
 def main():

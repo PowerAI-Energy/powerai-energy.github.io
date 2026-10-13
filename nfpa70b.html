@@ -61,7 +61,7 @@
       <button class="btn btn-primary" id="location-allow" type="button">Permitir ubicación</button>
       <button class="btn btn-light" id="location-deny" type="button">Ahora no</button>
     </div>
-    <small>Las coordenadas se usan durante esta sesión y no se guardan en el sitio. Puede consultar los datos de XM sin compartir ubicación. El pronóstico no sustituye mediciones de campo.</small>
+    <small>Fuentes: <a href="https://api.met.no/" target="_blank" rel="noopener">MET Norway</a> y <a href="https://www.bigdatacloud.com/" target="_blank" rel="noopener">BigDataCloud</a>. Las coordenadas se usan durante esta sesión y no se guardan en el sitio. Puede consultar los datos de XM sin compartir ubicación. El pronóstico no sustituye mediciones de campo.</small>
   </div>
 </div>
 <div class="location-modal" id="engineering-modal" aria-hidden="true">
@@ -73,8 +73,8 @@
     <p>Se consultan los indicadores técnicos agregados del Sistema disponibles en la API pública de XM. No equivale a todo el histórico ni a todas las desagregaciones. Los datos conservan sus unidades y período de publicación.</p>
     <div class="engineering-table-wrap"><table class="engineering-table"><thead><tr><th scope="col">Indicador</th><th scope="col">Valor</th><th scope="col">Fecha / período</th></tr></thead><tbody id="engineering-rows"></tbody></table></div>
     <details><summary>Catálogo técnico publicado por XM</summary><p>Variables y desagregaciones del catálogo público. La tira muestra los agregados del Sistema que hayan respondido a la consulta.</p><ul id="engineering-catalog"></ul></details>
-    <p>Brent y WTI: referencias spot EIA/FRED convertidas a COP por barril con TRM oficial. Las fechas pueden diferir; no son precios de venta local ni cotizaciones en tiempo real.</p>
-    <p><a href="https://sinergox.xm.com.co/" target="_blank" rel="noopener">XM / Sinergox ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">Brent EIA/FRED ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILWTICO" target="_blank" rel="noopener">WTI EIA/FRED ↗</a> · <a href="https://www.datos.gov.co/Econom-a-y-Finanzas/TRM/32sa-8pi3" target="_blank" rel="noopener">TRM oficial ↗</a></p>
+    <p>Brent y WTI: referencias spot de EIA convertidas a COP por barril con TRM oficial. Las fechas pueden diferir; no son precios de venta local ni cotizaciones en tiempo real.</p>
+    <p><a href="https://sinergox.xm.com.co/" target="_blank" rel="noopener">XM / Sinergox ↗</a> · <a href="https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm" target="_blank" rel="noopener">EIA petróleo ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">Brent EIA/FRED ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILWTICO" target="_blank" rel="noopener">WTI EIA/FRED ↗</a> · <a href="https://www.datos.gov.co/Econom-a-y-Finanzas/TRM/32sa-8pi3" target="_blank" rel="noopener">TRM oficial ↗</a></p>
   </div>
 </div>
 
