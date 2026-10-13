@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PowerAI-Energy | Portafolio de servicios de ingeniería en sistemas eléctricos de potencia, subestaciones, protección, calidad de energía y mantenimiento basado en condición.">
-<title>PowerAI-Energy | Servicios de Sistemas Eléctricos de Potencia</title>
+<meta name="description" content="PowerAI-Energy | Servicios de gestión de mantenimiento eléctrico industrial y gerencia de sistemas de potencia en baja, media y alta tensión.">
+<title>PowerAI-Energy | Servicios de mantenimiento y gerencia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="services-page">
 <header class="site-header">
-  <div class="topbar"><div class="container topbar-inner"><span>POWER SYSTEM SERVICES • ENGINEERING PORTFOLIO</span><span>PowerAI-Energy</span></div></div>
+  <div class="topbar"><div class="container topbar-inner"><span>MANTENIMIENTO INDUSTRIAL • GERENCIA DE SISTEMAS DE POTENCIA</span><span>PowerAI-Energy</span></div></div>
   <nav class="nav container">
     <a class="brand" href="index.html"><span class="brand-mark">P</span><span>PowerAI<span class="brand-dash">-</span>Energy</span></a>
-    <div class="nav-links" style="display:flex">
-      <a href="supervision.html">Supervisión eléctrica</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="supervision.html">Gestión de mantenimiento</a>
       <a href="index.html">Inicio</a>
       <a class="nav-cta" href="contacto.html" target="_blank" rel="noopener">Solicitar servicio ↗</a>
     </div>
@@ -29,13 +30,25 @@
     <section class="services-hero">
       <div>
         <span class="panel-label">ESPECIALIDAD • SISTEMAS ELÉCTRICOS DE POTENCIA</span>
-        <h1>Ingeniería aplicada a la <em>red eléctrica industrial.</em></h1>
-        <p>Servicios de análisis, diagnóstico, asesoría y mantenimiento para instalaciones de baja, media y alta tensión, con énfasis en desempeño, protección, confiabilidad y condición de los activos.</p>
+        <h1>Mantenimiento y gerencia de la <em>red eléctrica industrial.</em></h1>
+        <p>Gestión de mantenimiento eléctrico industrial y gerencia de sistemas de potencia en baja, media y alta tensión. Alineamos planes, recursos, riesgos y decisiones de inversión con la confiabilidad y la continuidad de la producción.</p>
       </div>
       <div class="services-hero-card">
         <span>ENGINEERING SCOPE</span>
-        <h2>Modelo • Analizar • Verificar • Recomendar</h2>
+        <h2>Planificar • Gestionar • Verificar • Mejorar</h2>
         <p>El alcance se define según nivel de tensión, topología, criticidad, documentación disponible, condiciones de operación y requisitos del cliente.</p>
+      </div>
+    </section>
+
+    <section class="portfolio-group" id="gerencia">
+      <div class="portfolio-group-head"><h2>Gerencia y gestión de mantenimiento eléctrico industrial</h2><span>BAJA • MEDIA • ALTA TENSIÓN</span></div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card"><div class="pc-icon">GER</div><h3>Gerencia de sistemas de potencia</h3><p>Dirección técnica de activos eléctricos, objetivos de disponibilidad, presupuesto, riesgos y decisiones de renovación durante el ciclo de vida del sistema.</p><small>Alcance en baja, media y alta tensión.</small></article>
+        <article class="portfolio-card"><div class="pc-icon">BT</div><h3>Gestión de activos en baja tensión</h3><p>Planes de mantenimiento para tableros, centros de control de motores, motores, alimentadores y protecciones, según criticidad y condiciones de operación.</p><small>Continuidad de procesos e instalaciones industriales.</small></article>
+        <article class="portfolio-card"><div class="pc-icon">MT/AT</div><h3>Gestión de activos en media y alta tensión</h3><p>Planificación de intervenciones en subestaciones, transformadores, celdas, interruptores y relés, coordinando ventanas operativas, pruebas y restitución del servicio.</p><small>Recursos especializados y procedimientos según el alcance.</small></article>
+        <article class="portfolio-card"><div class="pc-icon">PLAN</div><h3>Planificación y control de mantenimiento</h3><p>Inventario de activos, planes preventivos y predictivos, programación de órdenes, paradas de planta, repuestos críticos y control del backlog.</p><small>Trazabilidad mediante SAP PM o el sistema del cliente.</small></article>
+        <article class="portfolio-card"><div class="pc-icon">KPI</div><h3>Confiabilidad y desempeño</h3><p>Análisis de criticidad y causa raíz de fallas; seguimiento de disponibilidad, MTBF, MTTR y cumplimiento del programa para priorizar mejoras.</p><small>Indicadores vinculados a objetivos operativos.</small></article>
+        <article class="portfolio-card"><div class="pc-icon">COST</div><h3>Presupuesto y contratistas</h3><p>Definición de alcances, estimación y seguimiento de costos, evaluación técnica de proveedores y control de calidad de los servicios de mantenimiento.</p><small>Entregables, aceptación técnica y cierre documental.</small></article>
       </div>
     </section>
 
@@ -99,7 +112,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <span>© <span id="year"></span> PowerAI-Energy</span>
-    <span>Ingeniería • Sistemas eléctricos de potencia • Mantenimiento basado en condición</span>
+    <span>Gestión de mantenimiento • Gerencia de sistemas de potencia • BT / MT / AT</span>
     <span>NFPA 70B • RETIE • Res. 5018</span>
   </div>
 </footer>

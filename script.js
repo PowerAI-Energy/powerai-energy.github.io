@@ -9,6 +9,7 @@ const escapeHtml=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>'
 const tickerTrack=$('ticker-track');
 
 async function loadExchangeRates(){
+  if(!$('fx-usd') || !$('fx-eur') || !$('fx-gbp')) return;
   try{
     const response=await fetch('https://api.frankfurter.dev/v2/rates?base=USD&quotes=COP,EUR,GBP',{cache:'no-store'});
     if(!response.ok) throw new Error('exchange api');
@@ -33,7 +34,7 @@ async function loadExchangeRates(){
 let weatherRefreshTimer=null;
 function openLocationModal(){const m=$('location-modal'); if(!m)return; m.classList.add('open'); m.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open')}
 function closeLocationModal(){const m=$('location-modal'); if(!m)return; m.classList.remove('open'); m.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open')}
-function setWeatherText(message){$('weather-summary').textContent=message}
+function setWeatherText(message){const summary=$('weather-summary');if(summary) summary.textContent=message}
 function weatherIcon(symbol=''){const s=symbol.toLowerCase(); if(s.includes('rain')||s.includes('shower')) return '☔'; if(s.includes('snow')) return '❄'; if(s.includes('thunder')) return '⛈'; if(s.includes('cloud')) return '☁'; if(s.includes('clear')) return '☀'; return '◌'}
 function findCurrentSeries(data){
   const series=data?.properties?.timeseries||[];
@@ -93,7 +94,7 @@ loadExchangeRates();
 setInterval(loadExchangeRates,6*60*60*1000);
 
 try{
-  if(localStorage.getItem('powerai_weather_consent')==='granted'){
+  if($('weather-summary') && localStorage.getItem('powerai_weather_consent')==='granted'){
     const last=localStorage.getItem('powerai_weather_coords');
     if(last){const p=JSON.parse(last); if(Number.isFinite(p.lat)&&Number.isFinite(p.lon)) updateLocalWeather(p.lat,p.lon)}
   }
