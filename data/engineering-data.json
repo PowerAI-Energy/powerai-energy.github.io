@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T18:10:21.216905+00:00",
+  "generatedAt": "2026-10-13T18:13:17.210977+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -861,71 +861,136 @@
     "unavailable": [
       {
         "id": "AporEner",
-        "name": "Aportes  Energía por Sistema"
+        "name": "Aportes  Energía por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "VoluUtilDiarEner",
-        "name": "Volumen Útil diario Energía por Sistema"
+        "name": "Volumen Útil diario Energía por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "DemaSIN",
-        "name": "Demanda Energia SIN por Sistema"
+        "name": "Demanda Energia SIN por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "AporEnerMediHist",
-        "name": "Aportes Media Histórica Energía por Sistema"
+        "name": "Aportes Media Histórica Energía por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "CapaUtilDiarEner",
-        "name": "Capacidad Útil Energía por Sistema"
+        "name": "Capacidad Útil Energía por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "DemaMaxPot",
-        "name": "Demanda Máxima de Potencia por Sistema"
+        "name": "Demanda Máxima de Potencia por Sistema",
+        "responseFields": [],
+        "valueFields": "NoneType"
       },
       {
         "id": "VertEner",
-        "name": "Vertimientos Energía por Sistema"
+        "name": "Vertimientos Energía por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "CapaUtilDiarMasa",
-        "name": "Capacidad Útil Volumen por Sistema"
+        "name": "Capacidad Útil Volumen por Sistema",
+        "responseFields": [],
+        "valueFields": "NoneType"
       },
       {
         "id": "VolTurbMasa",
-        "name": "Volumen Turbinado por Sistema"
+        "name": "Volumen Turbinado por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "PorcVoluUtilDiar",
-        "name": "Volumen Útil  diario % por Sistema"
+        "name": "Volumen Útil  diario % por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "PorcApor",
-        "name": "Aportes % por Sistema"
+        "name": "Aportes % por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "EscDemUPMEAlto",
-        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema"
+        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "EscDemUPMEMedio",
-        "name": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema"
+        "name": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       },
       {
         "id": "EscDemUPMEBajo",
-        "name": "Demanda de Energia Proyectada UPME Escenario Bajo por Sistema"
+        "name": "Demanda de Energia Proyectada UPME Escenario Bajo por Sistema",
+        "responseFields": [
+          "Id",
+          "Value"
+        ],
+        "valueFields": "NoneType"
       }
     ],
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-13T18:10:21.216905+00:00",
+    "lastSuccessAt": "2026-10-13T18:13:17.210977+00:00",
     "status": "ok"
   },
   "oil": {
     "available": false,
     "status": "unavailable",
-    "lastAttemptAt": "2026-10-13T18:10:21.216905+00:00",
+    "lastAttemptAt": "2026-10-13T18:13:17.210977+00:00",
     "indicators": [],
-    "catalog": []
+    "catalog": [],
+    "diagnosis": "FRED source failed: HTTPError 404"
   }
 }
