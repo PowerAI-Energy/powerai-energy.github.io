@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-10-13T18:02:11.772977+00:00",
+  "xm": {
+    "available": false,
+    "status": "unavailable",
+    "lastAttemptAt": "2026-10-13T18:02:11.772977+00:00",
+    "indicators": [],
+    "catalog": []
+  },
+  "oil": {
+    "available": false,
+    "status": "unavailable",
+    "lastAttemptAt": "2026-10-13T18:02:11.772977+00:00",
+    "indicators": [],
+    "catalog": []
+  }
+}

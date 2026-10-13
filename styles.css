@@ -645,3 +645,26 @@ main p{font-size:1rem;line-height:1.65}
 .asset-photo-card img{height:260px;object-fit:contain;background:#0b2235}
 @media(max-width:980px){.home-hero-photo{margin-top:24px}.single-screen .hero-copy{display:block}}
 @media(max-width:720px){.assurance-story{grid-template-columns:1fr;gap:20px}.assurance-story-reverse .industrial-photo,.assurance-story-reverse>div{grid-column:auto;grid-row:auto}.home-hero-photo img{height:230px}.operational-assurance{padding:32px 0}.asset-photo-grid{grid-template-columns:1fr}.nfpa-real-visual .real-photo img{height:230px}}
+/* Published engineering data: controls stay accessible while the strip moves. */
+.live-data-ticker{height:40px;display:flex}
+.ticker-viewport{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.ticker-viewport::-webkit-scrollbar{display:none}
+.ticker-group{display:contents}
+.ticker-track{min-width:0;animation-name:engineeringTicker}
+.ticker-track small{font-size:.7rem;text-transform:none;letter-spacing:0;color:#bcd1dd}
+.ticker-track.ticker-paused,.ticker-viewport:focus-within .ticker-track{animation-play-state:paused}
+.ticker-controls{display:flex;align-items:center;gap:5px;flex-shrink:0;background:#071c2b;padding:0 8px;z-index:1}
+.ticker-controls .ticker-location{margin:0;text-transform:none;letter-spacing:0}
+@keyframes engineeringTicker{0%,8%{transform:translateX(0)}92%,100%{transform:translateX(var(--ticker-travel,0px))}}
+.engineering-dialog{width:min(980px,100%);max-height:85vh;overflow:auto}
+.engineering-dialog p{font-size:.9rem;line-height:1.6;color:var(--muted)}
+.engineering-dialog a{color:var(--blue);text-decoration:underline}
+.engineering-table-wrap{overflow:auto;margin:20px 0}
+.engineering-table{width:100%;border-collapse:collapse;text-align:left;font-size:.85rem}
+.engineering-table th,.engineering-table td{padding:12px;border:1px solid var(--line);vertical-align:top}
+.engineering-table th{background:var(--blue-soft)}
+#engineering-catalog{font-size:.85rem;line-height:1.6;padding-left:22px}
+.contact-main,.services-main,.supervision-main,.nfpa-main,.thank-main{padding-top:164px}
+@media(max-width:720px){.live-data-ticker{height:38px}.ticker-controls{gap:3px;padding:0 4px}.ticker-controls .ticker-location{padding:0 6px;font-size:.7rem}.contact-main,.services-main,.supervision-main,.nfpa-main,.thank-main{padding-top:146px}.engineering-dialog{padding:24px 16px}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}.ticker-viewport{overflow-x:auto}}
+.ticker-item b{text-transform:none}

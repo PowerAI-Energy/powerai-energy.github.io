@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261013-contextual-layout">
+<link rel="stylesheet" href="styles.css?v=20261013-engineering-data">
 </head>
 <body class="supervision-page">
 
@@ -28,6 +28,58 @@
     </div>
   </nav>
 </header>
+<div class="live-data-ticker" aria-label="Datos técnicos del sistema eléctrico y condiciones meteorológicas">
+  <div class="ticker-viewport" tabindex="0" aria-label="Indicadores desplazables">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-item ticker-label">INGENIERÍA · XM</span>
+      <span id="xm-items" class="ticker-group"><span class="ticker-item">XM <b>Consultando datos publicados…</b></span></span>
+      <span id="oil-items" class="ticker-group"><span class="ticker-item">PETRÓLEO <b>Consultando referencia COP/barril…</b></span></span>
+      <span class="ticker-item weather-item">LUGAR <b id="weather-summary">Autorizar ubicación</b></span>
+      <span class="ticker-item">TEMPERATURA <b id="weather-temp">—</b></span>
+      <span class="ticker-item">HUMEDAD RELATIVA <b id="weather-humidity">—</b></span>
+      <span class="ticker-item">VIENTO <b id="weather-wind">—</b></span>
+      <span class="ticker-item">RACHAS <b id="weather-gust">—</b></span>
+      <span class="ticker-item">DIRECCIÓN <b id="weather-direction">—</b></span>
+      <span class="ticker-item">ALTITUD DEL TERRENO <b id="weather-altitude">—</b></span>
+      <span class="ticker-item">PRESIÓN AL NIVEL DEL MAR <b id="weather-pressure">—</b></span>
+      <span class="ticker-item">NUBOSIDAD <b id="weather-clouds">—</b></span>
+      <span class="ticker-item">PRECIPITACIÓN PRÓX. 1 H <b id="weather-rain">—</b></span>
+      <span class="ticker-item">PRONÓSTICO MET <b id="weather-date">—</b></span>
+    </div>
+  </div>
+  <div class="ticker-controls">
+    <button class="ticker-location" id="engineering-button" type="button" aria-label="Consultar todos los indicadores técnicos publicados">Datos</button>
+    <button class="ticker-location" id="location-button" type="button">Ubicación</button>
+    <button class="ticker-location" id="ticker-pause" type="button" aria-label="Pausar desplazamiento" aria-pressed="false">Ⅱ</button>
+  </div>
+</div>
+<div class="location-modal" id="location-modal" aria-hidden="true">
+  <div class="location-dialog" role="dialog" aria-modal="true" aria-labelledby="location-title">
+    <button class="location-close" id="location-close" type="button" aria-label="Cerrar">×</button>
+    <span class="panel-label">CONDICIONES LOCALES</span>
+    <h2 id="location-title">¿Desea compartir su ubicación para consultar el clima?</h2>
+    <p>Con su autorización, el navegador solicitará su ubicación. Se enviarán coordenadas aproximadas a MET Norway y BigDataCloud para mostrar lugar, altitud del terreno, temperatura, humedad, viento y otras condiciones del pronóstico.</p>
+    <div class="location-actions">
+      <button class="btn btn-primary" id="location-allow" type="button">Permitir ubicación</button>
+      <button class="btn btn-light" id="location-deny" type="button">Ahora no</button>
+    </div>
+    <small>Las coordenadas se usan durante esta sesión y no se guardan en el sitio. Puede consultar los datos de XM sin compartir ubicación. El pronóstico no sustituye mediciones de campo.</small>
+  </div>
+</div>
+<div class="location-modal" id="engineering-modal" aria-hidden="true">
+  <div class="location-dialog engineering-dialog" role="dialog" aria-modal="true" aria-labelledby="engineering-title">
+    <button class="location-close" id="engineering-close" type="button" aria-label="Cerrar">×</button>
+    <span class="panel-label">FUENTES PÚBLICAS · DATOS PUBLICADOS</span>
+    <h2 id="engineering-title">Indicadores técnicos del sistema eléctrico</h2>
+    <p id="engineering-status">Consultando el último conjunto de datos publicado.</p>
+    <p>Se consultan los indicadores técnicos agregados del Sistema disponibles en la API pública de XM. No equivale a todo el histórico ni a todas las desagregaciones. Los datos conservan sus unidades y período de publicación.</p>
+    <div class="engineering-table-wrap"><table class="engineering-table"><thead><tr><th scope="col">Indicador</th><th scope="col">Valor</th><th scope="col">Fecha / período</th></tr></thead><tbody id="engineering-rows"></tbody></table></div>
+    <details><summary>Catálogo técnico publicado por XM</summary><p>Variables y desagregaciones del catálogo público. La tira muestra los agregados del Sistema que hayan respondido a la consulta.</p><ul id="engineering-catalog"></ul></details>
+    <p>Brent y WTI: referencias spot EIA/FRED convertidas a COP por barril con TRM oficial. Las fechas pueden diferir; no son precios de venta local ni cotizaciones en tiempo real.</p>
+    <p><a href="https://sinergox.xm.com.co/" target="_blank" rel="noopener">XM / Sinergox ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">Brent EIA/FRED ↗</a> · <a href="https://fred.stlouisfed.org/series/DCOILWTICO" target="_blank" rel="noopener">WTI EIA/FRED ↗</a> · <a href="https://www.datos.gov.co/Econom-a-y-Finanzas/TRM/32sa-8pi3" target="_blank" rel="noopener">TRM oficial ↗</a></p>
+  </div>
+</div>
+
 
 <main class="supervision-main">
   <div class="container">
@@ -228,6 +280,6 @@
   </details>
 </div>
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> PowerAI-Energy</span><span>Supervisión y coordinación de personal • BT / MT / AT</span><a href="contacto.html">Contacto técnico</a></div></footer>
-<script src="script.js?v=20261013-contextual-layout"></script>
+<script src="script.js?v=20261013-engineering-data"></script>
 </body>
 </html>
