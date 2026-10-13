@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T18:15:02.396258+00:00",
+  "generatedAt": "2026-10-13T18:17:16.882907+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -990,15 +990,15 @@
     ],
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-13T18:15:02.396258+00:00",
+    "lastSuccessAt": "2026-10-13T18:17:16.882907+00:00",
     "status": "ok"
   },
   "oil": {
     "available": false,
     "status": "unavailable",
-    "lastAttemptAt": "2026-10-13T18:15:02.396258+00:00",
+    "lastAttemptAt": "2026-10-13T18:17:16.882907+00:00",
     "indicators": [],
     "catalog": [],
-    "diagnosis": "FRED DCOILBRENTEU failed: HTTPError 404"
+    "diagnosis": "No published oil/TRM observations: [{\"name\": \"Brent\", \"errorType\": \"HTTPError\", \"httpStatus\": 406}, {\"name\": \"WTI\", \"errorType\": \"HTTPError\", \"httpStatus\": 406}]"
   }
 }
