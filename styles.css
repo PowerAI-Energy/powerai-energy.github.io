@@ -311,7 +311,7 @@ img{display:block;max-width:100%}
 .live-data-ticker{height:36px;position:fixed;z-index:45;top:98px;left:0;right:0;background:#071c2b;color:#d9e6ed;border-bottom:1px solid #234459;overflow:hidden}
 .ticker-viewport{width:100%;overflow:hidden;height:100%}
 .ticker-track{display:flex;align-items:center;gap:0;width:max-content;min-width:100%;height:100%;animation:poweraiTicker 36s linear infinite}
-.ticker-track:hover{animation-play-state:paused}
+
 .ticker-item{display:inline-flex;align-items:center;gap:6px;padding:0 18px;border-right:1px solid rgba(255,255,255,.11);white-space:nowrap;font-family:'Inter',Arial,sans-serif;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
 .ticker-item b{color:#f0c66d;font-weight:800;letter-spacing:.02em}
 .ticker-label{color:#82abc0;font-weight:800}
@@ -346,7 +346,7 @@ body.modal-open{overflow:hidden}
   .data-attribution .container>span+span{margin-top:4px}
   .data-attribution{font-size:.75rem}
 }
-@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
 
 /* Typography expansion */
 .hero-text{font-size:1.08rem;line-height:1.65}
@@ -650,12 +650,12 @@ main p{font-size:1rem;line-height:1.65}
 .ticker-viewport{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
 .ticker-viewport::-webkit-scrollbar{display:none}
 .ticker-group{display:contents}
-.ticker-track{min-width:0;animation-name:engineeringTicker}
+.ticker-track{min-width:0;animation:engineeringTicker var(--ticker-duration,40s) linear infinite}
 .ticker-track small{font-size:.7rem;text-transform:none;letter-spacing:0;color:#bcd1dd}
-.ticker-track.ticker-paused,.ticker-viewport:focus-within .ticker-track{animation-play-state:paused}
+.ticker-track.ticker-paused{animation-play-state:paused}
 .ticker-controls{display:flex;align-items:center;gap:5px;flex-shrink:0;background:#071c2b;padding:0 8px;z-index:1}
 .ticker-controls .ticker-location{margin:0;text-transform:none;letter-spacing:0}
-@keyframes engineeringTicker{0%,8%{transform:translateX(0)}92%,100%{transform:translateX(var(--ticker-travel,0px))}}
+@keyframes engineeringTicker{from{transform:translateX(0)}to{transform:translateX(var(--ticker-travel,0px))}}
 .engineering-dialog{width:min(980px,100%);max-height:85vh;overflow:auto}
 .engineering-dialog p{font-size:.9rem;line-height:1.6;color:var(--muted)}
 .engineering-dialog a{color:var(--blue);text-decoration:underline}
@@ -666,5 +666,9 @@ main p{font-size:1rem;line-height:1.65}
 #engineering-catalog{font-size:.85rem;line-height:1.6;padding-left:22px}
 .contact-main,.services-main,.supervision-main,.nfpa-main,.thank-main{padding-top:164px}
 @media(max-width:720px){.live-data-ticker{height:38px}.ticker-controls{gap:3px;padding:0 4px}.ticker-controls .ticker-location{padding:0 6px;font-size:.7rem}.contact-main,.services-main,.supervision-main,.nfpa-main,.thank-main{padding-top:146px}.engineering-dialog{padding:24px 16px}}
-@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}.ticker-viewport{overflow-x:auto}}
+
 .ticker-item b{text-transform:none}
+
+/* Two visual cycles create uninterrupted movement without duplicate accessible IDs. */
+.ticker-cycle{display:flex;align-items:center;flex-shrink:0;width:max-content;height:100%}
+.ticker-copy{pointer-events:none;user-select:none}

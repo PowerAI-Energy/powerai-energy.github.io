@@ -5,6 +5,7 @@ import json
 import math
 import re
 import time
+import unicodedata
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -91,6 +92,68 @@ def latest_values(payload, metric):
     return results
 
 
+def energy_source(resource):
+    raw = str(resource.get('EnerSource', '')) + ' ' + str(resource.get('Type', ''))
+    text = unicodedata.normalize('NFKD', raw).encode('ascii', 'ignore').decode().upper()
+    if 'SOLAR' in text or 'RADIACION' in text:
+        return 'Solar'
+    if 'VIENTO' in text or 'EOLIC' in text:
+        return 'Eólica'
+    if any(word in text for word in ('BIOMASA', 'BIOGAS', 'BAGAZO')):
+        return 'Biomasa'
+    if 'AGUA' in text or 'HIDRAUL' in text:
+        return 'Hidráulica'
+    if any(word in text for word in ('TERMIC', 'GAS', 'CARBON', 'ACPM', 'COMBUSTOLEO', 'FUEL', 'JET')):
+        return 'Térmica'
+    return 'Otros / sin clasificar'
+
+
+def generation_matrix(resources, payload, date, hour):
+    lookup = {str(row.get('code', row.get('Code', ''))): row for row in resources}
+    groups, count, seen = {}, 0, set()
+    for item in payload.get('Items', []):
+        if str(item.get('Date', ''))[:10] != date:
+            continue
+        for entity in item.get('HourlyEntities', []):
+            values = entity.get('Values', entity)
+            code = str(values.get('code', values.get('Code', entity.get('Code', ''))))
+            if not code or code in seen:
+                continue
+            value = number(values.get(hour))
+            if value is None or value < 0:
+                continue
+            seen.add(code)
+            source = energy_source(lookup.get(code, {}))
+            groups[source] = groups.get(source, 0) + value
+            count += 1
+    total = sum(groups.values())
+    if not total:
+        raise ValueError('No positive generation for the selected published hour')
+    order = ['Hidráulica', 'Térmica', 'Solar', 'Eólica', 'Biomasa', 'Otros / sin clasificar']
+    return {'available': True, 'date': date, 'period': f'{int(hour[-2:])-1:02d}:00–{int(hour[-2:]):02d}:00 (Colombia)',
+            'totalKWh': total, 'resourceCount': count,
+            'shares': [{'name': name, 'value': groups[name] / total * 100, 'unit': '%'} for name in order if name in groups],
+            'scope': 'Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.'}
+
+
+def collect_matrix(indicators):
+    generation = next((row for row in indicators if row['id'] == 'Gene'), None)
+    if not generation:
+        raise ValueError('No system generation period available')
+    date = generation['date']
+    hour = 'Hour' + generation['period'].split('–')[1][:2]
+    resources = catalog_rows(request(SOURCE + 'lists', {'MetricId': 'ListadoRecursos', 'Entity': 'Sistema'}))
+    if not resources:
+        raise ValueError('No resource classifications received')
+    payload = request(SOURCE + 'hourly', {'MetricId': 'Gene', 'Entity': 'Recurso', 'StartDate': date, 'EndDate': date})
+    result = generation_matrix(resources, payload, date, hour)
+    result['systemKWh'] = generation['value']
+    result['coverageNote'] = 'Participación calculada sobre los recursos reportados.'
+    if abs(result['totalKWh'] - generation['value']) > max(1, abs(generation['value']) * .005):
+        result['coverageNote'] = 'El total por recursos difiere del agregado del Sistema; participación sobre los recursos reportados, no cobertura completa del SIN.'
+    return result
+
+
 def collect_xm(today):
     catalog = [m for m in catalog_rows(request(SOURCE + 'lists', {'MetricId': 'ListadoMetricas'})) if technical(m)]
     if not catalog:
@@ -121,7 +184,11 @@ def collect_xm(today):
     catalog = [{key: m.get(key, '') for key in ('MetricId', 'MetricName', 'Entity', 'Type', 'MetricUnits', 'MetricDescription')} for m in catalog]
     if not indicators:
         raise ValueError('No published indicators received')
-    return {'available': True, 'indicators': indicators, 'catalog': catalog, 'unavailable': unavailable,
+    try:
+        matrix = collect_matrix(indicators)
+    except Exception as error:
+        matrix = {'available': False, 'diagnosis': type(error).__name__}
+    return {'available': True, 'indicators': indicators, 'catalog': catalog, 'unavailable': unavailable, 'matrix': matrix,
             'scope': 'Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.',
             'source': 'https://sinergox.xm.com.co/'}
 

@@ -38,3 +38,14 @@ Verificación: `python3 -m unittest discover -s tests` y `node --check script.js
 Fuentes: documentación pública de [XM](https://github.com/EquipoAnaliticaXM/API_XM),
 [MET Norway](https://api.met.no/), [FRED](https://fred.stlouisfed.org/),
 [TRM](https://www.datos.gov.co/Econom-a-y-Finanzas/TRM/32sa-8pi3).
+
+La tira prioriza demanda real y generación reportada cuando métricas relacionadas
+coinciden en valor, unidad y período. El detalle conserva todas las observaciones.
+El desplazamiento es continuo y se controla con el botón de pausa; si el visitante
+solicita movimiento reducido en su sistema, puede iniciarlo explícitamente.
+
+La participación por fuente se calcula con la generación de recursos de XM para
+una misma hora publicada y su clasificación energética. Se conservan recursos sin
+clasificar en una categoría propia y se advierte si el total difiere del agregado
+del Sistema. Estos porcentajes corresponden a generación eléctrica del SIN, no
+a toda la matriz energética del país ni a una medición instantánea.

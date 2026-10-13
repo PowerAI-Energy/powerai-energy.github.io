@@ -20,6 +20,23 @@ class PublicDataTests(unittest.TestCase):
             payload = {'Items': [{'Date': '2026-10-10', kind: [{'Id': 'Sistema', 'Value': '125.5'}]}]}
             self.assertEqual(feed.latest_values(payload, metric)[0]['value'], 125.5)
 
+    def test_generation_shares_match_same_hour_and_keep_unknown_sources(self):
+        resources = [{'code': 'H1', 'EnerSource': 'AGUA'}, {'code': 'S1', 'EnerSource': 'RADIACION SOLAR'}, {'code': 'T1', 'EnerSource': 'GAS'}]
+        payload = {'Items': [{'Date': '2026-10-10', 'HourlyEntities': [
+            {'Values': {'code': 'H1', 'Hour23': 999, 'Hour24': 50}},
+            {'Values': {'code': 'S1', 'Hour24': 0}},
+            {'Values': {'code': 'T1', 'Hour24': 30}},
+            {'Values': {'code': 'X1', 'Hour24': 20}}]}]}
+        result = feed.generation_matrix(resources, payload, '2026-10-10', 'Hour24')
+        self.assertEqual(result['totalKWh'], 100)
+        shares = {row['name']: row['value'] for row in result['shares']}
+        self.assertEqual(shares, {'Hidráulica': 50, 'Térmica': 30, 'Solar': 0, 'Otros / sin clasificar': 20})
+        self.assertAlmostEqual(sum(shares.values()), 100)
+
+    def test_no_generation_does_not_invent_percentages(self):
+        with self.assertRaises(ValueError):
+            feed.generation_matrix([], {'Items': []}, '2026-10-10', 'Hour24')
+
     def test_zero_is_valid_but_missing_and_nan_are_not(self):
         self.assertEqual(feed.number('0'), 0)
         for value in [None, '', 'NaN', 'inf', True]:

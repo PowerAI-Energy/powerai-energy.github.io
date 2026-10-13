@@ -6,19 +6,38 @@ navLinks?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>
 if($('year')) $('year').textContent=new Date().getFullYear();
 
 const track=$('ticker-track'),viewport=document.querySelector('.ticker-viewport');
-function sizeTicker(){
-  if(!track||!viewport)return;
-  const travel=Math.max(0,track.scrollWidth-viewport.clientWidth);
-  track.style.setProperty('--ticker-travel',-travel+'px');
-  track.style.animationDuration=Math.max(40,travel/32)+'s';
+let tickerCycle=null;
+if(track){
+  tickerCycle=document.createElement('div');tickerCycle.className='ticker-cycle';
+  while(track.firstChild)tickerCycle.append(track.firstChild);
+  track.append(tickerCycle);
 }
-if(track&&viewport){new ResizeObserver(sizeTicker).observe(viewport);}
-$('ticker-pause')?.addEventListener('click',()=>{
-  const paused=track.classList.toggle('ticker-paused');
-  $('ticker-pause').setAttribute('aria-pressed',String(paused));
-  $('ticker-pause').setAttribute('aria-label',paused?'Reanudar desplazamiento':'Pausar desplazamiento');
-  $('ticker-pause').textContent=paused?'▶':'Ⅱ';
-});
+function sizeTicker(){
+  if(!track||!viewport||!tickerCycle)return;
+  track.querySelector('.ticker-copy')?.remove();
+  tickerCycle.style.minWidth=viewport.clientWidth+'px';
+  const width=tickerCycle.getBoundingClientRect().width;
+  const copy=tickerCycle.cloneNode(true);copy.classList.add('ticker-copy');
+  copy.setAttribute('aria-hidden','true');copy.inert=true;
+  copy.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
+  track.append(copy);
+  track.style.setProperty('--ticker-travel',-width+'px');
+  track.style.setProperty('--ticker-duration',Math.max(20,width/38)+'s');
+}
+function setTickerPaused(paused){
+  track?.classList.toggle('ticker-paused',paused);
+  $('ticker-pause')?.setAttribute('aria-pressed',String(paused));
+  $('ticker-pause')?.setAttribute('aria-label',paused?'Reanudar desplazamiento':'Pausar desplazamiento');
+  if($('ticker-pause'))$('ticker-pause').textContent=paused?'▶':'Ⅱ';
+}
+if(track&&viewport){
+  new ResizeObserver(sizeTicker).observe(viewport);
+  document.fonts?.ready.then(sizeTicker);
+  const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+  setTickerPaused(motionPreference.matches);
+  motionPreference.addEventListener('change',e=>setTickerPaused(e.matches));
+}
+$('ticker-pause')?.addEventListener('click',()=>setTickerPaused(!track.classList.contains('ticker-paused')));
 
 let focusedBeforeDialog=null;
 function openDialog(id){const modal=$(id);if(!modal)return;focusedBeforeDialog=document.activeElement;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');modal.querySelector('button')?.focus();}
@@ -46,6 +65,19 @@ function chip(parent,label,value,date=''){
   parent.append(span);
 }
 function tableRow(name,value,date){const tr=document.createElement('tr');for(const text of [name,value,date]){const td=document.createElement('td');td.textContent=text;tr.append(td)}$('engineering-rows')?.append(tr);}
+// Related metrics can coincide; unrelated indicators remain distinct even at equal values.
+function selectTickerIndicators(indicators){
+  const families=[['DemaReal','DemaCome'],['Gene','GeneIdea'],['DemaRealReg','DemaComeReg'],['DemaRealNoReg','DemaComeNoReg']];
+  const identical=(a,b)=>a.value===b.value&&a.unit===b.unit&&a.date===b.date&&a.period===b.period&&(a.entity||'Sistema')===(b.entity||'Sistema')&&(a.code||'Sistema')===(b.code||'Sistema');
+  const seen=new Set();
+  return indicators.filter(i=>{
+    const key=JSON.stringify([i.id,i.code,i.entity,i.value,i.unit,i.date,i.period]);
+    if(seen.has(key))return false;seen.add(key);
+    const family=families.find(group=>group.includes(i.id));
+    if(!family)return true;
+    return !indicators.some(other=>family.includes(other.id)&&family.indexOf(other.id)<family.indexOf(i.id)&&identical(i,other));
+  });
+}
 async function loadEngineeringData(){
   if(!$('xm-items'))return;
   try{
@@ -54,23 +86,34 @@ async function loadEngineeringData(){
     const data=await response.json(),xm=data.xm||{},oil=data.oil||{};
     for(const id of ['xm-items','oil-items','engineering-rows','engineering-catalog'])$(id)?.replaceChildren();
     const indicators=(xm.indicators||[]).filter(i=>Number.isFinite(i.value)&&i.unit&&i.date);
+    const tickerIndicators=new Set(selectTickerIndicators(indicators));
     if(!indicators.length){chip($('xm-items'),'XM','No disponible');tableRow('XM','Sin datos publicados disponibles','—');}
     for(const i of indicators){
       const value=fmtNumber(i.value,2)+' '+i.unit;
       const label=i.name+(i.code&&i.code!=='Sistema'?' · '+i.code:'');
-      chip($('xm-items'),label,value,dateLabel(i.date)+(xm.available===false?' · último guardado':''));
+      if(tickerIndicators.has(i))chip($('xm-items'),label,value,dateLabel(i.date)+(xm.available===false?' · último guardado':''));
       tableRow(label,value,dateLabel(i.date)+' · '+i.period+(xm.available===false?' · fuente no disponible; último guardado':''));
     }
+    const matrix=xm.matrix||{};
+    if(matrix.available && Array.isArray(matrix.shares)){
+      for(const share of matrix.shares){
+        if(!Number.isFinite(share.value))continue;
+        const value=fmtNumber(share.value,2)+' %';
+        chip($('xm-items'),'Generación '+share.name,value,dateLabel(matrix.date)+' · '+matrix.period);
+        tableRow('Generación eléctrica SIN · '+share.name,value,dateLabel(matrix.date)+' · '+matrix.period);
+      }
+    }else{chip($('xm-items'),'Generación por fuente','No disponible');}
     const oils=(oil.indicators||[]).filter(i=>Number.isFinite(i.cop)&&i.cop>0&&i.date&&i.trmDate);
     if(!oils.length){chip($('oil-items'),'PETRÓLEO COP/barril','No disponible');}
     for(const i of oils){const value=fmtNumber(i.cop,0)+' COP/barril';chip($('oil-items'),i.name+' ref.',value,dateLabel(i.date)+(oil.available===false?' · último guardado':''));tableRow(i.name+' spot · referencia convertida',value,'Petróleo '+dateLabel(i.date)+' · TRM '+dateLabel(i.trmDate)+(oil.available===false?' · último guardado':''));}
     const unique=new Set();for(const m of xm.catalog||[]){const key=m.MetricId+'|'+m.Entity;if(unique.has(key))continue;unique.add(key);const li=document.createElement('li');li.textContent=m.MetricName+' · '+m.Entity+' · '+m.MetricUnits;$('engineering-catalog')?.append(li);}
-    if($('engineering-status'))$('engineering-status').textContent=indicators.length+' indicadores técnicos disponibles. Última consulta: '+(data.generatedAt?new Date(data.generatedAt).toLocaleString('es-CO',{timeZone:'America/Bogota'}):'No disponible')+'.'+(xm.available===false?' XM no respondió en la última actualización.':'')+(oil.available===false?' Petróleo/TRM no disponibles en la última actualización.':'');
+    if($('engineering-status'))$('engineering-status').textContent=indicators.length+' indicadores técnicos disponibles; '+tickerIndicators.size+' seleccionados para la tira. Las métricas relacionadas con valor y período idénticos se priorizan por utilidad técnica. Última consulta: '+(data.generatedAt?new Date(data.generatedAt).toLocaleString('es-CO',{timeZone:'America/Bogota'}):'No disponible')+'.'+(xm.available===false?' XM no respondió en la última actualización.':'')+(oil.available===false?' Petróleo/TRM no disponibles en la última actualización.':'');
+    $('matrix-note')?.remove();const matrixNote=document.createElement('p');matrixNote.id='matrix-note';matrixNote.textContent=matrix.available?'Participación de generación por fuente: último período publicado, no medición instantánea. '+(matrix.coverageNote||''):'La fuente no devolvió participación por tecnología en esta consulta.';$('engineering-status')?.after(matrixNote);
     const previous=$('xm-unavailable');previous?.remove();
     if((xm.unavailable||[]).length){const note=document.createElement('p');note.id='xm-unavailable';note.textContent='Sin observaciones recientes: '+xm.unavailable.map(x=>x.name).join(', ');$('engineering-status')?.after(note);}
     sizeTicker();
   }catch{
-    $('xm-items').replaceChildren();$('oil-items').replaceChildren();$('engineering-rows')?.replaceChildren();$('engineering-catalog')?.replaceChildren();$('xm-unavailable')?.remove();tableRow('Datos públicos','No disponibles','—');chip($('xm-items'),'XM','No disponible');chip($('oil-items'),'PETRÓLEO COP/barril','No disponible');if($('engineering-status'))$('engineering-status').textContent='No se pudo consultar el conjunto de datos. Reintente más tarde.';sizeTicker();
+    $('xm-items').replaceChildren();$('oil-items').replaceChildren();$('engineering-rows')?.replaceChildren();$('engineering-catalog')?.replaceChildren();$('xm-unavailable')?.remove();$('matrix-note')?.remove();tableRow('Datos públicos','No disponibles','—');chip($('xm-items'),'XM','No disponible');chip($('oil-items'),'PETRÓLEO COP/barril','No disponible');if($('engineering-status'))$('engineering-status').textContent='No se pudo consultar el conjunto de datos. Reintente más tarde.';sizeTicker();
   }
 }
 loadEngineeringData();if($('xm-items'))setInterval(loadEngineeringData,15*60*1000);
