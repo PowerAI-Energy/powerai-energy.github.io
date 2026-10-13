@@ -74,7 +74,7 @@ def latest_values(payload, metric):
                 hour = int(key[-2:])
                 period = f'{hour-1:02d}:00–{hour:02d}:00 (Colombia)'
             else:
-                candidates = [(key, number(value)) for key, value in values.items() if key.lower() in ('value', 'dailyvalue', 'monthlyvalue')]
+                candidates = [(key, number(value)) for key, value in values.items() if key.lower() in ('value', 'dailyvalue', 'monthlyvalue', 'dayvalue', 'daily', 'monthly', 'day', 'month')]
                 candidates = [(key, value) for key, value in candidates if value is not None]
                 if not candidates:
                     continue
@@ -100,10 +100,12 @@ def collect_xm(today):
             start = (today.replace(day=1) - timedelta(days=1)).replace(day=1)
         body = {'MetricId': metric['MetricId'], 'Entity': 'Sistema', 'StartDate': start.isoformat(), 'EndDate': end.isoformat()}
         try:
-            rows = latest_values(request(SOURCE + PERIODS[metric['Type']], body), metric)
-            return rows, None if rows else {'id': metric['MetricId'], 'name': metric['MetricName']}
-        except Exception:
-            return [], {'id': metric['MetricId'], 'name': metric['MetricName']}
+            payload = request(SOURCE + PERIODS[metric['Type']], body)
+            rows = latest_values(payload, metric)
+            first = next((entity for item in payload.get('Items', []) for entity in item.get(metric['Type'], [])), {})
+            return rows, None if rows else {'id': metric['MetricId'], 'name': metric['MetricName'], 'responseFields': list(first), 'valueFields': list(first.get('Values', {})) if isinstance(first.get('Values'), dict) else type(first.get('Values')).__name__}
+        except Exception as error:
+            return [], {'id': metric['MetricId'], 'name': metric['MetricName'], 'errorType': type(error).__name__, 'httpStatus': getattr(error, 'code', None)}
     indicators, unavailable = [], []
     with ThreadPoolExecutor(max_workers=3) as pool:
         for rows, failure in pool.map(collect, selected.values()):
@@ -141,8 +143,14 @@ def convert_oil(rows, trm):
 
 def collect_oil(today):
     params = urlencode({'$where': "vigenciadesde <= '" + today.isoformat() + "T23:59:59'", '$order': 'vigenciadesde DESC', '$limit': '1'})
-    trm = request('https://www.datos.gov.co/resource/32sa-8pi3.json?' + params)
-    text = request('https://fred.stlouisfed.org/graph.csv?' + urlencode({'id': 'DCOILBRENTEU,DCOILWTICO', 'cosd': (today - timedelta(days=31)).isoformat()}), as_json=False)
+    try:
+        trm = request('https://www.datos.gov.co/resource/32sa-8pi3.json?' + params)
+    except Exception as error:
+        raise ValueError('TRM source failed: ' + type(error).__name__ + ' ' + str(getattr(error, 'code', ''))) from error
+    try:
+        text = request('https://fred.stlouisfed.org/graph.csv?' + urlencode({'id': 'DCOILBRENTEU,DCOILWTICO', 'cosd': (today - timedelta(days=31)).isoformat()}), as_json=False)
+    except Exception as error:
+        raise ValueError('FRED source failed: ' + type(error).__name__ + ' ' + str(getattr(error, 'code', ''))) from error
     rows = oil_rows(text)
     if not rows or not trm:
         raise ValueError('No published oil/TRM observations')
@@ -163,7 +171,8 @@ def main():
         except Exception as error:
             retained = previous.get(key, {})
             snapshot[key] = {**retained, 'available': False, 'status': 'unavailable', 'lastAttemptAt': now,
-                             'indicators': retained.get('indicators', []), 'catalog': retained.get('catalog', [])}
+                             'indicators': retained.get('indicators', []), 'catalog': retained.get('catalog', []),
+                             'diagnosis': str(error)[:180] if isinstance(error, ValueError) else type(error).__name__}
             print(f'{key}: unavailable ({type(error).__name__}); previous dates retained')
     output.parent.mkdir(exist_ok=True)
     output.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + '\n')
