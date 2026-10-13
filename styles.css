@@ -547,3 +547,17 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue-2);outline-off
 @media(max-width:1100px){.nav-links{gap:10px;font-size:.8rem}.brand{font-size:.95rem}}
 @media(max-width:900px){.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:98px;left:14px;right:14px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:10px}.power-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.nav-links{top:87px}.supervision-main{padding-top:112px}.hero h1,.services-hero h1,.contact-info h1,.supervision-hero-copy h1{font-size:clamp(2rem,8vw,2.8rem)}.contact-page .nav{flex-wrap:wrap;height:auto;padding:12px 0;gap:8px}.contact-page .brand{width:100%}.contact-main{padding-top:175px}.power-service-grid{grid-template-columns:1fr}.service-more{white-space:normal}.topbar{letter-spacing:.05em}.topbar-inner{overflow:hidden}.topbar-inner>span{white-space:nowrap;font-size:.65rem}}
+
+/* Regulatory service scope and official references. */
+.regulatory-section{margin-top:28px;padding:28px;background:#fff;border:1px solid var(--line);border-radius:8px}
+.regulatory-section h2{color:var(--navy);font-size:clamp(1.6rem,2.8vw,2.5rem);line-height:1.2}
+.regulatory-table-wrap{overflow-x:auto;margin:22px 0}
+.regulatory-table{width:100%;border-collapse:collapse;font-size:.9rem;text-align:left}
+.regulatory-table caption{text-align:left;color:var(--muted);padding-bottom:12px}
+.regulatory-table th,.regulatory-table td{padding:16px;border:1px solid var(--line);vertical-align:top;min-width:210px}
+.regulatory-table thead{background:var(--navy);color:#fff}
+.regulatory-table tbody th{width:23%;background:var(--blue-soft)}
+.regulatory-table a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.regulatory-note{color:var(--muted);border-left:3px solid var(--gold);padding-left:16px}
+.regulatory-summary .btn{margin-top:14px}
+@media(max-width:720px){.regulatory-section{padding:20px}.portfolio-group-head{align-items:flex-start;flex-direction:column}}
