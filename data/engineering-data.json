@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T18:13:17.210977+00:00",
+  "generatedAt": "2026-10-13T18:15:02.396258+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -140,6 +140,126 @@
         "value": 52784.1,
         "date": "2026-10-08",
         "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "AporEner",
+        "name": "Aportes  Energía por Sistema",
+        "unit": "kWh",
+        "value": 188266076.89,
+        "date": "2026-10-12",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "VoluUtilDiarEner",
+        "name": "Volumen Útil diario Energía por Sistema",
+        "unit": "kWh",
+        "value": 13323363100.0,
+        "date": "2026-10-12",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaSIN",
+        "name": "Demanda Energia SIN por Sistema",
+        "unit": "kWh",
+        "value": 31530.0,
+        "date": "2026-10-11",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "AporEnerMediHist",
+        "name": "Aportes Media Histórica Energía por Sistema",
+        "unit": "kWh",
+        "value": 245070000.0,
+        "date": "2026-10-12",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "CapaUtilDiarEner",
+        "name": "Capacidad Útil Energía por Sistema",
+        "unit": "kWh",
+        "value": 17652543144.0,
+        "date": "2026-10-12",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "VertEner",
+        "name": "Vertimientos Energía por Sistema",
+        "unit": "kWh",
+        "value": 31114.755,
+        "date": "2026-10-08",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "VolTurbMasa",
+        "name": "Volumen Turbinado por Sistema",
+        "unit": "m3",
+        "value": 167242250.0,
+        "date": "2026-10-12",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "PorcVoluUtilDiar",
+        "name": "Volumen Útil  diario % por Sistema",
+        "unit": "%",
+        "value": 0.75476,
+        "date": "2026-10-12",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "PorcApor",
+        "name": "Aportes % por Sistema",
+        "unit": "%",
+        "value": 0.76821,
+        "date": "2026-10-12",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "EscDemUPMEAlto",
+        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
+        "unit": "kWh",
+        "value": 8187000000.0,
+        "date": "2026-10-01",
+        "period": "Mensual",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "EscDemUPMEMedio",
+        "name": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema",
+        "unit": "kWh",
+        "value": 8011000000.0,
+        "date": "2026-10-01",
+        "period": "Mensual",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "EscDemUPMEBajo",
+        "name": "Demanda de Energia Proyectada UPME Escenario Bajo por Sistema",
+        "unit": "kWh",
+        "value": 7835000000.0,
+        "date": "2026-10-01",
+        "period": "Mensual",
         "entity": "Sistema",
         "code": "Sistema"
       }
@@ -860,137 +980,25 @@
     ],
     "unavailable": [
       {
-        "id": "AporEner",
-        "name": "Aportes  Energía por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "VoluUtilDiarEner",
-        "name": "Volumen Útil diario Energía por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "DemaSIN",
-        "name": "Demanda Energia SIN por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "AporEnerMediHist",
-        "name": "Aportes Media Histórica Energía por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "CapaUtilDiarEner",
-        "name": "Capacidad Útil Energía por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
         "id": "DemaMaxPot",
-        "name": "Demanda Máxima de Potencia por Sistema",
-        "responseFields": [],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "VertEner",
-        "name": "Vertimientos Energía por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
+        "name": "Demanda Máxima de Potencia por Sistema"
       },
       {
         "id": "CapaUtilDiarMasa",
-        "name": "Capacidad Útil Volumen por Sistema",
-        "responseFields": [],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "VolTurbMasa",
-        "name": "Volumen Turbinado por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "PorcVoluUtilDiar",
-        "name": "Volumen Útil  diario % por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "PorcApor",
-        "name": "Aportes % por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "EscDemUPMEAlto",
-        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "EscDemUPMEMedio",
-        "name": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
-      },
-      {
-        "id": "EscDemUPMEBajo",
-        "name": "Demanda de Energia Proyectada UPME Escenario Bajo por Sistema",
-        "responseFields": [
-          "Id",
-          "Value"
-        ],
-        "valueFields": "NoneType"
+        "name": "Capacidad Útil Volumen por Sistema"
       }
     ],
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-13T18:13:17.210977+00:00",
+    "lastSuccessAt": "2026-10-13T18:15:02.396258+00:00",
     "status": "ok"
   },
   "oil": {
     "available": false,
     "status": "unavailable",
-    "lastAttemptAt": "2026-10-13T18:13:17.210977+00:00",
+    "lastAttemptAt": "2026-10-13T18:15:02.396258+00:00",
     "indicators": [],
     "catalog": [],
-    "diagnosis": "FRED source failed: HTTPError 404"
+    "diagnosis": "FRED DCOILBRENTEU failed: HTTPError 404"
   }
 }
