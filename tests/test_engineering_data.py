@@ -14,6 +14,12 @@ class PublicDataTests(unittest.TestCase):
         self.assertEqual((row['value'], row['unit'], row['date']), (25, 'kWh', '2026-10-10'))
         self.assertEqual(row['period'], '01:00–02:00 (Colombia)')
 
+    def test_daily_and_monthly_public_api_direct_value(self):
+        for kind in ['DailyEntities', 'MonthlyEntities']:
+            metric = {'MetricId': 'VoluUtilDiarEner', 'MetricName': 'Volumen útil', 'MetricUnits': 'kWh', 'Entity': 'Sistema', 'Type': kind}
+            payload = {'Items': [{'Date': '2026-10-10', kind: [{'Id': 'Sistema', 'Value': '125.5'}]}]}
+            self.assertEqual(feed.latest_values(payload, metric)[0]['value'], 125.5)
+
     def test_zero_is_valid_but_missing_and_nan_are_not(self):
         self.assertEqual(feed.number('0'), 0)
         for value in [None, '', 'NaN', 'inf', True]:

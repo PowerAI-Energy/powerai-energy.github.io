@@ -64,7 +64,7 @@ def latest_values(payload, metric):
         if not date:
             continue
         for entity in item.get(kind, []):
-            values = entity.get('Values', {})
+            values = entity.get('Values', entity)
             if kind == 'HourlyEntities':
                 candidates = [(key, number(value)) for key, value in values.items() if re.fullmatch(r'Hour\d{2}', key)]
                 candidates = [(key, value) for key, value in candidates if value is not None]
@@ -102,8 +102,7 @@ def collect_xm(today):
         try:
             payload = request(SOURCE + PERIODS[metric['Type']], body)
             rows = latest_values(payload, metric)
-            first = next((entity for item in payload.get('Items', []) for entity in item.get(metric['Type'], [])), {})
-            return rows, None if rows else {'id': metric['MetricId'], 'name': metric['MetricName'], 'responseFields': list(first), 'valueFields': list(first.get('Values', {})) if isinstance(first.get('Values'), dict) else type(first.get('Values')).__name__}
+            return rows, None if rows else {'id': metric['MetricId'], 'name': metric['MetricName']}
         except Exception as error:
             return [], {'id': metric['MetricId'], 'name': metric['MetricName'], 'errorType': type(error).__name__, 'httpStatus': getattr(error, 'code', None)}
     indicators, unavailable = [], []
@@ -147,11 +146,13 @@ def collect_oil(today):
         trm = request('https://www.datos.gov.co/resource/32sa-8pi3.json?' + params)
     except Exception as error:
         raise ValueError('TRM source failed: ' + type(error).__name__ + ' ' + str(getattr(error, 'code', ''))) from error
-    try:
-        text = request('https://fred.stlouisfed.org/graph.csv?' + urlencode({'id': 'DCOILBRENTEU,DCOILWTICO', 'cosd': (today - timedelta(days=31)).isoformat()}), as_json=False)
-    except Exception as error:
-        raise ValueError('FRED source failed: ' + type(error).__name__ + ' ' + str(getattr(error, 'code', ''))) from error
-    rows = oil_rows(text)
+    rows = []
+    for series in ['DCOILBRENTEU', 'DCOILWTICO']:
+        try:
+            text = request('https://fred.stlouisfed.org/graph.csv?' + urlencode({'id': series}), as_json=False)
+            rows.extend(oil_rows(text))
+        except Exception as error:
+            raise ValueError('FRED ' + series + ' failed: ' + type(error).__name__ + ' ' + str(getattr(error, 'code', ''))) from error
     if not rows or not trm:
         raise ValueError('No published oil/TRM observations')
     return {'available': True, 'indicators': convert_oil(rows, trm[0]),
