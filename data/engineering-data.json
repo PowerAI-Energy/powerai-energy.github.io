@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T07:51:12.266154+00:00",
+  "generatedAt": "2026-10-14T08:49:05.533077+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -989,12 +989,45 @@
       }
     ],
     "matrix": {
-      "available": false,
-      "diagnosis": "ValueError"
+      "available": true,
+      "date": "2026-10-11",
+      "period": "23:00–24:00 (Colombia)",
+      "totalKWh": 9354531.039999997,
+      "resourceCount": 175,
+      "shares": [
+        {
+          "name": "Hidráulica",
+          "value": 66.37346258674663,
+          "unit": "%"
+        },
+        {
+          "name": "Térmica",
+          "value": 32.10851262512889,
+          "unit": "%"
+        },
+        {
+          "name": "Solar",
+          "value": 0.01874834764565601,
+          "unit": "%"
+        },
+        {
+          "name": "Eólica",
+          "value": 0.18328390730317148,
+          "unit": "%"
+        },
+        {
+          "name": "Biomasa",
+          "value": 1.3159925331756668,
+          "unit": "%"
+        }
+      ],
+      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
+      "systemKWh": 9354531.04,
+      "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-14T07:51:12.266154+00:00",
+    "lastSuccessAt": "2026-10-14T08:49:05.533077+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1025,7 +1058,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-14T07:51:12.266154+00:00",
+    "lastSuccessAt": "2026-10-14T08:49:05.533077+00:00",
     "status": "ok"
   }
 }
