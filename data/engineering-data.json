@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T13:54:28.313477+00:00",
+  "generatedAt": "2026-10-15T14:48:25.555630+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -981,7 +981,9 @@
     "unavailable": [
       {
         "id": "DemaMaxPot",
-        "name": "Demanda Máxima de Potencia por Sistema"
+        "name": "Demanda Máxima de Potencia por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
       },
       {
         "id": "CapaUtilDiarMasa",
@@ -1027,7 +1029,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-15T13:54:28.313477+00:00",
+    "lastSuccessAt": "2026-10-15T14:48:25.555630+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1058,7 +1060,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-15T13:54:28.313477+00:00",
+    "lastSuccessAt": "2026-10-15T14:48:25.555630+00:00",
     "status": "ok"
   }
 }
