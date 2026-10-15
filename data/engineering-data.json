@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T04:46:20.164806+00:00",
+  "generatedAt": "2026-10-15T05:45:31.501381+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -86,6 +86,26 @@
       {
         "id": "DemaComeReg",
         "name": "Demanda Comercial Mercado Regulado por Sistema",
+        "unit": "kWh",
+        "value": 1839882.18,
+        "date": "2026-10-11",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaComeNoReg",
+        "name": "Demanda Comercial Mercado No Regulado por Sistema",
+        "unit": "kWh",
+        "value": 58993.39,
+        "date": "2026-10-11",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaRealReg",
+        "name": "Demanda Real Regulada Sistema",
         "unit": "kWh",
         "value": 1839882.18,
         "date": "2026-10-11",
@@ -960,18 +980,6 @@
     ],
     "unavailable": [
       {
-        "id": "DemaComeNoReg",
-        "name": "Demanda Comercial Mercado No Regulado por Sistema",
-        "errorType": "TimeoutError",
-        "httpStatus": null
-      },
-      {
-        "id": "DemaRealReg",
-        "name": "Demanda Real Regulada Sistema",
-        "errorType": "URLError",
-        "httpStatus": null
-      },
-      {
         "id": "DemaMaxPot",
         "name": "Demanda Máxima de Potencia por Sistema"
       },
@@ -1019,7 +1027,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-15T04:46:20.164806+00:00",
+    "lastSuccessAt": "2026-10-15T05:45:31.501381+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1030,27 +1038,27 @@
         "usd": 125.44,
         "date": "2026-10-06",
         "source": "EIA",
-        "cop": 399117.47,
+        "cop": 401113.22,
         "unit": "COP/barril",
-        "trm": 3181.74,
-        "trmDate": "2026-10-14"
+        "trm": 3197.65,
+        "trmDate": "2026-10-15"
       },
       {
         "name": "WTI",
         "usd": 96.24,
         "date": "2026-10-06",
         "source": "EIA",
-        "cop": 306210.66,
+        "cop": 307741.84,
         "unit": "COP/barril",
-        "trm": 3181.74,
-        "trmDate": "2026-10-14"
+        "trm": 3197.65,
+        "trmDate": "2026-10-15"
       }
     ],
     "unavailable": [],
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-15T04:46:20.164806+00:00",
+    "lastSuccessAt": "2026-10-15T05:45:31.501381+00:00",
     "status": "ok"
   }
 }
