@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T10:48:38.077066+00:00",
+  "generatedAt": "2026-10-15T11:46:58.167920+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -147,8 +147,8 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 191331326.05,
-        "date": "2026-10-13",
+        "value": 31757373.27,
+        "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -157,8 +157,8 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 13369002300.0,
-        "date": "2026-10-13",
+        "value": 1368366000.0,
+        "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -167,8 +167,8 @@
         "id": "DemaSIN",
         "name": "Demanda Energia SIN por Sistema",
         "unit": "kWh",
-        "value": 42759.9,
-        "date": "2026-10-12",
+        "value": 79530.0,
+        "date": "2026-10-13",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -178,7 +178,7 @@
         "name": "Aportes Media Histórica Energía por Sistema",
         "unit": "kWh",
         "value": 247350000.0,
-        "date": "2026-10-13",
+        "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -188,7 +188,7 @@
         "name": "Capacidad Útil Energía por Sistema",
         "unit": "kWh",
         "value": 17664655304.0,
-        "date": "2026-10-13",
+        "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -217,8 +217,8 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.75682,
-        "date": "2026-10-13",
+        "value": 0.07746,
+        "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -227,8 +227,8 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.77352,
-        "date": "2026-10-13",
+        "value": 0.12839,
+        "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -989,12 +989,45 @@
       }
     ],
     "matrix": {
-      "available": false,
-      "diagnosis": "ValueError"
+      "available": true,
+      "date": "2026-10-12",
+      "period": "23:00–24:00 (Colombia)",
+      "totalKWh": 8868562.87,
+      "resourceCount": 164,
+      "shares": [
+        {
+          "name": "Hidráulica",
+          "value": 60.99534940772203,
+          "unit": "%"
+        },
+        {
+          "name": "Térmica",
+          "value": 37.388036580497285,
+          "unit": "%"
+        },
+        {
+          "name": "Solar",
+          "value": 0.001258377503050841,
+          "unit": "%"
+        },
+        {
+          "name": "Eólica",
+          "value": 0.21249282748784307,
+          "unit": "%"
+        },
+        {
+          "name": "Biomasa",
+          "value": 1.4028628067897997,
+          "unit": "%"
+        }
+      ],
+      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
+      "systemKWh": 8868562.87,
+      "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-15T10:48:38.077066+00:00",
+    "lastSuccessAt": "2026-10-15T11:46:58.167920+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1025,7 +1058,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-15T10:48:38.077066+00:00",
+    "lastSuccessAt": "2026-10-15T11:46:58.167920+00:00",
     "status": "ok"
   }
 }
