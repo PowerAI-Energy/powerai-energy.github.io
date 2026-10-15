@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T05:45:31.501381+00:00",
+  "generatedAt": "2026-10-15T07:00:04.627809+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -26,16 +26,6 @@
       {
         "id": "Gene",
         "name": "Generación por Sistema",
-        "unit": "kWh",
-        "value": 9354531.04,
-        "date": "2026-10-11",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "GeneIdea",
-        "name": "Generación Ideal por Sistema",
         "unit": "kWh",
         "value": 9354531.04,
         "date": "2026-10-11",
@@ -167,7 +157,7 @@
         "id": "DemaSIN",
         "name": "Demanda Energia SIN por Sistema",
         "unit": "kWh",
-        "value": 58100.0,
+        "value": 42759.9,
         "date": "2026-10-12",
         "period": "Diario",
         "entity": "Sistema",
@@ -980,6 +970,12 @@
     ],
     "unavailable": [
       {
+        "id": "GeneIdea",
+        "name": "Generación Ideal por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
         "id": "DemaMaxPot",
         "name": "Demanda Máxima de Potencia por Sistema"
       },
@@ -1027,7 +1023,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-15T05:45:31.501381+00:00",
+    "lastSuccessAt": "2026-10-15T07:00:04.627809+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1058,7 +1054,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-15T05:45:31.501381+00:00",
+    "lastSuccessAt": "2026-10-15T07:00:04.627809+00:00",
     "status": "ok"
   }
 }
