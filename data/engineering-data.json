@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T11:46:58.167920+00:00",
+  "generatedAt": "2026-10-15T12:59:39.897635+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -147,7 +147,7 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 31757373.27,
+        "value": 178081759.93,
         "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
@@ -157,7 +157,7 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 1368366000.0,
+        "value": 13398972100.0,
         "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
@@ -197,8 +197,8 @@
         "id": "VertEner",
         "name": "Vertimientos Energía por Sistema",
         "unit": "kWh",
-        "value": 31114.755,
-        "date": "2026-10-08",
+        "value": 6113318.12,
+        "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -207,7 +207,7 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 19902250.0,
+        "value": 175752030.0,
         "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
@@ -217,7 +217,7 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.07746,
+        "value": 0.75852,
         "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
@@ -227,7 +227,7 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.12839,
+        "value": 0.71996,
         "date": "2026-10-14",
         "period": "Diario",
         "entity": "Sistema",
@@ -1027,7 +1027,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-15T11:46:58.167920+00:00",
+    "lastSuccessAt": "2026-10-15T12:59:39.897635+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1058,7 +1058,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-15T11:46:58.167920+00:00",
+    "lastSuccessAt": "2026-10-15T12:59:39.897635+00:00",
     "status": "ok"
   }
 }
