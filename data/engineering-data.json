@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T05:45:08.215372+00:00",
+  "generatedAt": "2026-10-16T06:59:04.260764+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -167,7 +167,7 @@
         "id": "DemaSIN",
         "name": "Demanda Energia SIN por Sistema",
         "unit": "kWh",
-        "value": 79530.0,
+        "value": 62700.26,
         "date": "2026-10-13",
         "period": "Diario",
         "entity": "Sistema",
@@ -189,6 +189,16 @@
         "unit": "kWh",
         "value": 17664655304.0,
         "date": "2026-10-14",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaMaxPot",
+        "name": "Demanda Máxima de Potencia por Sistema",
+        "unit": "kW",
+        "value": 12437888.0,
+        "date": "2026-09-30",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -980,10 +990,6 @@
     ],
     "unavailable": [
       {
-        "id": "DemaMaxPot",
-        "name": "Demanda Máxima de Potencia por Sistema"
-      },
-      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
@@ -1027,7 +1033,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-16T05:45:08.215372+00:00",
+    "lastSuccessAt": "2026-10-16T06:59:04.260764+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1058,7 +1064,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-16T05:45:08.215372+00:00",
+    "lastSuccessAt": "2026-10-16T06:59:04.260764+00:00",
     "status": "ok"
   }
 }
