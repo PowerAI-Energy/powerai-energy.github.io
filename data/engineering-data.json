@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T11:46:10.518086+00:00",
+  "generatedAt": "2026-10-16T12:58:32.211918+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -147,7 +147,7 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 30076299.41,
+        "value": 149556923.2,
         "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
@@ -157,7 +157,7 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 1465212200.0,
+        "value": 13405731700.0,
         "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
@@ -177,7 +177,7 @@
         "id": "AporEnerMediHist",
         "name": "Aportes Media Histórica Energía por Sistema",
         "unit": "kWh",
-        "value": 247350000.0,
+        "value": 245070000.0,
         "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
@@ -207,8 +207,8 @@
         "id": "VertEner",
         "name": "Vertimientos Energía por Sistema",
         "unit": "kWh",
-        "value": 6113318.12,
-        "date": "2026-10-14",
+        "value": 3776647.49,
+        "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -217,7 +217,7 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 46259420.0,
+        "value": 201515760.0,
         "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
@@ -227,7 +227,7 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.08295,
+        "value": 0.7589,
         "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
@@ -237,7 +237,7 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.12159,
+        "value": 0.61026,
         "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
@@ -1033,7 +1033,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-16T11:46:10.518086+00:00",
+    "lastSuccessAt": "2026-10-16T12:58:32.211918+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1064,7 +1064,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-16T11:46:10.518086+00:00",
+    "lastSuccessAt": "2026-10-16T12:58:32.211918+00:00",
     "status": "ok"
   }
 }
