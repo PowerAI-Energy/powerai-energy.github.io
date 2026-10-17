@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T10:42:25.388146+00:00",
+  "generatedAt": "2026-10-17T11:41:13.865793+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -119,26 +119,6 @@
         "unit": "kWh",
         "value": 25266.44,
         "date": "2026-10-14",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "PerdidasEnerReg",
-        "name": "Perdidas de Energía Regulada Sistema",
-        "unit": "kWh",
-        "value": 91644.93,
-        "date": "2026-10-12",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "PerdidasEnerNoReg",
-        "name": "Perdidas de Energía No Regulada Sistema",
-        "unit": "kWh",
-        "value": 44038.92,
-        "date": "2026-10-12",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -990,6 +970,18 @@
     ],
     "unavailable": [
       {
+        "id": "PerdidasEnerReg",
+        "name": "Perdidas de Energía Regulada Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "PerdidasEnerNoReg",
+        "name": "Perdidas de Energía No Regulada Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
@@ -1033,7 +1025,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-17T10:42:25.388146+00:00",
+    "lastSuccessAt": "2026-10-17T11:41:13.865793+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1064,7 +1056,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-17T10:42:25.388146+00:00",
+    "lastSuccessAt": "2026-10-17T11:41:13.865793+00:00",
     "status": "ok"
   }
 }
