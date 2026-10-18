@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T05:43:00.095440+00:00",
+  "generatedAt": "2026-10-18T06:53:24.366547+00:00",
   "xm": {
     "available": false,
     "indicators": [
@@ -1033,7 +1033,7 @@
     "source": "https://sinergox.xm.com.co/",
     "lastSuccessAt": "2026-10-18T04:45:01.921906+00:00",
     "status": "unavailable",
-    "lastAttemptAt": "2026-10-18T05:43:00.095440+00:00",
+    "lastAttemptAt": "2026-10-18T06:53:24.366547+00:00",
     "diagnosis": "URLError"
   },
   "oil": {
@@ -1064,7 +1064,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-18T05:43:00.095440+00:00",
+    "lastSuccessAt": "2026-10-18T06:53:24.366547+00:00",
     "status": "ok"
   }
 }
