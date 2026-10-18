@@ -1,38 +1,8 @@
 {
-  "generatedAt": "2026-10-18T10:42:39.732014+00:00",
+  "generatedAt": "2026-10-18T11:40:30.041964+00:00",
   "xm": {
     "available": true,
     "indicators": [
-      {
-        "id": "DemaReal",
-        "name": "Demanda Real por Sistema",
-        "unit": "kWh",
-        "value": 2362326.67,
-        "date": "2026-10-15",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaCome",
-        "name": "Demanda Comercial por Sistema",
-        "unit": "kWh",
-        "value": 2362326.67,
-        "date": "2026-10-15",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "Gene",
-        "name": "Generación por Sistema",
-        "unit": "kWh",
-        "value": 10457988.84,
-        "date": "2026-10-15",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
       {
         "id": "GeneIdea",
         "name": "Generación Ideal por Sistema",
@@ -990,50 +960,35 @@
     ],
     "unavailable": [
       {
+        "id": "DemaReal",
+        "name": "Demanda Real por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
+        "id": "DemaCome",
+        "name": "Demanda Comercial por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "Gene",
+        "name": "Generación por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
     ],
     "matrix": {
-      "available": true,
-      "date": "2026-10-15",
-      "period": "23:00–24:00 (Colombia)",
-      "totalKWh": 10457988.839999998,
-      "resourceCount": 175,
-      "shares": [
-        {
-          "name": "Hidráulica",
-          "value": 61.394148131448944,
-          "unit": "%"
-        },
-        {
-          "name": "Térmica",
-          "value": 37.218332219983516,
-          "unit": "%"
-        },
-        {
-          "name": "Solar",
-          "value": 1.6255515529886532e-06,
-          "unit": "%"
-        },
-        {
-          "name": "Eólica",
-          "value": 0.31254317154157535,
-          "unit": "%"
-        },
-        {
-          "name": "Biomasa",
-          "value": 1.0749748514744066,
-          "unit": "%"
-        }
-      ],
-      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
-      "systemKWh": 10457988.84,
-      "coverageNote": "Participación calculada sobre los recursos reportados."
+      "available": false,
+      "diagnosis": "ValueError"
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-18T10:42:39.732014+00:00",
+    "lastSuccessAt": "2026-10-18T11:40:30.041964+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1064,7 +1019,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-18T10:42:39.732014+00:00",
+    "lastSuccessAt": "2026-10-18T11:40:30.041964+00:00",
     "status": "ok"
   }
 }
