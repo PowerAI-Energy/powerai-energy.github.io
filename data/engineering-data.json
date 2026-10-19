@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T15:49:52.552356+00:00",
+  "generatedAt": "2026-10-19T16:49:57.924317+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -189,26 +189,6 @@
         "unit": "kWh",
         "value": 17664655304.0,
         "date": "2026-10-18",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaMaxPot",
-        "name": "Demanda Máxima de Potencia por Sistema",
-        "unit": "kW",
-        "value": 12437888.0,
-        "date": "2026-09-30",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "VertEner",
-        "name": "Vertimientos Energía por Sistema",
-        "unit": "kWh",
-        "value": 3776647.49,
-        "date": "2026-10-15",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -990,6 +970,18 @@
     ],
     "unavailable": [
       {
+        "id": "DemaMaxPot",
+        "name": "Demanda Máxima de Potencia por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "VertEner",
+        "name": "Vertimientos Energía por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
@@ -1028,7 +1020,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-19T15:49:52.552356+00:00",
+    "lastSuccessAt": "2026-10-19T16:49:57.924317+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1059,7 +1051,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-19T15:49:52.552356+00:00",
+    "lastSuccessAt": "2026-10-19T16:49:57.924317+00:00",
     "status": "ok"
   }
 }
