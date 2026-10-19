@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T07:04:11.926060+00:00",
+  "generatedAt": "2026-10-19T07:59:45.899163+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -7,8 +7,8 @@
         "id": "DemaReal",
         "name": "Demanda Real por Sistema",
         "unit": "kWh",
-        "value": 2362326.67,
-        "date": "2026-10-15",
+        "value": 2069538.07,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -17,8 +17,8 @@
         "id": "DemaCome",
         "name": "Demanda Comercial por Sistema",
         "unit": "kWh",
-        "value": 2362326.67,
-        "date": "2026-10-15",
+        "value": 2069538.07,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -27,8 +27,8 @@
         "id": "Gene",
         "name": "Generación por Sistema",
         "unit": "kWh",
-        "value": 10457988.84,
-        "date": "2026-10-15",
+        "value": 10413206.32,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -37,8 +37,8 @@
         "id": "GeneIdea",
         "name": "Generación Ideal por Sistema",
         "unit": "kWh",
-        "value": 10457988.84,
-        "date": "2026-10-15",
+        "value": 10413206.32,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -47,8 +47,8 @@
         "id": "factorEmisionCO2e",
         "name": "Emisiones de CO2 Eq/kWh por Sistema",
         "unit": "gCO2e/kWh",
-        "value": 236.41225,
-        "date": "2026-10-15",
+        "value": 231.60784,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -57,9 +57,9 @@
         "id": "ImpoEner",
         "name": "Importaciones Energía por Sistema",
         "unit": "kWh",
-        "value": 514.41,
-        "date": "2026-10-15",
-        "period": "15:00–16:00 (Colombia)",
+        "value": 32.92,
+        "date": "2026-10-16",
+        "period": "17:00–18:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
       },
@@ -67,8 +67,8 @@
         "id": "PerdidasEner",
         "name": "Perdidas de Energía por Sistema",
         "unit": "kWh",
-        "value": 146188.83,
-        "date": "2026-10-13",
+        "value": 130318.43,
+        "date": "2026-10-14",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -77,8 +77,8 @@
         "id": "ExpoEner",
         "name": "Exportaciones Energía por Sistema",
         "unit": "kWh",
-        "value": 1115.02,
-        "date": "2026-10-15",
+        "value": 956.22,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -87,8 +87,8 @@
         "id": "DemaComeReg",
         "name": "Demanda Comercial Mercado Regulado por Sistema",
         "unit": "kWh",
-        "value": 2262829.6,
-        "date": "2026-10-15",
+        "value": 1938852.88,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -97,8 +97,8 @@
         "id": "DemaComeNoReg",
         "name": "Demanda Comercial Mercado No Regulado por Sistema",
         "unit": "kWh",
-        "value": 31301.74,
-        "date": "2026-10-15",
+        "value": 65938.67,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -107,8 +107,8 @@
         "id": "DemaRealReg",
         "name": "Demanda Real Regulada Sistema",
         "unit": "kWh",
-        "value": 2262829.6,
-        "date": "2026-10-15",
+        "value": 1938852.88,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -117,8 +117,8 @@
         "id": "DemaRealNoReg",
         "name": "Demanda Real No Regulada Sistema",
         "unit": "kWh",
-        "value": 31301.74,
-        "date": "2026-10-15",
+        "value": 65938.67,
+        "date": "2026-10-16",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -127,8 +127,8 @@
         "id": "PerdidasEnerReg",
         "name": "Perdidas de Energía Regulada Sistema",
         "unit": "kWh",
-        "value": 96407.37,
-        "date": "2026-10-13",
+        "value": 88383.17,
+        "date": "2026-10-14",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -137,8 +137,8 @@
         "id": "PerdidasEnerNoReg",
         "name": "Perdidas de Energía No Regulada Sistema",
         "unit": "kWh",
-        "value": 49777.66,
-        "date": "2026-10-13",
+        "value": 41924.28,
+        "date": "2026-10-14",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
         "code": "Sistema"
@@ -147,8 +147,8 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 151148432.55,
-        "date": "2026-10-17",
+        "value": 19386894.21,
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -157,8 +157,8 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 13423853700.0,
-        "date": "2026-10-17",
+        "value": 1468297200.0,
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -167,8 +167,8 @@
         "id": "DemaSIN",
         "name": "Demanda Energia SIN por Sistema",
         "unit": "kWh",
-        "value": 50730.0,
-        "date": "2026-10-17",
+        "value": 13550.0,
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -178,7 +178,7 @@
         "name": "Aportes Media Histórica Energía por Sistema",
         "unit": "kWh",
         "value": 247350000.0,
-        "date": "2026-10-17",
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -188,7 +188,7 @@
         "name": "Capacidad Útil Energía por Sistema",
         "unit": "kWh",
         "value": 17664655304.0,
-        "date": "2026-10-17",
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -217,8 +217,8 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 266638010.0,
-        "date": "2026-10-17",
+        "value": 35350610.0,
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -227,8 +227,8 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.75993,
-        "date": "2026-10-17",
+        "value": 0.08312,
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -237,8 +237,8 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.61107,
-        "date": "2026-10-17",
+        "value": 0.07838,
+        "date": "2026-10-18",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -996,44 +996,39 @@
     ],
     "matrix": {
       "available": true,
-      "date": "2026-10-15",
+      "date": "2026-10-16",
       "period": "23:00–24:00 (Colombia)",
-      "totalKWh": 10457988.839999998,
-      "resourceCount": 175,
+      "totalKWh": 10413206.32,
+      "resourceCount": 173,
       "shares": [
         {
           "name": "Hidráulica",
-          "value": 61.394148131448944,
+          "value": 62.75374614876546,
           "unit": "%"
         },
         {
           "name": "Térmica",
-          "value": 37.218332219983516,
-          "unit": "%"
-        },
-        {
-          "name": "Solar",
-          "value": 1.6255515529886532e-06,
+          "value": 35.807503331980456,
           "unit": "%"
         },
         {
           "name": "Eólica",
-          "value": 0.31254317154157535,
+          "value": 0.24112630853932795,
           "unit": "%"
         },
         {
           "name": "Biomasa",
-          "value": 1.0749748514744066,
+          "value": 1.1976242107147645,
           "unit": "%"
         }
       ],
       "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
-      "systemKWh": 10457988.84,
+      "systemKWh": 10413206.32,
       "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-19T07:04:11.926060+00:00",
+    "lastSuccessAt": "2026-10-19T07:59:45.899163+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1064,7 +1059,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-19T07:04:11.926060+00:00",
+    "lastSuccessAt": "2026-10-19T07:59:45.899163+00:00",
     "status": "ok"
   }
 }
