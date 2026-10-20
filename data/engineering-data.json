@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T11:46:20.677818+00:00",
+  "generatedAt": "2026-10-20T12:58:21.484450+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -147,7 +147,7 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 16814584.79,
+        "value": 119715481.24,
         "date": "2026-10-19",
         "period": "Diario",
         "entity": "Sistema",
@@ -157,7 +157,7 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 1459497600.0,
+        "value": 13454893300.0,
         "date": "2026-10-19",
         "period": "Diario",
         "entity": "Sistema",
@@ -194,11 +194,21 @@
         "code": "Sistema"
       },
       {
+        "id": "DemaMaxPot",
+        "name": "Demanda Máxima de Potencia por Sistema",
+        "unit": "kW",
+        "value": 12437888.0,
+        "date": "2026-09-30",
+        "period": "Diario",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
         "id": "VertEner",
         "name": "Vertimientos Energía por Sistema",
         "unit": "kWh",
-        "value": 3776647.49,
-        "date": "2026-10-15",
+        "value": 342118.455,
+        "date": "2026-10-19",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -207,7 +217,7 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 40694980.0,
+        "value": 194373950.0,
         "date": "2026-10-19",
         "period": "Diario",
         "entity": "Sistema",
@@ -217,7 +227,7 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.08262,
+        "value": 0.76168,
         "date": "2026-10-19",
         "period": "Diario",
         "entity": "Sistema",
@@ -227,7 +237,7 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.06798,
+        "value": 0.48399,
         "date": "2026-10-19",
         "period": "Diario",
         "entity": "Sistema",
@@ -980,16 +990,8 @@
     ],
     "unavailable": [
       {
-        "id": "DemaMaxPot",
-        "name": "Demanda Máxima de Potencia por Sistema",
-        "errorType": "URLError",
-        "httpStatus": null
-      },
-      {
         "id": "CapaUtilDiarMasa",
-        "name": "Capacidad Útil Volumen por Sistema",
-        "errorType": "URLError",
-        "httpStatus": null
+        "name": "Capacidad Útil Volumen por Sistema"
       }
     ],
     "matrix": {
@@ -1026,7 +1028,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-20T11:46:20.677818+00:00",
+    "lastSuccessAt": "2026-10-20T12:58:21.484450+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1057,7 +1059,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-20T11:46:20.677818+00:00",
+    "lastSuccessAt": "2026-10-20T12:58:21.484450+00:00",
     "status": "ok"
   }
 }
