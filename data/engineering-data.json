@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T16:47:05.396416+00:00",
+  "generatedAt": "2026-10-20T17:43:23.516887+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -38,6 +38,16 @@
         "name": "Generación Ideal por Sistema",
         "unit": "kWh",
         "value": 9503757.74,
+        "date": "2026-10-17",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "factorEmisionCO2e",
+        "name": "Emisiones de CO2 Eq/kWh por Sistema",
+        "unit": "gCO2e/kWh",
+        "value": 246.06211,
         "date": "2026-10-17",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
@@ -980,12 +990,6 @@
     ],
     "unavailable": [
       {
-        "id": "factorEmisionCO2e",
-        "name": "Emisiones de CO2 Eq/kWh por Sistema",
-        "errorType": "URLError",
-        "httpStatus": null
-      },
-      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
@@ -1024,7 +1028,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-20T16:47:05.396416+00:00",
+    "lastSuccessAt": "2026-10-20T17:43:23.516887+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1055,7 +1059,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-20T16:47:05.396416+00:00",
+    "lastSuccessAt": "2026-10-20T17:43:23.516887+00:00",
     "status": "ok"
   }
 }
