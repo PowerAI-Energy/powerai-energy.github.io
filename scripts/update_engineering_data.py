@@ -160,7 +160,9 @@ def collect_xm(today):
         raise ValueError('Empty technical catalog')
     selected = {(m['MetricId'], m['Type']): m for m in catalog if m.get('Entity') == 'Sistema' and m.get('Type') in PERIODS}
     def collect(metric):
-        end = today - timedelta(days=1)
+        # Include today: some series may already publish a partial current day.
+        # latest_values preserves the actual source date and last available hour.
+        end = today
         start = end - timedelta(days=6)
         if metric['Type'] == 'MonthlyEntities':
             start = (today.replace(day=1) - timedelta(days=1)).replace(day=1)

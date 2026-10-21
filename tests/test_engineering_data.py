@@ -1,5 +1,7 @@
 import importlib.util
 import unittest
+from unittest.mock import patch
+from datetime import date
 from pathlib import Path
 spec = importlib.util.spec_from_file_location('feed', Path(__file__).parents[1] / 'scripts/update_engineering_data.py')
 feed = importlib.util.module_from_spec(spec)
@@ -7,6 +9,19 @@ spec.loader.exec_module(feed)
 
 
 class PublicDataTests(unittest.TestCase):
+    def test_collection_includes_current_day_without_relabeling_old_data(self):
+        metric = {'MetricId': 'DemaReal', 'MetricName': 'Demanda Real', 'MetricUnits': 'kWh', 'Entity': 'Sistema', 'Type': 'HourlyEntities'}
+        calls = []
+        def source(url, body):
+            if url.endswith('lists'):
+                return {'Items': [{'ListEntities': [metric]}]}
+            calls.append(body)
+            return {'Items': [{'Date': '2026-10-18', 'HourlyEntities': [{'Values': {'Hour24': 25}}]}]}
+        with patch.object(feed, 'request', side_effect=source):
+            result = feed.collect_xm(date(2026, 10, 21))
+        self.assertEqual(calls[0]['EndDate'], '2026-10-21')
+        self.assertEqual(result['indicators'][0]['date'], '2026-10-18')
+
     def test_hourly_energy_keeps_unit_and_latest_valid_hour(self):
         metric = {'MetricId': 'DemaReal', 'MetricName': 'Demanda Real', 'MetricUnits': 'kWh', 'Entity': 'Sistema', 'Type': 'HourlyEntities'}
         payload = {'Items': [{'Date': '2026-10-10', 'HourlyEntities': [{'Code': 'Sistema', 'Values': {'Hour01': '0', 'Hour02': '25', 'Hour03': None}}]}, {'Date': '2026-10-09', 'HourlyEntities': [{'Values': {'Hour24': '99'}}]}]}
