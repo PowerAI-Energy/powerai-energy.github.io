@@ -21,6 +21,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Queued runs must collect from the current branch, not an old event SHA.
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
