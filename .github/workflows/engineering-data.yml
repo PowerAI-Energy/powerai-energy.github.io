@@ -40,3 +40,22 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
           gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+      - name: Actualizar Cloudflare Pages sin exceder el plan gratuito
+        if: github.event_name != 'push'
+        env:
+          CLOUDFLARE_PAGES_DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          # El colector sigue siendo horario. Pages Free admite 500 builds/mes.
+          # Solo los horarios pares UTC avisan a Cloudflare (hasta 372/mes).
+          if [ "$EVENT_NAME" = "schedule" ] && [ $((10#$(date -u +%H) % 2)) -ne 0 ]; then
+            echo "Cloudflare se actualizará en el siguiente turno de dos horas."
+            exit 0
+          fi
+          if [ -z "$CLOUDFLARE_PAGES_DEPLOY_HOOK" ]; then
+            echo "::error::Falta el secreto CLOUDFLARE_PAGES_DEPLOY_HOOK."
+            exit 1
+          fi
+          curl --fail --silent --show-error --max-time 60 --output /dev/null \
+            --request POST "$CLOUDFLARE_PAGES_DEPLOY_HOOK"
+          echo "Cloudflare Pages aceptó la solicitud de despliegue de main."
