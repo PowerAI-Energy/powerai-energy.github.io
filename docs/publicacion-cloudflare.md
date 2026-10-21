@@ -19,7 +19,15 @@ Pulsar **Save and Deploy**. Cloudflare mostrará la dirección `pages.dev` asign
 
 ## Datos y actualizaciones
 
-El colector horario existente en GitHub Actions mantiene `data/engineering-data.json` con XM y petróleo en COP. La integración Git de Pages debe publicar los cambios de `main`, incluidos los commits del colector. Comprobar en Deployments que un commit automático también despliegue. La ausencia de caché del JSON no sustituye la necesidad de desplegar una nueva versión cuando cambian los datos. Las fechas y las limitaciones de las fuentes se mantienen visibles.
+El colector horario existente en GitHub Actions mantiene `data/engineering-data.json` con XM y petróleo en COP y conserva la publicación de GitHub Pages. Cloudflare publica en https://powerai-energy.pages.dev/ desde `main`.
+
+El 21 de octubre de 2026 se observó que los commits del colector no aparecían en Pages y el panel avisó de una incidencia de GitHub con eventos push degradados. Por eso el workflow incorpora un Deploy Hook de Cloudflare para `main`. Su URL está únicamente en el secreto cifrado de GitHub Actions `CLOUDFLARE_PAGES_DEPLOY_HOOK`; no debe copiarse a archivos, capturas públicas ni logs.
+
+En Cloudflare, Build watch paths incluye `*` y excluye `data/engineering-data.json` para evitar builds horarios duplicados cuando vuelvan los eventos push. El hook obtiene el estado actual de `main`, incluido el JSON. El colector sigue siendo horario; las ejecuciones programadas avisan a Cloudflare solo en horas pares UTC (aproximadamente cada dos horas, sujeto a retrasos de GitHub Actions). Una ejecución manual también avisa; una ejecución por push omite el hook para evitar duplicar el despliegue Git.
+
+El plan gratuito admite 500 builds al mes: 12 avisos diarios representan hasta 372 avisos programados en 31 días, más builds por cambios de código, pruebas o ejecuciones manuales. No habilitar cobros ni aumentar la frecuencia sin revisar ese límite. Documentación: https://developers.cloudflare.com/pages/platform/limits/ y https://developers.cloudflare.com/pages/configuration/deploy-hooks/.
+
+La prueba manual del workflow #198 completó correctamente el paso del hook y Cloudflare inició un despliegue para el commit automático `0221555`. La ausencia de caché del JSON no sustituye desplegar sus cambios. Las fechas y las limitaciones de las fuentes se mantienen visibles.
 
 El clima se consulta desde el navegador después del consentimiento de ubicación, mediante MET Norway y BigDataCloud. Comprobar sus solicitudes desde el dominio publicado.
 
