@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T07:55:00.199284+00:00",
+  "generatedAt": "2026-10-21T08:51:27.970691+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -995,12 +995,40 @@
       }
     ],
     "matrix": {
-      "available": false,
-      "diagnosis": "ValueError"
+      "available": true,
+      "date": "2026-10-18",
+      "period": "23:00–24:00 (Colombia)",
+      "totalKWh": 9166840.86,
+      "resourceCount": 165,
+      "shares": [
+        {
+          "name": "Hidráulica",
+          "value": 58.542777080565564,
+          "unit": "%"
+        },
+        {
+          "name": "Térmica",
+          "value": 39.715969390135136,
+          "unit": "%"
+        },
+        {
+          "name": "Eólica",
+          "value": 0.3136564759781376,
+          "unit": "%"
+        },
+        {
+          "name": "Biomasa",
+          "value": 1.4275970533211593,
+          "unit": "%"
+        }
+      ],
+      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
+      "systemKWh": 9166840.86,
+      "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-21T07:55:00.199284+00:00",
+    "lastSuccessAt": "2026-10-21T08:51:27.970691+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1031,7 +1059,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-21T07:55:00.199284+00:00",
+    "lastSuccessAt": "2026-10-21T08:51:27.970691+00:00",
     "status": "ok"
   }
 }
