@@ -165,7 +165,3 @@ $('location-allow')?.addEventListener('click',()=>{closeDialog('location-modal')
 // Remove coordinates retained by the previous implementation; this version keeps them only in memory.
 try{localStorage.removeItem('powerai_weather_coords');localStorage.removeItem('powerai_weather_consent')}catch{}
 if($('location-modal'))setTimeout(()=>{if(!document.querySelector('.location-modal.open'))openDialog('location-modal')},1800);
-const CONTACT_FORM=$('contact-form');
-const contactReturn=CONTACT_FORM?.querySelector('input[name="_next"]');
-if(contactReturn)contactReturn.value=new URL('gracias.html',window.location.href).href;
-CONTACT_FORM?.addEventListener('submit',()=>{const d=new FormData(CONTACT_FORM);try{sessionStorage.setItem('powerai_contact_pending',JSON.stringify({nombre:d.get('nombre')||'',empresa:d.get('empresa')||'',email:d.get('email')||'',tension:d.get('tension')||'',servicio:d.get('servicio')||'',mensaje:d.get('mensaje')||''}))}catch{}});

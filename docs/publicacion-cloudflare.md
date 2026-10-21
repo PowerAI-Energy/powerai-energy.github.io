@@ -31,7 +31,7 @@ La prueba manual del workflow #198 completó correctamente el paso del hook y Cl
 
 El clima se consulta desde el navegador después del consentimiento de ubicación, mediante MET Norway y BigDataCloud. Comprobar sus solicitudes desde el dominio publicado.
 
-El formulario conserva FormSubmit y ajusta su retorno a `gracias.html` en el dominio desde el que se envía. Comprobar un envío real autorizado; FormSubmit puede pedir una nueva confirmación para el nuevo dominio.
+El formulario verifica el correo mediante un código enviado desde Google Apps Script y solo entonces entrega la solicitud. Ambos sitios llaman al endpoint protegido de Cloudflare y retornan a `gracias.html` en su propio dominio. Ver configuración y límites en `docs/seguridad-cloudflare.md`. Comprobar un envío real autorizado antes de declarar terminada la integración.
 
 ## Verificación tras publicar
 

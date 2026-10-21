@@ -1,3 +1,4 @@
+import { contactApi } from './cloudflare_contact.mjs';
 // Cloudflare-only entry gate. GitHub Pages keeps serving the original static site.
 const COOKIE = '__Host-powerai_human';
 const TTL = 30 * 60;
@@ -41,6 +42,7 @@ function gate(sitekey, next, message = '', status = 200) {
 }
 export async function handle(request, env, verifyFetch = fetch) {
   const url = new URL(request.url);
+  if (url.pathname.startsWith('/api/contact')) return contactApi(request, env, verifyFetch);
   if (!env.TURNSTILE_SITE_KEY || !env.TURNSTILE_SECRET_KEY) return new Response('Verificación temporalmente no disponible. Intente más tarde.',{status:503,headers:{'Cache-Control':'no-store'}});
   if (url.pathname === '/__human' && request.method === 'POST') {
     if (request.headers.get('Origin') !== url.origin) return new Response('Origen no autorizado',{status:403});

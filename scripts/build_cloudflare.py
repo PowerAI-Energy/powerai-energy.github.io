@@ -14,5 +14,6 @@ for name in ('assets', 'data'):
     shutil.copytree(ROOT / name, OUTPUT / name)
 (OUTPUT / '_headers').write_text('/data/engineering-data.json\n  Cache-Control: no-store\n', encoding='utf-8')
 shutil.copy2(ROOT / 'scripts' / 'cloudflare_gate.mjs', OUTPUT / '_worker.js')
+shutil.copy2(ROOT / 'scripts' / 'cloudflare_contact.mjs', OUTPUT / 'cloudflare_contact.mjs')
 (OUTPUT / '_routes.json').write_text('{"version":1,"include":["/*"],"exclude":[]}', encoding='utf-8')
 print(f'Public site ready: {OUTPUT}')

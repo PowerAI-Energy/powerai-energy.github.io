@@ -4,7 +4,7 @@ La compilación `python3 scripts/build_cloudflare.py` incorpora `scripts/cloudfl
 
 ## Verificación humana
 
-En producción se requieren `TURNSTILE_SITE_KEY` (pública) y `TURNSTILE_SECRET_KEY` (secreto cifrado de Pages). No copiar el secreto al repositorio. El widget administrado admite `powerai-energy.pages.dev`; Cloudflare decide cuándo requiere interacción. No existe aquí un ajuste que garantice un acertijo de máxima dificultad para cada visita.
+En producción se requieren `TURNSTILE_SITE_KEY` (pública) y `TURNSTILE_SECRET_KEY` (secreto cifrado de Pages). No copiar el secreto al repositorio. El widget administrado admite `powerai-energy.pages.dev` y `powerai-energy.github.io`; Cloudflare decide cuándo requiere interacción. No existe aquí un ajuste que garantice un acertijo de máxima dificultad para cada visita.
 
 El Worker valida el token con Siteverify, exige el hostname de la petición y la acción `site-entry`, y solo entonces concede una cookie firmada de hasta 30 minutos, HttpOnly, Secure y vinculada al navegador. Sin sesión válida no entrega HTML, JSON ni imágenes. Las respuestas son privadas y no almacenables. El modo de agotamiento de cuota de Pages debe ser **Fail closed**; no activar pagos. Las funciones consumen la cuota gratuita de Workers, compartida con otros proyectos.
 
@@ -20,4 +20,12 @@ La publicación del JSON en GitHub se solicita en cada actualización. Cloudflar
 
 ## Verificación del correo del remitente
 
-Requisito adicional solicitado: enviar un código al correo del visitante y no entregar su solicitud antes de validarlo, para ambos formularios (GitHub y Cloudflare). Es diferente de activar el correo receptor en FormSubmit. La integración de ese servicio está pendiente; no declarar que Turnstile o la activación de FormSubmit verifican al remitente.
+Ambos formularios usan `contact-verification.js` y el endpoint de Cloudflare `/api/contact`. Al solicitar un código, Cloudflare valida Turnstile en servidor con hostname del sitio y acción `contact-start`. El servicio privado `scripts/contact_mail.gs` se despliega como aplicación web de Google Apps Script, ejecutada por la cuenta receptora. No lee la bandeja de entrada ni contactos.
+
+Configurar en Pages producción `MAIL_SERVICE_URL` (URL /exec de la implementación) y `MAIL_SERVICE_KEY` como secreto cifrado. La misma clave está en Script Properties `SERVICE_KEY`; `configurarServicio()` la crea sin imprimirla y configura `RECIPIENT`. No guardar claves en archivos, capturas ni repositorio. Cualquier llamada sin clave se rechaza. El proyecto no se comparte públicamente aunque el endpoint /exec sea accesible.
+
+El código tiene seis dígitos, vence en 10 minutos, se almacena como HMAC y permite cinco intentos; se consume antes de enviar la solicitud. Límite de tres códigos por correo y cinco por hash de cliente por hora. Solo después de verificar se envía al receptor fijo con Reply-To del correo verificado. El navegador retorna a gracias.html en su propio dominio. No hay envío alternativo sin verificación.
+
+La cuota gratuita de MailApp depende de la cuenta. Para cuentas de consumidor Google publica 100 destinatarios/día; un proceso completo consume dos envíos, más reintentos. Se reservan los últimos envíos para solicitudes que ya tengan código. No contratar una ampliación. Ante fallo o agotamiento, el formulario informa y no envía sin verificar. Cuotas: https://developers.google.com/apps-script/guides/services/quotas
+
+Pruebas: `node --test tests/cloudflare_gate.test.mjs tests/cloudflare_contact.test.mjs tests/contact_mail.test.mjs`. La prueba real de recepción y retorno a gracias.html debe hacerse tras cada cambio de servicio o configuración. No declarar completa la verificación de producción solo por pasar pruebas simuladas.

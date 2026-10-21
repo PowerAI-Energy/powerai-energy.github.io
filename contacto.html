@@ -118,11 +118,7 @@
 
     <section class="contact-form-panel">
       <div class="form-title"><span>SOLICITUD DE SERVICIO EN CAMPO</span><strong>Prepare su solicitud técnica.</strong><p>La información se enviará al correo configurado.</p></div>
-      <form id="contact-form" action="https://formsubmit.co/PowerAI.Energy@gmail.com" method="POST" accept-charset="UTF-8">
-        <input type="hidden" name="_subject" value="Nueva solicitud técnica — PowerAI-Energy">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://powerai-energy.github.io/gracias.html">
-        <input type="hidden" name="_honey" value="">
+      <form id="contact-form" action="https://powerai-energy.pages.dev/api/contact" method="POST" accept-charset="UTF-8">
         <div class="form-grid-two">
           <label>Nombre<input name="nombre" required placeholder="Su nombre"></label>
           <label>Empresa<input name="empresa" placeholder="Empresa / organización"></label>
@@ -152,7 +148,8 @@
         </select></label>
         <label>Descripción del requerimiento<textarea name="mensaje" rows="5" required placeholder="Describa brevemente la instalación, activo, problema o servicio requerido."></textarea></label>
         <button class="btn btn-primary" type="submit"><span>Enviar solicitud</span><b>→</b></button>
-        <small class="privacy-note">El envío utiliza FormSubmit para entregar la solicitud por correo. En el primer envío, FormSubmit puede solicitar la confirmación de la dirección de correo receptora.</small>
+        <small class="privacy-note">Primero recibirá un código de seguridad en su correo. La solicitud solo se enviará después de validarlo. Cloudflare comprueba el acceso humano y Google procesa el correo y la solicitud. El código vence en 10 minutos.</small>
+        <noscript>Active JavaScript para verificar su correo y enviar la solicitud.</noscript>
       </form>
       <div class="whatsapp-direct">
         <span class="small-round-icon whatsapp-mini"><svg viewBox="0 0 24 24"><path d="M12 3.15a8.76 8.76 0 0 0-7.58 13.14L3.12 21l4.88-1.27A8.76 8.76 0 1 0 12 3.15Z"/></svg></span>
@@ -172,5 +169,6 @@
 </div>
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> PowerAI-Energy</span><span>Supervisión y coordinación de personal • BT / MT / AT</span><a href="contacto.html">Contacto técnico</a></div></footer>
 <script src="script.js?v=20261021-cloudflare"></script>
+<script src="contact-verification.js?v=20261021-email"></script>
 </body>
 </html>
