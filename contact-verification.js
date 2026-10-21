@@ -7,7 +7,7 @@
   let challengeId = '', verifiedEmail = '', token = '', widget = null, busy = false;
   const panel = document.createElement('div');
   panel.className = 'contact-verification';
-  panel.innerHTML = '<p>Antes de enviar su solicitud, verificaremos su correo con un código de seguridad.</p><div id="contact-human-check"></div><div id="contact-code-panel" hidden><label>Código de seguridad<input id="contact-email-code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="Código de 6 dígitos"></label><small>El código vence en 10 minutos. Su solicitud aún no se ha enviado.</small><button type="button" class="btn" id="contact-change-email">Cambiar correo o solicitar otro código</button></div><p id="contact-verify-status" role="status" aria-live="polite"></p>';
+  panel.innerHTML = '<p>Antes de enviar su solicitud, verificaremos su correo con un código de seguridad.</p><div id="contact-human-check"></div><div id="contact-code-panel" hidden><label>Código de seguridad<input id="contact-email-code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="Código de 6 dígitos"></label><small>El código vence en 30 segundos. Su solicitud aún no se ha enviado.</small><button type="button" class="btn" id="contact-change-email">Cambiar correo o solicitar otro código</button></div><p id="contact-verify-status" role="status" aria-live="polite"></p>';
   submit.before(panel);
   const status = panel.querySelector('#contact-verify-status');
   const codePanel = panel.querySelector('#contact-code-panel');

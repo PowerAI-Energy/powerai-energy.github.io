@@ -54,9 +54,9 @@ function doPost(e) {
       var id=Utilities.getUuid(),random=Utilities.computeHmacSha256Signature(Utilities.getUuid()+Utilities.getUuid(),secret);
       var n=((random[0]&255)*16777216+(random[1]&255)*65536+(random[2]&255)*256+(random[3]&255))%1000000;
       var code=String(n).padStart(6,'0');
-      props.setProperty('OTP_'+id,JSON.stringify({email:email,hash:digest_(id+':'+email+':'+code,secret),exp:now+600000,attempts:0}));
-      try{MailApp.sendEmail({to:email,subject:'Su código de seguridad — PowerAI-Energy',body:'Su código de seguridad es: '+code+'\n\nVence en 10 minutos y solo puede usarse una vez. Escríbalo en el formulario de PowerAI-Energy para enviar su solicitud.\n\nSi no solicitó este código, ignore este mensaje. No comparta el código con otras personas.',name:'PowerAI-Energy'});}catch(error){props.deleteProperty('OTP_'+id);throw Error('No se pudo enviar el código. Intente más tarde.');}
-      return json_({ok:true,challengeId:id,expiresIn:600});
+      props.setProperty('OTP_'+id,JSON.stringify({email:email,hash:digest_(id+':'+email+':'+code,secret),exp:now+30000,attempts:0}));
+      try{MailApp.sendEmail({to:email,subject:'Su código de seguridad — PowerAI-Energy',body:'Su código de seguridad es: '+code+'\n\nVence en 30 segundos y solo puede usarse una vez. Escríbalo en el formulario de PowerAI-Energy para enviar su solicitud.\n\nSi no solicitó este código, ignore este mensaje. No comparta el código con otras personas.',name:'PowerAI-Energy'});}catch(error){props.deleteProperty('OTP_'+id);throw Error('No se pudo enviar el código. Intente más tarde.');}
+      return json_({ok:true,challengeId:id,expiresIn:30});
     }
     if(data.action==='verify-send') {
       if(typeof data.challengeId!=='string' || !/^[a-f0-9-]{36}$/.test(data.challengeId) || typeof data.code!=='string' || !/^\d{6}$/.test(data.code))throw Error('Revise el código de seis dígitos.');

@@ -24,7 +24,7 @@ Ambos formularios usan `contact-verification.js` y el endpoint de Cloudflare `/a
 
 Configurar en Pages producción `MAIL_SERVICE_URL` (URL /exec de la implementación) y `MAIL_SERVICE_KEY` como secreto cifrado. La misma clave está en Script Properties `SERVICE_KEY`; `configurarServicio()` la crea sin imprimirla y configura `RECIPIENT`. No guardar claves en archivos, capturas ni repositorio. Cualquier llamada sin clave se rechaza. El proyecto no se comparte públicamente aunque el endpoint /exec sea accesible.
 
-El código tiene seis dígitos, vence en 10 minutos, se almacena como HMAC y permite cinco intentos; se consume antes de enviar la solicitud. Límite de tres códigos por correo y cinco por hash de cliente por hora. Solo después de verificar se envía al receptor fijo con Reply-To del correo verificado. El navegador retorna a gracias.html en su propio dominio. No hay envío alternativo sin verificación.
+El código tiene seis dígitos, vence en 30 segundos, se almacena como HMAC y permite cinco intentos; se consume antes de enviar la solicitud. Límite de tres códigos por correo y cinco por hash de cliente por hora. Solo después de verificar se envía al receptor fijo con Reply-To del correo verificado. El navegador retorna a gracias.html en su propio dominio. No hay envío alternativo sin verificación.
 
 La cuota gratuita de MailApp depende de la cuenta. Para cuentas de consumidor Google publica 100 destinatarios/día; un proceso completo consume dos envíos, más reintentos. Se reservan los últimos envíos para solicitudes que ya tengan código. No contratar una ampliación. Ante fallo o agotamiento, el formulario informa y no envía sin verificar. Cuotas: https://developers.google.com/apps-script/guides/services/quotas
 

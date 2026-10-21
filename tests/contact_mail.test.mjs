@@ -20,9 +20,11 @@ function service(){
  return {state,sent,key,email,call,start,code,send,advance:ms=>now+=ms,setQuota:value=>quota=value};
 }
 test('unauthorized callers cannot send any mail',()=>{const s=service();assert.equal(s.call({serviceKey:'wrong',action:'start',email:s.email}).ok,false);assert.equal(s.sent.length,0)});
-test('start sends only a code, never delivers the contact request',()=>{const s=service(),r=s.start();assert.equal(r.ok,true);assert.equal(r.expiresIn,600);assert.match(s.code(),/^\d{6}$/);assert.equal(s.sent.length,1);assert.equal(s.sent[0].to,s.email);assert.ok(!JSON.stringify([...s.state]).includes(s.code()))});
+test('start sends only a code, never delivers the contact request',()=>{const s=service(),r=s.start();assert.equal(r.ok,true);assert.equal(r.expiresIn,30);assert.match(s.code(),/^\d{6}$/);assert.equal(s.sent.length,1);assert.equal(s.sent[0].to,s.email);assert.ok(!JSON.stringify([...s.state]).includes(s.code()))});
 test('only matching verified email can send; successful code is single-use',()=>{const s=service(),r=s.start(),pin=s.code();assert.equal(s.send(r.challengeId,pin,'other@example.test').ok,false);assert.equal(s.sent.length,1);assert.equal(s.send(r.challengeId,pin).sent,true);assert.equal(s.sent.length,2);assert.equal(s.sent[1].replyTo,s.email);assert.equal(s.sent[1].to,'PowerAI.Energy@gmail.com');assert.equal(s.send(r.challengeId,pin).ok,false);assert.equal(s.sent.length,2)});
 test('wrong attempts are bounded and never send request',()=>{const s=service(),r=s.start(),pin=s.code(),wrong=pin==='000000'?'111111':'000000';for(let i=0;i<6;i++)assert.equal(s.send(r.challengeId,wrong).ok,false);assert.equal(s.send(r.challengeId,pin).ok,false);assert.equal(s.sent.length,1)});
-test('expired code and exhausted quota cannot send',()=>{const s=service(),r=s.start(),pin=s.code();s.advance(600001);assert.equal(s.send(r.challengeId,pin).ok,false);assert.equal(s.sent.length,1);s.setQuota(0);assert.equal(s.start().ok,false);assert.equal(s.sent.length,1)});
+test('expired code and exhausted quota cannot send',()=>{const s=service(),r=s.start(),pin=s.code();s.advance(30000);assert.equal(s.send(r.challengeId,pin).ok,false);assert.equal(s.sent.length,1);s.setQuota(0);assert.equal(s.start().ok,false);assert.equal(s.sent.length,1)});
 test('email rate limit stops repeated code requests',()=>{const s=service();for(let i=0;i<3;i++)assert.equal(s.start().ok,true);assert.equal(s.start().ok,false);assert.equal(s.sent.length,3)});
 
+
+test('code is valid just before 30 seconds',()=>{const s=service(),r=s.start(),pin=s.code();s.advance(29999);assert.equal(s.send(r.challengeId,pin).ok,true)});

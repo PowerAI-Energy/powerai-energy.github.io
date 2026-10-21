@@ -36,7 +36,7 @@ export async function contactApi(request,env,serviceFetch=fetch) {
     if(!response.ok)return reply(origin,{ok:false,error:'El servicio de correo no respondió. Intente más tarde.'},502);
     const result=await response.json();
     if(result.ok!==true)return reply(origin,{ok:false,error:typeof result.error==='string'?result.error:'No se pudo completar la operación.'},400);
-    if(data.action==='start' && typeof result.challengeId==='string')return reply(origin,{ok:true,challengeId:result.challengeId,expiresIn:600});
+    if(data.action==='start' && typeof result.challengeId==='string')return reply(origin,{ok:true,challengeId:result.challengeId,expiresIn:30});
     if(data.action==='verify-send' && result.sent===true)return reply(origin,{ok:true,sent:true});
     return reply(origin,{ok:false,error:'Respuesta de correo inválida.'},502);
   }catch{return reply(origin,{ok:false,error:'No se pudo completar la verificación. Intente nuevamente.'},503)}
