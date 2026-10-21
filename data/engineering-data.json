@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-21T17:44:56.625386+00:00",
+  "generatedAt": "2026-10-21T18:55:06.036387+00:00",
   "xm": {
-    "available": true,
+    "available": false,
     "indicators": [
       {
         "id": "DemaReal",
@@ -1029,7 +1029,9 @@
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
     "lastSuccessAt": "2026-10-21T17:44:56.625386+00:00",
-    "status": "ok"
+    "status": "unavailable",
+    "lastAttemptAt": "2026-10-21T18:55:06.036387+00:00",
+    "diagnosis": "URLError"
   },
   "oil": {
     "available": true,
@@ -1059,7 +1061,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-21T17:44:56.625386+00:00",
+    "lastSuccessAt": "2026-10-21T18:55:06.036387+00:00",
     "status": "ok"
   }
 }
