@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T11:47:45.123080+00:00",
+  "generatedAt": "2026-10-21T12:58:19.109400+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -147,7 +147,7 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 17958086.32,
+        "value": 121094463.01,
         "date": "2026-10-20",
         "period": "Diario",
         "entity": "Sistema",
@@ -157,7 +157,7 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 1451203000.0,
+        "value": 13443420800.0,
         "date": "2026-10-20",
         "period": "Diario",
         "entity": "Sistema",
@@ -217,7 +217,7 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 43172550.0,
+        "value": 194830980.0,
         "date": "2026-10-20",
         "period": "Diario",
         "entity": "Sistema",
@@ -227,7 +227,7 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.08215,
+        "value": 0.76103,
         "date": "2026-10-20",
         "period": "Diario",
         "entity": "Sistema",
@@ -237,7 +237,7 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.0726,
+        "value": 0.48957,
         "date": "2026-10-20",
         "period": "Diario",
         "entity": "Sistema",
@@ -1028,7 +1028,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-21T11:47:45.123080+00:00",
+    "lastSuccessAt": "2026-10-21T12:58:19.109400+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1059,7 +1059,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-21T11:47:45.123080+00:00",
+    "lastSuccessAt": "2026-10-21T12:58:19.109400+00:00",
     "status": "ok"
   }
 }
