@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T05:45:10.075309+00:00",
+  "generatedAt": "2026-10-22T07:01:21.613965+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -88,16 +88,6 @@
         "name": "Demanda Comercial Mercado Regulado por Sistema",
         "unit": "kWh",
         "value": 1757635.95,
-        "date": "2026-10-18",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaComeNoReg",
-        "name": "Demanda Comercial Mercado No Regulado por Sistema",
-        "unit": "kWh",
-        "value": 27042.72,
         "date": "2026-10-18",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
@@ -209,16 +199,6 @@
         "unit": "kWh",
         "value": 342118.455,
         "date": "2026-10-19",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "VolTurbMasa",
-        "name": "Volumen Turbinado por Sistema",
-        "unit": "m3",
-        "value": 194830980.0,
-        "date": "2026-10-20",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -990,8 +970,20 @@
     ],
     "unavailable": [
       {
+        "id": "DemaComeNoReg",
+        "name": "Demanda Comercial Mercado No Regulado por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
+      },
+      {
+        "id": "VolTurbMasa",
+        "name": "Volumen Turbinado por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
       }
     ],
     "matrix": {
@@ -1028,7 +1020,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-22T05:45:10.075309+00:00",
+    "lastSuccessAt": "2026-10-22T07:01:21.613965+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1059,7 +1051,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-22T05:45:10.075309+00:00",
+    "lastSuccessAt": "2026-10-22T07:01:21.613965+00:00",
     "status": "ok"
   }
 }
