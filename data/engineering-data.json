@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T04:46:40.360055+00:00",
+  "generatedAt": "2026-10-22T05:45:10.075309+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -18,6 +18,36 @@
         "name": "Demanda Comercial por Sistema",
         "unit": "kWh",
         "value": 1847165.21,
+        "date": "2026-10-18",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "Gene",
+        "name": "Generación por Sistema",
+        "unit": "kWh",
+        "value": 9166840.86,
+        "date": "2026-10-18",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "GeneIdea",
+        "name": "Generación Ideal por Sistema",
+        "unit": "kWh",
+        "value": 9166840.86,
+        "date": "2026-10-18",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "factorEmisionCO2e",
+        "name": "Emisiones de CO2 Eq/kWh por Sistema",
+        "unit": "gCO2e/kWh",
+        "value": 257.65273,
         "date": "2026-10-18",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
@@ -960,29 +990,45 @@
     ],
     "unavailable": [
       {
-        "id": "Gene",
-        "name": "Generación por Sistema"
-      },
-      {
-        "id": "GeneIdea",
-        "name": "Generación Ideal por Sistema"
-      },
-      {
-        "id": "factorEmisionCO2e",
-        "name": "Emisiones de CO2 Eq/kWh por Sistema"
-      },
-      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
     ],
     "matrix": {
-      "available": false,
-      "diagnosis": "ValueError"
+      "available": true,
+      "date": "2026-10-18",
+      "period": "23:00–24:00 (Colombia)",
+      "totalKWh": 9166840.86,
+      "resourceCount": 165,
+      "shares": [
+        {
+          "name": "Hidráulica",
+          "value": 58.542777080565564,
+          "unit": "%"
+        },
+        {
+          "name": "Térmica",
+          "value": 39.715969390135136,
+          "unit": "%"
+        },
+        {
+          "name": "Eólica",
+          "value": 0.3136564759781376,
+          "unit": "%"
+        },
+        {
+          "name": "Biomasa",
+          "value": 1.4275970533211593,
+          "unit": "%"
+        }
+      ],
+      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
+      "systemKWh": 9166840.86,
+      "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-22T04:46:40.360055+00:00",
+    "lastSuccessAt": "2026-10-22T05:45:10.075309+00:00",
     "status": "ok"
   },
   "oil": {
@@ -993,27 +1039,27 @@
         "usd": 115.22,
         "date": "2026-10-20",
         "source": "EIA",
-        "cop": 364528.43,
+        "cop": 367721.17,
         "unit": "COP/barril",
-        "trm": 3163.76,
-        "trmDate": "2026-10-21"
+        "trm": 3191.47,
+        "trmDate": "2026-10-22"
       },
       {
         "name": "WTI",
         "usd": 107.89,
         "date": "2026-10-20",
         "source": "EIA",
-        "cop": 341338.07,
+        "cop": 344327.7,
         "unit": "COP/barril",
-        "trm": 3163.76,
-        "trmDate": "2026-10-21"
+        "trm": 3191.47,
+        "trmDate": "2026-10-22"
       }
     ],
     "unavailable": [],
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-22T04:46:40.360055+00:00",
+    "lastSuccessAt": "2026-10-22T05:45:10.075309+00:00",
     "status": "ok"
   }
 }
