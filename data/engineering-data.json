@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T03:48:23.369238+00:00",
+  "generatedAt": "2026-10-22T04:46:40.360055+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -961,15 +961,11 @@
     "unavailable": [
       {
         "id": "Gene",
-        "name": "Generación por Sistema",
-        "errorType": "URLError",
-        "httpStatus": null
+        "name": "Generación por Sistema"
       },
       {
         "id": "GeneIdea",
-        "name": "Generación Ideal por Sistema",
-        "errorType": "TimeoutError",
-        "httpStatus": null
+        "name": "Generación Ideal por Sistema"
       },
       {
         "id": "factorEmisionCO2e",
@@ -986,7 +982,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-22T03:48:23.369238+00:00",
+    "lastSuccessAt": "2026-10-22T04:46:40.360055+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1017,7 +1013,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-22T03:48:23.369238+00:00",
+    "lastSuccessAt": "2026-10-22T04:46:40.360055+00:00",
     "status": "ok"
   }
 }
