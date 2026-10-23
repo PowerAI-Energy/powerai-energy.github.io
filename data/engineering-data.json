@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T04:46:37.328834+00:00",
+  "generatedAt": "2026-10-23T05:45:37.976806+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -1028,7 +1028,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-23T04:46:37.328834+00:00",
+    "lastSuccessAt": "2026-10-23T05:45:37.976806+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1039,27 +1039,27 @@
         "usd": 115.22,
         "date": "2026-10-20",
         "source": "EIA",
-        "cop": 367721.17,
+        "cop": 366976.85,
         "unit": "COP/barril",
-        "trm": 3191.47,
-        "trmDate": "2026-10-22"
+        "trm": 3185.01,
+        "trmDate": "2026-10-23"
       },
       {
         "name": "WTI",
         "usd": 107.89,
         "date": "2026-10-20",
         "source": "EIA",
-        "cop": 344327.7,
+        "cop": 343630.73,
         "unit": "COP/barril",
-        "trm": 3191.47,
-        "trmDate": "2026-10-22"
+        "trm": 3185.01,
+        "trmDate": "2026-10-23"
       }
     ],
     "unavailable": [],
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-23T04:46:37.328834+00:00",
+    "lastSuccessAt": "2026-10-23T05:45:37.976806+00:00",
     "status": "ok"
   }
 }
