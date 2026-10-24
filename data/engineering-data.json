@@ -1,11 +1,21 @@
 {
-  "generatedAt": "2026-10-24T05:56:24.928910+00:00",
+  "generatedAt": "2026-10-24T11:05:33.127297+00:00",
   "xm": {
     "available": true,
     "indicators": [
       {
         "id": "DemaReal",
         "name": "Demanda Real por Sistema",
+        "unit": "kWh",
+        "value": 2018031.93,
+        "date": "2026-10-20",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaCome",
+        "name": "Demanda Comercial por Sistema",
         "unit": "kWh",
         "value": 2018031.93,
         "date": "2026-10-20",
@@ -157,7 +167,7 @@
         "id": "DemaSIN",
         "name": "Demanda Energia SIN por Sistema",
         "unit": "kWh",
-        "value": 101110.0,
+        "value": -56336.45,
         "date": "2026-10-21",
         "period": "Diario",
         "entity": "Sistema",
@@ -980,12 +990,6 @@
     ],
     "unavailable": [
       {
-        "id": "DemaCome",
-        "name": "Demanda Comercial por Sistema",
-        "errorType": "URLError",
-        "httpStatus": null
-      },
-      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
@@ -1024,7 +1028,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-24T05:56:24.928910+00:00",
+    "lastSuccessAt": "2026-10-24T11:05:33.127297+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1055,7 +1059,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-24T05:56:24.928910+00:00",
+    "lastSuccessAt": "2026-10-24T11:05:33.127297+00:00",
     "status": "ok"
   }
 }
