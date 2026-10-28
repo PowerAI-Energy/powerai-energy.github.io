@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-28T16:39:48.209896+00:00",
+  "generatedAt": "2026-10-28T21:40:23.985397+00:00",
   "xm": {
-    "available": false,
+    "available": true,
     "indicators": [
       {
         "id": "DemaReal",
@@ -147,7 +147,7 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 30521161.19,
+        "value": 170617054.47,
         "date": "2026-10-27",
         "period": "Diario",
         "entity": "Sistema",
@@ -157,7 +157,7 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 1457512800.0,
+        "value": 13604493900.0,
         "date": "2026-10-27",
         "period": "Diario",
         "entity": "Sistema",
@@ -207,8 +207,8 @@
         "id": "VertEner",
         "name": "Vertimientos Energía por Sistema",
         "unit": "kWh",
-        "value": 2207076.165,
-        "date": "2026-10-24",
+        "value": 9147397.525,
+        "date": "2026-10-27",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -217,7 +217,7 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 42756680.0,
+        "value": 203915530.0,
         "date": "2026-10-27",
         "period": "Diario",
         "entity": "Sistema",
@@ -227,7 +227,7 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.08251,
+        "value": 0.77015,
         "date": "2026-10-27",
         "period": "Diario",
         "entity": "Sistema",
@@ -237,7 +237,7 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.12339,
+        "value": 0.68978,
         "date": "2026-10-27",
         "period": "Diario",
         "entity": "Sistema",
@@ -995,35 +995,66 @@
       }
     ],
     "matrix": {
-      "available": false,
-      "diagnosis": "ValueError"
+      "available": true,
+      "date": "2026-10-25",
+      "period": "23:00–24:00 (Colombia)",
+      "totalKWh": 9279907.95,
+      "resourceCount": 165,
+      "shares": [
+        {
+          "name": "Hidráulica",
+          "value": 58.49662291100635,
+          "unit": "%"
+        },
+        {
+          "name": "Térmica",
+          "value": 40.34551991434355,
+          "unit": "%"
+        },
+        {
+          "name": "Solar",
+          "value": 0.0029483051068410655,
+          "unit": "%"
+        },
+        {
+          "name": "Eólica",
+          "value": 0.00593669681820497,
+          "unit": "%"
+        },
+        {
+          "name": "Biomasa",
+          "value": 1.148972172725054,
+          "unit": "%"
+        }
+      ],
+      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
+      "systemKWh": 9279907.95,
+      "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-28T09:43:07.621144+00:00",
-    "status": "unavailable",
-    "lastAttemptAt": "2026-10-28T16:39:48.209896+00:00",
-    "diagnosis": "URLError"
+    "lastSuccessAt": "2026-10-28T21:40:23.985397+00:00",
+    "status": "ok"
   },
   "oil": {
     "available": true,
     "indicators": [
       {
         "name": "Brent",
-        "usd": 115.22,
-        "date": "2026-10-20",
+        "usd": 123.1,
+        "date": "2026-10-27",
         "source": "EIA",
-        "cop": 362714.86,
+        "cop": 387521.26,
         "unit": "COP/barril",
         "trm": 3148.02,
         "trmDate": "2026-10-28"
       },
       {
         "name": "WTI",
-        "usd": 107.89,
-        "date": "2026-10-20",
+        "usd": 103.37,
+        "date": "2026-10-27",
         "source": "EIA",
-        "cop": 339639.88,
+        "cop": 325410.83,
         "unit": "COP/barril",
         "trm": 3148.02,
         "trmDate": "2026-10-28"
@@ -1033,7 +1064,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-28T16:39:48.209896+00:00",
+    "lastSuccessAt": "2026-10-28T21:40:23.985397+00:00",
     "status": "ok"
   }
 }
