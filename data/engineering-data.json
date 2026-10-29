@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T08:32:13.061776+00:00",
+  "generatedAt": "2026-10-29T16:09:52.958700+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -147,8 +147,8 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 170617054.47,
-        "date": "2026-10-27",
+        "value": 145916227.22,
+        "date": "2026-10-28",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -157,8 +157,8 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 13604493900.0,
-        "date": "2026-10-27",
+        "value": 13611822500.0,
+        "date": "2026-10-28",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -207,8 +207,8 @@
         "id": "VertEner",
         "name": "Vertimientos Energía por Sistema",
         "unit": "kWh",
-        "value": 9147397.525,
-        "date": "2026-10-27",
+        "value": 6152095.285,
+        "date": "2026-10-28",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -217,8 +217,8 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 203915530.0,
-        "date": "2026-10-27",
+        "value": 201286870.0,
+        "date": "2026-10-28",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -227,8 +227,8 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.77015,
-        "date": "2026-10-27",
+        "value": 0.77057,
+        "date": "2026-10-28",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -237,8 +237,8 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.68978,
-        "date": "2026-10-27",
+        "value": 0.58992,
+        "date": "2026-10-28",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -995,12 +995,45 @@
       }
     ],
     "matrix": {
-      "available": false,
-      "diagnosis": "ValueError"
+      "available": true,
+      "date": "2026-10-26",
+      "period": "23:00–24:00 (Colombia)",
+      "totalKWh": 9677237.250000002,
+      "resourceCount": 167,
+      "shares": [
+        {
+          "name": "Hidráulica",
+          "value": 58.523228414184004,
+          "unit": "%"
+        },
+        {
+          "name": "Térmica",
+          "value": 40.268314079000184,
+          "unit": "%"
+        },
+        {
+          "name": "Solar",
+          "value": 0.0016740315010877714,
+          "unit": "%"
+        },
+        {
+          "name": "Eólica",
+          "value": 0.0032216839573712005,
+          "unit": "%"
+        },
+        {
+          "name": "Biomasa",
+          "value": 1.203561791357342,
+          "unit": "%"
+        }
+      ],
+      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
+      "systemKWh": 9677237.25,
+      "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-29T08:32:13.061776+00:00",
+    "lastSuccessAt": "2026-10-29T16:09:52.958700+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1031,7 +1064,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-29T08:32:13.061776+00:00",
+    "lastSuccessAt": "2026-10-29T16:09:52.958700+00:00",
     "status": "ok"
   }
 }
