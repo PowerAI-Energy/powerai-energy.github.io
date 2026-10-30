@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T01:02:57.527662+00:00",
+  "generatedAt": "2026-10-30T07:10:22.042785+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -167,7 +167,7 @@
         "id": "DemaSIN",
         "name": "Demanda Energia SIN por Sistema",
         "unit": "kWh",
-        "value": 24630.0,
+        "value": -2775.86,
         "date": "2026-10-27",
         "period": "Diario",
         "entity": "Sistema",
@@ -1033,7 +1033,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-10-30T01:02:57.527662+00:00",
+    "lastSuccessAt": "2026-10-30T07:10:22.042785+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1044,27 +1044,27 @@
         "usd": 123.1,
         "date": "2026-10-27",
         "source": "EIA",
-        "cop": 389285.28,
+        "cop": 389846.62,
         "unit": "COP/barril",
-        "trm": 3162.35,
-        "trmDate": "2026-10-29"
+        "trm": 3166.91,
+        "trmDate": "2026-10-30"
       },
       {
         "name": "WTI",
         "usd": 103.37,
         "date": "2026-10-27",
         "source": "EIA",
-        "cop": 326892.12,
+        "cop": 327363.49,
         "unit": "COP/barril",
-        "trm": 3162.35,
-        "trmDate": "2026-10-29"
+        "trm": 3166.91,
+        "trmDate": "2026-10-30"
       }
     ],
     "unavailable": [],
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-10-30T01:02:57.527662+00:00",
+    "lastSuccessAt": "2026-10-30T07:10:22.042785+00:00",
     "status": "ok"
   }
 }
