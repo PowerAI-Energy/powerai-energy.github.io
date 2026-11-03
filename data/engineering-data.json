@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T23:33:56.845861+00:00",
+  "generatedAt": "2026-11-03T06:51:31.975713+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -84,6 +84,16 @@
         "code": "Sistema"
       },
       {
+        "id": "DemaComeReg",
+        "name": "Demanda Comercial Mercado Regulado por Sistema",
+        "unit": "kWh",
+        "value": 2264314.15,
+        "date": "2026-10-30",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
         "id": "DemaComeNoReg",
         "name": "Demanda Comercial Mercado No Regulado por Sistema",
         "unit": "kWh",
@@ -98,6 +108,16 @@
         "name": "Demanda Real Regulada Sistema",
         "unit": "kWh",
         "value": 2264314.15,
+        "date": "2026-10-30",
+        "period": "23:00–24:00 (Colombia)",
+        "entity": "Sistema",
+        "code": "Sistema"
+      },
+      {
+        "id": "DemaRealNoReg",
+        "name": "Demanda Real No Regulada Sistema",
+        "unit": "kWh",
+        "value": 19318.57,
         "date": "2026-10-30",
         "period": "23:00–24:00 (Colombia)",
         "entity": "Sistema",
@@ -147,7 +167,7 @@
         "id": "DemaSIN",
         "name": "Demanda Energia SIN por Sistema",
         "unit": "kWh",
-        "value": 47770.0,
+        "value": 31529.17,
         "date": "2026-10-31",
         "period": "Diario",
         "entity": "Sistema",
@@ -960,18 +980,6 @@
     ],
     "unavailable": [
       {
-        "id": "DemaComeReg",
-        "name": "Demanda Comercial Mercado Regulado por Sistema",
-        "errorType": "TimeoutError",
-        "httpStatus": null
-      },
-      {
-        "id": "DemaRealNoReg",
-        "name": "Demanda Real No Regulada Sistema",
-        "errorType": "URLError",
-        "httpStatus": null
-      },
-      {
         "id": "DemaMaxPot",
         "name": "Demanda Máxima de Potencia por Sistema"
       },
@@ -1019,7 +1027,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-11-02T23:33:56.845861+00:00",
+    "lastSuccessAt": "2026-11-03T06:51:31.975713+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1050,7 +1058,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-11-02T23:33:56.845861+00:00",
+    "lastSuccessAt": "2026-11-03T06:51:31.975713+00:00",
     "status": "ok"
   }
 }
