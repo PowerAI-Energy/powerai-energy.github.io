@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T22:01:44.391834+00:00",
+  "generatedAt": "2026-11-06T02:29:06.017388+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -189,16 +189,6 @@
         "unit": "kWh",
         "value": 17664655304.0,
         "date": "2026-11-04",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "VertEner",
-        "name": "Vertimientos Energía por Sistema",
-        "unit": "kWh",
-        "value": 6152095.285,
-        "date": "2026-10-28",
         "period": "Diario",
         "entity": "Sistema",
         "code": "Sistema"
@@ -984,6 +974,12 @@
         "name": "Demanda Máxima de Potencia por Sistema"
       },
       {
+        "id": "VertEner",
+        "name": "Vertimientos Energía por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
       }
@@ -1027,7 +1023,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-11-05T22:01:44.391834+00:00",
+    "lastSuccessAt": "2026-11-06T02:29:06.017388+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1058,7 +1054,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-11-05T22:01:44.391834+00:00",
+    "lastSuccessAt": "2026-11-06T02:29:06.017388+00:00",
     "status": "ok"
   }
 }
