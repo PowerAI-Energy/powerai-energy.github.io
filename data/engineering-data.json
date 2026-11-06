@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T10:56:45.896636+00:00",
+  "generatedAt": "2026-11-06T17:59:37.203142+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -147,7 +147,7 @@
         "id": "AporEner",
         "name": "Aportes  Energía por Sistema",
         "unit": "kWh",
-        "value": 15847636.04,
+        "value": 127961384.02,
         "date": "2026-11-05",
         "period": "Diario",
         "entity": "Sistema",
@@ -157,7 +157,7 @@
         "id": "VoluUtilDiarEner",
         "name": "Volumen Útil diario Energía por Sistema",
         "unit": "kWh",
-        "value": 499320600.0,
+        "value": 13778934200.0,
         "date": "2026-11-05",
         "period": "Diario",
         "entity": "Sistema",
@@ -207,7 +207,7 @@
         "id": "VolTurbMasa",
         "name": "Volumen Turbinado por Sistema",
         "unit": "m3",
-        "value": 15720610.0,
+        "value": 231530570.0,
         "date": "2026-11-05",
         "period": "Diario",
         "entity": "Sistema",
@@ -217,7 +217,7 @@
         "id": "PorcVoluUtilDiar",
         "name": "Volumen Útil  diario % por Sistema",
         "unit": "%",
-        "value": 0.02827,
+        "value": 0.78003,
         "date": "2026-11-05",
         "period": "Diario",
         "entity": "Sistema",
@@ -227,7 +227,7 @@
         "id": "PorcApor",
         "name": "Aportes % por Sistema",
         "unit": "%",
-        "value": 0.05845,
+        "value": 0.47192,
         "date": "2026-11-05",
         "period": "Diario",
         "entity": "Sistema",
@@ -989,12 +989,40 @@
       }
     ],
     "matrix": {
-      "available": false,
-      "diagnosis": "ValueError"
+      "available": true,
+      "date": "2026-11-03",
+      "period": "23:00–24:00 (Colombia)",
+      "totalKWh": 9816922.570000002,
+      "resourceCount": 170,
+      "shares": [
+        {
+          "name": "Hidráulica",
+          "value": 57.20258614609812,
+          "unit": "%"
+        },
+        {
+          "name": "Térmica",
+          "value": 41.51566512763073,
+          "unit": "%"
+        },
+        {
+          "name": "Eólica",
+          "value": 0.032071048513933616,
+          "unit": "%"
+        },
+        {
+          "name": "Biomasa",
+          "value": 1.2496776777572156,
+          "unit": "%"
+        }
+      ],
+      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
+      "systemKWh": 9816922.57,
+      "coverageNote": "Participación calculada sobre los recursos reportados."
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-11-06T10:56:45.896636+00:00",
+    "lastSuccessAt": "2026-11-06T17:59:37.203142+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1025,7 +1053,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-11-06T10:56:45.896636+00:00",
+    "lastSuccessAt": "2026-11-06T17:59:37.203142+00:00",
     "status": "ok"
   }
 }
