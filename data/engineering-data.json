@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T23:12:06.656024+00:00",
+  "generatedAt": "2026-11-07T02:50:36.854239+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -230,16 +230,6 @@
         "value": 0.47192,
         "date": "2026-11-05",
         "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "EscDemUPMEAlto",
-        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
-        "unit": "kWh",
-        "value": 7985000000.0,
-        "date": "2026-11-01",
-        "period": "Mensual",
         "entity": "Sistema",
         "code": "Sistema"
       },
@@ -986,6 +976,12 @@
       {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
+      },
+      {
+        "id": "EscDemUPMEAlto",
+        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
       }
     ],
     "matrix": {
@@ -1022,7 +1018,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-11-06T23:12:06.656024+00:00",
+    "lastSuccessAt": "2026-11-07T02:50:36.854239+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1053,7 +1049,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-11-06T23:12:06.656024+00:00",
+    "lastSuccessAt": "2026-11-07T02:50:36.854239+00:00",
     "status": "ok"
   }
 }
