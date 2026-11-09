@@ -1,188 +1,8 @@
 {
-  "generatedAt": "2026-11-08T23:44:54.016259+00:00",
+  "generatedAt": "2026-11-09T06:37:46.524766+00:00",
   "xm": {
     "available": true,
     "indicators": [
-      {
-        "id": "DemaReal",
-        "name": "Demanda Real por Sistema",
-        "unit": "kWh",
-        "value": 2002232.92,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaCome",
-        "name": "Demanda Comercial por Sistema",
-        "unit": "kWh",
-        "value": 2002232.92,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "Gene",
-        "name": "Generación por Sistema",
-        "unit": "kWh",
-        "value": 9709503.76,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "GeneIdea",
-        "name": "Generación Ideal por Sistema",
-        "unit": "kWh",
-        "value": 9709503.76,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "factorEmisionCO2e",
-        "name": "Emisiones de CO2 Eq/kWh por Sistema",
-        "unit": "gCO2e/kWh",
-        "value": 282.44222,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "ImpoEner",
-        "name": "Importaciones Energía por Sistema",
-        "unit": "kWh",
-        "value": 738.02,
-        "date": "2026-11-05",
-        "period": "16:00–17:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "PerdidasEner",
-        "name": "Perdidas de Energía por Sistema",
-        "unit": "kWh",
-        "value": 179644.22,
-        "date": "2026-11-03",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "ExpoEner",
-        "name": "Exportaciones Energía por Sistema",
-        "unit": "kWh",
-        "value": 586.07,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaComeReg",
-        "name": "Demanda Comercial Mercado Regulado por Sistema",
-        "unit": "kWh",
-        "value": 1905908.65,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaComeNoReg",
-        "name": "Demanda Comercial Mercado No Regulado por Sistema",
-        "unit": "kWh",
-        "value": 33628.49,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaRealReg",
-        "name": "Demanda Real Regulada Sistema",
-        "unit": "kWh",
-        "value": 1905908.65,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaRealNoReg",
-        "name": "Demanda Real No Regulada Sistema",
-        "unit": "kWh",
-        "value": 33628.49,
-        "date": "2026-11-05",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "PerdidasEnerReg",
-        "name": "Perdidas de Energía Regulada Sistema",
-        "unit": "kWh",
-        "value": 122225.59,
-        "date": "2026-11-03",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "PerdidasEnerNoReg",
-        "name": "Perdidas de Energía No Regulada Sistema",
-        "unit": "kWh",
-        "value": 57405.71,
-        "date": "2026-11-03",
-        "period": "23:00–24:00 (Colombia)",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "AporEner",
-        "name": "Aportes  Energía por Sistema",
-        "unit": "kWh",
-        "value": 258763145.07,
-        "date": "2026-11-07",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "VoluUtilDiarEner",
-        "name": "Volumen Útil diario Energía por Sistema",
-        "unit": "kWh",
-        "value": 13901721500.0,
-        "date": "2026-11-07",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "DemaSIN",
-        "name": "Demanda Energia SIN por Sistema",
-        "unit": "kWh",
-        "value": 221540.0,
-        "date": "2026-11-06",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "AporEnerMediHist",
-        "name": "Aportes Media Histórica Energía por Sistema",
-        "unit": "kWh",
-        "value": 271150000.0,
-        "date": "2026-11-07",
-        "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
       {
         "id": "CapaUtilDiarEner",
         "name": "Capacidad Útil Energía por Sistema",
@@ -980,6 +800,114 @@
     ],
     "unavailable": [
       {
+        "id": "DemaReal",
+        "name": "Demanda Real por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "DemaCome",
+        "name": "Demanda Comercial por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "Gene",
+        "name": "Generación por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "GeneIdea",
+        "name": "Generación Ideal por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "factorEmisionCO2e",
+        "name": "Emisiones de CO2 Eq/kWh por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "ImpoEner",
+        "name": "Importaciones Energía por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
+        "id": "PerdidasEner",
+        "name": "Perdidas de Energía por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
+        "id": "ExpoEner",
+        "name": "Exportaciones Energía por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "DemaComeReg",
+        "name": "Demanda Comercial Mercado Regulado por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
+        "id": "DemaComeNoReg",
+        "name": "Demanda Comercial Mercado No Regulado por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
+        "id": "DemaRealReg",
+        "name": "Demanda Real Regulada Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "DemaRealNoReg",
+        "name": "Demanda Real No Regulada Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "PerdidasEnerReg",
+        "name": "Perdidas de Energía Regulada Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
+      },
+      {
+        "id": "PerdidasEnerNoReg",
+        "name": "Perdidas de Energía No Regulada Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "AporEner",
+        "name": "Aportes  Energía por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "VoluUtilDiarEner",
+        "name": "Volumen Útil diario Energía por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "DemaSIN",
+        "name": "Demanda Energia SIN por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "AporEnerMediHist",
+        "name": "Aportes Media Histórica Energía por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
         "id": "DemaMaxPot",
         "name": "Demanda Máxima de Potencia por Sistema"
       },
@@ -989,45 +917,12 @@
       }
     ],
     "matrix": {
-      "available": true,
-      "date": "2026-11-05",
-      "period": "23:00–24:00 (Colombia)",
-      "totalKWh": 9709503.76,
-      "resourceCount": 165,
-      "shares": [
-        {
-          "name": "Hidráulica",
-          "value": 56.6020071246154,
-          "unit": "%"
-        },
-        {
-          "name": "Térmica",
-          "value": 42.00406406763676,
-          "unit": "%"
-        },
-        {
-          "name": "Solar",
-          "value": 0.00015016215411610284,
-          "unit": "%"
-        },
-        {
-          "name": "Eólica",
-          "value": 0.0006532774647177231,
-          "unit": "%"
-        },
-        {
-          "name": "Biomasa",
-          "value": 1.3931253681290092,
-          "unit": "%"
-        }
-      ],
-      "scope": "Participación en la generación eléctrica reportada por recursos del SIN para una misma hora; no incluye la matriz energética de transporte o combustibles.",
-      "systemKWh": 9709503.76,
-      "coverageNote": "Participación calculada sobre los recursos reportados."
+      "available": false,
+      "diagnosis": "ValueError"
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-11-08T23:44:54.016259+00:00",
+    "lastSuccessAt": "2026-11-09T06:37:46.524766+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1058,7 +953,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-11-08T23:44:54.016259+00:00",
+    "lastSuccessAt": "2026-11-09T06:37:46.524766+00:00",
     "status": "ok"
   }
 }
