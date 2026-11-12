@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T22:01:55.573965+00:00",
+  "generatedAt": "2026-11-12T03:02:01.271394+00:00",
   "xm": {
     "available": true,
     "indicators": [
@@ -230,26 +230,6 @@
         "value": 0.43195,
         "date": "2026-11-10",
         "period": "Diario",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "EscDemUPMEAlto",
-        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
-        "unit": "kWh",
-        "value": 7985000000.0,
-        "date": "2026-11-01",
-        "period": "Mensual",
-        "entity": "Sistema",
-        "code": "Sistema"
-      },
-      {
-        "id": "EscDemUPMEMedio",
-        "name": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema",
-        "unit": "kWh",
-        "value": 7813000000.0,
-        "date": "2026-11-01",
-        "period": "Mensual",
         "entity": "Sistema",
         "code": "Sistema"
       },
@@ -986,6 +966,18 @@
       {
         "id": "CapaUtilDiarMasa",
         "name": "Capacidad Útil Volumen por Sistema"
+      },
+      {
+        "id": "EscDemUPMEAlto",
+        "name": "Demanda de Energia Proyectada UPME Escenario Alto por Sistema",
+        "errorType": "TimeoutError",
+        "httpStatus": null
+      },
+      {
+        "id": "EscDemUPMEMedio",
+        "name": "Demanda de Energia Proyectada UPME Escenario Medio por Sistema",
+        "errorType": "URLError",
+        "httpStatus": null
       }
     ],
     "matrix": {
@@ -1027,7 +1019,7 @@
     },
     "scope": "Indicadores técnicos agregados del Sistema disponibles en la API pública; no incluye todo el histórico ni todas las desagregaciones.",
     "source": "https://sinergox.xm.com.co/",
-    "lastSuccessAt": "2026-11-11T22:01:55.573965+00:00",
+    "lastSuccessAt": "2026-11-12T03:02:01.271394+00:00",
     "status": "ok"
   },
   "oil": {
@@ -1058,7 +1050,7 @@
     "source": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
     "trmSource": "https://www.datos.gov.co/resource/32sa-8pi3.json",
     "note": "Precios spot de referencia EIA, consultados en FRED o EIA, convertidos con TRM. No son cotizaciones de venta local ni datos en tiempo real.",
-    "lastSuccessAt": "2026-11-11T22:01:55.573965+00:00",
+    "lastSuccessAt": "2026-11-12T03:02:01.271394+00:00",
     "status": "ok"
   }
 }
